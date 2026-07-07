@@ -113,6 +113,29 @@ document.addEventListener('DOMContentLoaded', () => {
     const slides = document.querySelectorAll('.hero-slider .slide');
     const dots = document.querySelectorAll('.slider-dots .dot');
     
+    // Slide content data matching Agra/Taj Mahal, Rajasthan, and Kerala
+    const heroContentData = [
+        {
+            subtitle: "Experience Heritage & Splendor",
+            title: "Discover <span>Royal India</span>",
+            description: "Embark on an unforgettable bespoke journey through majestic palaces, sacred temples, and vibrant landscapes custom-tailored for international explorers."
+        },
+        {
+            subtitle: "Royal Forts & Golden Deserts",
+            title: "Majestic <span>Rajasthan</span>",
+            description: "Explore legendary fortresses, luxurious heritage palaces, and the rich cultural tapestry of the land of Kings."
+        },
+        {
+            subtitle: "Serene Backwaters & Lush Hills",
+            title: "Tranquil <span>Kerala Paradise</span>",
+            description: "Relax in luxury houseboats, rejuvenate with authentic Ayurveda, and discover beautiful tropical coastlines."
+        }
+    ];
+
+    const subtitleEl = document.querySelector('.hero-content .hero-subtitle');
+    const titleEl = document.querySelector('.hero-content .hero-title');
+    const descriptionEl = document.querySelector('.hero-content .hero-description');
+    
     if (slides.length > 0) {
         let currentSlide = 0;
         const slideInterval = 6000; // 6 seconds
@@ -125,6 +148,32 @@ document.addEventListener('DOMContentLoaded', () => {
             if (dots[index]) {
                 dots[index].classList.add('active');
             }
+
+            // Sync and animate content change
+            if (subtitleEl && titleEl && descriptionEl && heroContentData[index]) {
+                const data = heroContentData[index];
+                
+                // Temporarily remove animation
+                subtitleEl.style.animation = 'none';
+                titleEl.style.animation = 'none';
+                descriptionEl.style.animation = 'none';
+                
+                // Trigger reflow to restart animation
+                void subtitleEl.offsetWidth;
+                void titleEl.offsetWidth;
+                void descriptionEl.offsetWidth;
+                
+                // Set text/html
+                subtitleEl.textContent = data.subtitle;
+                titleEl.innerHTML = data.title;
+                descriptionEl.textContent = data.description;
+                
+                // Re-apply animations
+                subtitleEl.style.animation = 'fadeInDown 1s ease forwards';
+                titleEl.style.animation = 'fadeInUp 1s ease 0.2s both';
+                descriptionEl.style.animation = 'fadeInUp 1s ease 0.4s both';
+            }
+
             currentSlide = index;
         }
 
@@ -367,6 +416,24 @@ document.addEventListener('DOMContentLoaded', () => {
                     slidesPerView: 3,
                 }
             }
+        });
+    }
+
+    // 10. Scroll To Top Button Logic
+    const scrollToTopBtn = document.getElementById('scrollToTopBtn');
+    if (scrollToTopBtn) {
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                scrollToTopBtn.classList.add('visible');
+            } else {
+                scrollToTopBtn.classList.remove('visible');
+            }
+        });
+        scrollToTopBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
         });
     }
 });

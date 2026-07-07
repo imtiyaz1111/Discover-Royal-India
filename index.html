@@ -25,19 +25,19 @@
         <div
           class="slide active"
           style="
-            background-image: url('images/hero-taj-mahal.png');
+            background-image: url('/images/banner/banner1.png');
           "
         ></div>
         <div
           class="slide"
           style="
-            background-image: url('images/hero-jaipur.png');
+            background-image: url('/images//banner/banner2.png');
           "
         ></div>
         <div
           class="slide"
           style="
-            background-image: url('images/hero-kerala.png');
+            background-image: url('/images/banner/banner3.png');
           "
         ></div>
       </div>
@@ -74,55 +74,70 @@
           <!-- Tour Details Row (Hotel, Days, Date, Adults, Child) -->
           <div class="form-row tour-details-row">
             <div class="form-col col-hotel">
-              <select class="quote-input" required>
-                <option value="" disabled selected>Select Hotel*</option>
-                <option value="standard">Standard (3 Star)</option>
-                <option value="first-class">First Class (4 Star)</option>
-                <option value="deluxe">Deluxe (5 Star)</option>
-                <option value="luxury">Luxury</option>
-              </select>
+              <div class="input-group-wrapper">
+                <select class="quote-input" required>
+                  <option value="" disabled selected>Select Hotel*</option>
+                  <option value="standard">Standard (3 Star)</option>
+                  <option value="first-class">First Class (4 Star)</option>
+                  <option value="deluxe">Deluxe (5 Star)</option>
+                  <option value="luxury">Luxury</option>
+                </select>
+                <i class="ri-hotel-bed-line"></i>
+              </div>
             </div>
             <div class="form-col col-days">
-              <select class="quote-input" required>
-                <option value="" disabled selected>No of Days*</option>
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-                <option value="6">6</option>
-                <option value="7">7</option>
-                <option value="8">8</option>
-                <option value="9">9</option>
-                <option value="10">10</option>
-                <option value="11">11</option>
-                <option value="12">12</option>
-                <option value="13">13</option>
-                <option value="14">14</option>
-                <option value="15">15</option>
-              </select>
+              <div class="input-group-wrapper">
+                <select class="quote-input" required>
+                  <option value="" disabled selected>No of Days*</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                  <option value="8">8</option>
+                  <option value="9">9</option>
+                  <option value="10">10</option>
+                  <option value="11">11</option>
+                  <option value="12">12</option>
+                  <option value="13">13</option>
+                  <option value="14">14</option>
+                  <option value="15">15</option>
+                </select>
+                <i class="ri-calendar-todo-line"></i>
+              </div>
             </div>
             <div class="form-col col-date">
-              <input type="date" class="quote-input" value="2026-11-08" required>
+              <div class="input-group-wrapper">
+                <input type="date" class="quote-input" value="2026-11-08" required>
+                <i class="ri-calendar-line"></i>
+              </div>
             </div>
             <div class="form-col col-adults">
-              <select class="quote-input" required>
-                <option value="" disabled selected>Adults*</option>
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5+</option>
-              </select>
+              <div class="input-group-wrapper">
+                <select class="quote-input" required>
+                  <option value="" disabled selected>Adults*</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5+</option>
+                </select>
+                <i class="ri-group-line"></i>
+              </div>
             </div>
             <div class="form-col col-child">
-              <select class="quote-input">
-                <option value="" selected>Child</option>
-                <option value="0">0</option>
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3+</option>
-              </select>
+              <div class="input-group-wrapper">
+                <select class="quote-input">
+                  <option value="" selected>Child</option>
+                  <option value="0">0</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3+</option>
+                </select>
+                <i class="ri-user-smile-line"></i>
+              </div>
             </div>
           </div>
 
@@ -132,50 +147,65 @@
           <!-- Contact Details Row (Name, Country, Phone, Email) -->
           <div class="form-row contact-details-row">
             <div class="form-col col-name">
-              <input type="text" class="quote-input" placeholder="Your Name*" required>
+              <div class="input-group-wrapper">
+                <input type="text" class="quote-input" placeholder="Your Name*" required>
+                <i class="ri-user-3-line"></i>
+              </div>
             </div>
             <div class="form-col col-country">
-              <select class="quote-input" required>
-                <option value="" disabled selected>Your Country*</option>
-                <option value="United States">United States</option>
-                <option value="United Kingdom">United Kingdom</option>
-                <option value="India">India</option>
-                <option value="Canada">Canada</option>
-                <option value="Australia">Australia</option>
-                <option value="Germany">Germany</option>
-                <option value="France">France</option>
-                <option value="Afghanistan">Afghanistan</option>
-                <option value="Albania">Albania</option>
-                <option value="Algeria">Algeria</option>
-                <option value="Andorra">Andorra</option>
-                <option value="Angola">Angola</option>
-                <option value="Antigua and Barbuda">Antigua and Barbuda</option>
-                <option value="Argentina">Argentina</option>
-                <option value="Armenia">Armenia</option>
-                <option value="Austria">Austria</option>
-                <option value="Azerbaijan">Azerbaijan</option>
-                <option value="Bahamas">Bahamas</option>
-                <option value="Bahrain">Bahrain</option>
-                <option value="Bangladesh">Bangladesh</option>
-                <option value="Barbados">Barbados</option>
-                <option value="Belarus">Belarus</option>
-                <option value="Belgium">Belgium</option>
-                <option value="Belize">Belize</option>
-                <option value="Benin">Benin</option>
-              </select>
+              <div class="input-group-wrapper">
+                <select class="quote-input" required>
+                  <option value="" disabled selected>Your Country*</option>
+                  <option value="United States">United States</option>
+                  <option value="United Kingdom">United Kingdom</option>
+                  <option value="India">India</option>
+                  <option value="Canada">Canada</option>
+                  <option value="Australia">Australia</option>
+                  <option value="Germany">Germany</option>
+                  <option value="France">France</option>
+                  <option value="Afghanistan">Afghanistan</option>
+                  <option value="Albania">Albania</option>
+                  <option value="Algeria">Algeria</option>
+                  <option value="Andorra">Andorra</option>
+                  <option value="Angola">Angola</option>
+                  <option value="Antigua and Barbuda">Antigua and Barbuda</option>
+                  <option value="Argentina">Argentina</option>
+                  <option value="Armenia">Armenia</option>
+                  <option value="Austria">Austria</option>
+                  <option value="Azerbaijan">Azerbaijan</option>
+                  <option value="Bahamas">Bahamas</option>
+                  <option value="Bahrain">Bahrain</option>
+                  <option value="Bangladesh">Bangladesh</option>
+                  <option value="Barbados">Barbados</option>
+                  <option value="Belarus">Belarus</option>
+                  <option value="Belgium">Belgium</option>
+                  <option value="Belize">Belize</option>
+                  <option value="Benin">Benin</option>
+                </select>
+                <i class="ri-earth-line"></i>
+              </div>
             </div>
             <div class="form-col col-phone">
-              <input type="text" class="quote-input" placeholder="Phone Number*" required>
+              <div class="input-group-wrapper">
+                <input type="text" class="quote-input" placeholder="Phone Number*" required>
+                <i class="ri-phone-line"></i>
+              </div>
             </div>
             <div class="form-col col-email">
-              <input type="email" class="quote-input" placeholder="Email address*" required>
+              <div class="input-group-wrapper">
+                <input type="email" class="quote-input" placeholder="Email address*" required>
+                <i class="ri-mail-line"></i>
+              </div>
             </div>
           </div>
 
           <!-- Requirements & Action Row -->
           <div class="form-row footer-row">
             <div class="form-col col-req">
-              <textarea class="quote-textarea" placeholder="Other Tour Requirements"></textarea>
+              <div class="input-group-wrapper textarea-group">
+                <textarea class="quote-textarea" placeholder="Other Tour Requirements"></textarea>
+                <i class="ri-chat-4-line"></i>
+              </div>
             </div>
             <div class="form-col col-submit">
               <div class="privacy-notes">
@@ -197,13 +227,13 @@
         <div class="about-image-collage">
           <div class="about-img-wrapper main-img">
             <img
-              src="images/about-palace.png"
+              src="/images/about-img.png"
               alt="Royal Palace Courtyard"
             />
           </div>
           <div class="about-img-wrapper offset-img">
             <img
-              src="images/about-lake.png"
+              src="/images/about-img2.png"
               alt="Lake Palace Udaipur"
             />
           </div>
@@ -250,9 +280,12 @@
             </div>
           </div>
 
-          <a href="about-us.html" class="about-cta-btn"
-            >Read Our Story <i class="ri-arrow-right-line"></i
-          ></a>
+          <div class="about-actions-group">
+            <a href="about-us.html" class="about-cta-btn">Read Our Story <i class="ri-arrow-right-line"></i></a>
+            <a href="https://wa.me/919289990112" class="about-whatsapp-btn" target="_blank" rel="noopener noreferrer">
+              <i class="ri-whatsapp-line"></i> Chat on WhatsApp
+            </a>
+          </div>
         </div>
     </section>
 
@@ -273,7 +306,7 @@
                 <linearGradient id="roadGrad" x1="0%" y1="0%" x2="100%" y2="0%">
                   <stop offset="0%" stop-color="#3b82f6" />
                   <stop offset="50%" stop-color="#8b5cf6" />
-                  <stop offset="100%" stop-color="#ff6b00" />
+                  <stop offset="100%" stop-color="#d93f21" />
                 </linearGradient>
               </defs>
             </svg>
@@ -337,85 +370,137 @@
         <div class="categories-slider-wrapper" id="categoriesSliderWrapper">
           <div class="categories-slider" id="categoriesSlider">
             <!-- Card 1: Golden Triangle -->
-            <div class="category-card">
-              <img src="https://images.unsplash.com/photo-1564507592333-c60657eea523?auto=format&fit=crop&w=500&q=80" alt="Golden Triangle">
+            <a href="#" class="category-card">
+              <img src="/images/india-tours/GoldenTriangle.avif" alt="Golden Triangle">
               <div class="card-overlay"></div>
-              <div class="card-content">
-                <h3>Golden Triangle</h3>
-                <span>3 Tours</span>
-              </div>
-              <div class="card-arrow"><i class="ri-arrow-right-line"></i></div>
-            </div>
-            <!-- Card 2: Rajasthan Heritage -->
-            <div class="category-card">
-              <img src="https://images.unsplash.com/photo-1599661046289-e31897846e41?auto=format&fit=crop&w=500&q=80" alt="Rajasthan Heritage">
+              <h3>GOLDEN TRIANGLE</h3>
+            </a>
+            <!-- Card 2: First Timer Tours -->
+            <a href="#" class="category-card">
+              <img src="/images/india-tours/FirstTimerIndiaTours.avif" alt="First Timer Tours">
               <div class="card-overlay"></div>
-              <div class="card-content">
-                <h3>Rajasthan</h3>
-                <span>5 Tours</span>
-              </div>
-              <div class="card-arrow"><i class="ri-arrow-right-line"></i></div>
-            </div>
-            <!-- Card 3: Kerala Backwaters -->
-            <div class="category-card">
-              <img src="https://images.unsplash.com/photo-1593693397690-362cb9666fc2?auto=format&fit=crop&w=500&q=80" alt="Kerala Backwaters">
+              <h3>FIRST TIMER TOURS</h3>
+            </a>
+            <!-- Card 3: Rajasthan -->
+            <a href="rajasthan-tours.html" class="category-card">
+              <img src="/images/india-tours/Rajasthan.avif" alt="Rajasthan">
               <div class="card-overlay"></div>
-              <div class="card-content">
-                <h3>Kerala Tours</h3>
-                <span>4 Tours</span>
-              </div>
-              <div class="card-arrow"><i class="ri-arrow-right-line"></i></div>
-            </div>
-            <!-- Card 4: Varanasi Spiritual -->
-            <div class="category-card">
-              <img src="https://images.unsplash.com/photo-1561361513-2d000a50f0db?auto=format&fit=crop&w=500&q=80" alt="Varanasi Spiritual">
+              <h3>RAJASTHAN</h3>
+            </a>
+            <!-- Card 4: Jaipur -->
+            <a href="#" class="category-card">
+              <img src="/images/india-tours/Jaipur.avif" alt="Jaipur">
               <div class="card-overlay"></div>
-              <div class="card-content">
-                <h3>Varanasi</h3>
-                <span>2 Tours</span>
-              </div>
-              <div class="card-arrow"><i class="ri-arrow-right-line"></i></div>
-            </div>
-            <!-- Card 5: Ladakh Adventure -->
-            <div class="category-card">
-              <img src="https://images.unsplash.com/photo-1598091383021-15ddea10925d?auto=format&fit=crop&w=500&q=80" alt="Ladakh Adventure">
+              <h3>JAIPUR</h3>
+            </a>
+            <!-- Card 5: Udaipur -->
+            <a href="#" class="category-card">
+              <img src="/images/india-tours/Udaipur.avif" alt="Udaipur">
               <div class="card-overlay"></div>
-              <div class="card-content">
-                <h3>Ladakh</h3>
-                <span>2 Tours</span>
-              </div>
-              <div class="card-arrow"><i class="ri-arrow-right-line"></i></div>
-            </div>
-            <!-- Card 6: Goa Beaches -->
-            <div class="category-card">
-              <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=500&q=80" alt="Goa Beaches">
+              <h3>UDAIPUR</h3>
+            </a>
+            <!-- Card 6: Delhi -->
+            <a href="#" class="category-card">
+              <img src="/images/india-tours/Dehli.avif" alt="Delhi">
               <div class="card-overlay"></div>
-              <div class="card-content">
-                <h3>Goa Beaches</h3>
-                <span>3 Tours</span>
-              </div>
-              <div class="card-arrow"><i class="ri-arrow-right-line"></i></div>
-            </div>
-            <!-- Card 7: Wildlife Safaris -->
-            <div class="category-card">
-              <img src="https://images.unsplash.com/photo-1602491453631-e2a5ad90a131?auto=format&fit=crop&w=500&q=80" alt="Wildlife Safaris">
+              <h3>DELHI</h3>
+            </a>
+            <!-- Card 7: Agra -->
+            <a href="#" class="category-card">
+              <img src="/images/india-tours/Agra.avif" alt="Agra">
               <div class="card-overlay"></div>
-              <div class="card-content">
-                <h3>Wildlife Tours</h3>
-                <span>3 Tours</span>
-              </div>
-              <div class="card-arrow"><i class="ri-arrow-right-line"></i></div>
-            </div>
-            <!-- Card 8: Luxury Train -->
-            <div class="category-card">
-              <img src="https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=500&q=80" alt="Luxury Train">
+              <h3>AGRA</h3>
+            </a>
+            <!-- Card 8: Uttarakhand -->
+            <a href="#" class="category-card">
+              <img src="/images/india-tours/Uttarakhand.jpg" alt="Uttarakhand">
               <div class="card-overlay"></div>
-              <div class="card-content">
-                <h3>Luxury Train</h3>
-                <span>2 Tours</span>
-              </div>
-              <div class="card-arrow"><i class="ri-arrow-right-line"></i></div>
-            </div>
+              <h3>UTTRAKHAND</h3>
+            </a>
+            <!-- Card 9: Haridwar & Rishikesh -->
+            <a href="#" class="category-card">
+              <img src="/images/india-tours/Haridwar&Rishikesh.jpg" alt="Haridwar & Rishikesh">
+              <div class="card-overlay"></div>
+              <h3>HARIDWAR & RISHIKESH</h3>
+            </a>
+            <!-- Card 10: Varanasi -->
+            <a href="#" class="category-card">
+              <img src="/images/india-tours/Varanasi.jpg" alt="Varanasi">
+              <div class="card-overlay"></div>
+              <h3>VARANASI</h3>
+            </a>
+            <!-- Card 11: Himachal -->
+            <a href="#" class="category-card">
+              <img src="/images/india-tours/Himachal.jpg" alt="Himachal">
+              <div class="card-overlay"></div>
+              <h3>HIMACHAL</h3>
+            </a>
+            <!-- Card 12: Ladakh -->
+            <a href="ladakh-tours.html" class="category-card">
+              <img src="/images/india-tours/Ladakh.avif" alt="Ladakh">
+              <div class="card-overlay"></div>
+              <h3>LADAKH</h3>
+            </a>
+            <!-- Card 13: Kerala -->
+            <a href="south-india-tours.html" class="category-card">
+              <img src="/images/india-tours/Kerala.avif" alt="Kerala">
+              <div class="card-overlay"></div>
+              <h3>KERALA</h3>
+            </a>
+            <!-- Card 14: Tamil Nadu -->
+            <a href="#" class="category-card">
+              <img src="/images/india-tours/TamilNadu.avif" alt="Tamil Nadu">
+              <div class="card-overlay"></div>
+              <h3>TAMIL NADU</h3>
+            </a>
+            <!-- Card 15: Karnataka -->
+            <a href="#" class="category-card">
+              <img src="/images/india-tours/Karnataka.jpg" alt="Karnataka">
+              <div class="card-overlay"></div>
+              <h3>KARNATAKA</h3>
+            </a>
+            <!-- Card 16: Gujarat -->
+            <a href="#" class="category-card">
+              <img src="/images/india-tours/Gujarat.avif" alt="Gujarat">
+              <div class="card-overlay"></div>
+              <h3>GUJARAT</h3>
+            </a>
+            <!-- Card 17: Goa -->
+            <a href="#" class="category-card">
+              <img src="/images/india-tours/Goa.avif" alt="Goa">
+              <div class="card-overlay"></div>
+              <h3>GOA</h3>
+            </a>
+            <!-- Card 18: Mumbai -->
+            <a href="#" class="category-card">
+              <img src="/images/india-tours/Mumbai.avif" alt="Mumbai">
+              <div class="card-overlay"></div>
+              <h3>MUMBAI</h3>
+            </a>
+            <!-- Card 19: Madhya Pradesh -->
+            <a href="#" class="category-card">
+              <img src="/images/india-tours/MadhyaPradesh.jpg" alt="Madhya Pradesh">
+              <div class="card-overlay"></div>
+              <h3>MADHYA PRADESH</h3>
+            </a>
+            <!-- Card 20: Wildlife Tours -->
+            <a href="#" class="category-card">
+              <img src="/images/india-tours/WildlifeTours.avif" alt="Wildlife Tours">
+              <div class="card-overlay"></div>
+              <h3>WILDLIFE TOURS</h3>
+            </a>
+            <!-- Card 21: Luxury Train -->
+            <a href="#" class="category-card">
+              <img src="/images/india-tours/LuxuryTrain.jpg" alt="Luxury Train">
+              <div class="card-overlay"></div>
+              <h3>LUXURY TRAIN</h3>
+            </a>
+            <!-- Card 22: Family Tours -->
+            <a href="#" class="category-card">
+              <img src="/images/india-tours/FamilyTours.avif" alt="Family Tours">
+              <div class="card-overlay"></div>
+              <h3>FAMILY TOURS</h3>
+            </a>
           </div>
         </div>
 
@@ -424,6 +509,8 @@
           <span class="nav-dot active" data-slide="0"></span>
           <span class="nav-dot" data-slide="1"></span>
           <span class="nav-dot" data-slide="2"></span>
+          <span class="nav-dot" data-slide="3"></span>
+          <span class="nav-dot" data-slide="4"></span>
         </div>
       </div>
     </section>
@@ -439,12 +526,9 @@
             <i class="ri-plane-fill plane-icon"></i>
             <span class="line"></span>
           </div>
-          <div class="theme-desc-wrapper">
             <p class="theme-desc" id="themeDesc">
               Planning to visit India with our popular India holiday packages, tailored to various themes. Our pride lies in delivering unparalleled holidays that unveil India's rich heritage, diverse culture, and famous monuments. Our India tours packages cater to a spectrum of themes – wildlife tours, golden triangle tours, family holidays, luxury trains and more. Whether you crave opulence, historical exploration, or pristine nature, we have the perfect itinerary.
             </p>
-            <button class="read-more-btn" id="themeReadMoreToggle">Read More <i class="ri-arrow-down-s-line"></i></button>
-          </div>
         </div>
 
         <div class="theme-slider-outer">
@@ -577,9 +661,10 @@
                 <span class="tour-duration"><i class="ri-time-line"></i> 14 Nights / 15 Days</span>
                 <span class="tour-guests"><i class="ri-user-line"></i> Max 12 Guests</span>
               </div>
-              <div class="tour-actions">
+              <div class="tour-actions three-buttons">
                 <a href="#quote-form" class="action-btn enquiry-btn">Send Enquiry</a>
                 <a href="#" class="action-btn details-btn">View Details</a>
+                <a href="https://wa.me/919289990112?text=Hi%2C%20I%20am%20interested%20in%20the%20India%20First%20Timer%20Tour%20package." class="action-btn whatsapp-btn" target="_blank" rel="noopener noreferrer"><i class="ri-whatsapp-line"></i> WhatsApp</a>
               </div>
             </div>
           </div>
@@ -619,9 +704,10 @@
                 <span class="tour-duration"><i class="ri-time-line"></i> 07 Nights / 08 Days</span>
                 <span class="tour-guests"><i class="ri-user-line"></i> Max 10 Guests</span>
               </div>
-              <div class="tour-actions">
+              <div class="tour-actions three-buttons">
                 <a href="#quote-form" class="action-btn enquiry-btn">Send Enquiry</a>
                 <a href="#" class="action-btn details-btn">View Details</a>
+                <a href="https://wa.me/919289990112?text=Hi%2C%20I%20am%20interested%20in%20the%20Golden%20Triangle%20%26%20Tiger%20Tour%20package." class="action-btn whatsapp-btn" target="_blank" rel="noopener noreferrer"><i class="ri-whatsapp-line"></i> WhatsApp</a>
               </div>
             </div>
           </div>
@@ -661,9 +747,10 @@
                 <span class="tour-duration"><i class="ri-time-line"></i> 05 Nights / 06 Days</span>
                 <span class="tour-guests"><i class="ri-user-line"></i> Max 12 Guests</span>
               </div>
-              <div class="tour-actions">
+              <div class="tour-actions three-buttons">
                 <a href="#quote-form" class="action-btn enquiry-btn">Send Enquiry</a>
                 <a href="#" class="action-btn details-btn">View Details</a>
+                <a href="https://wa.me/919289990112?text=Hi%2C%20I%20am%20interested%20in%20the%20Golden%20Triangle%20Tour%20package." class="action-btn whatsapp-btn" target="_blank" rel="noopener noreferrer"><i class="ri-whatsapp-line"></i> WhatsApp</a>
               </div>
             </div>
           </div>
@@ -703,9 +790,10 @@
                 <span class="tour-duration"><i class="ri-time-line"></i> 09 Nights / 10 Days</span>
                 <span class="tour-guests"><i class="ri-user-line"></i> Max 12 Guests</span>
               </div>
-              <div class="tour-actions">
+              <div class="tour-actions three-buttons">
                 <a href="#quote-form" class="action-btn enquiry-btn">Send Enquiry</a>
                 <a href="#" class="action-btn details-btn">View Details</a>
+                <a href="https://wa.me/919289990112?text=Hi%2C%20I%20am%20interested%20in%20the%20Colour%20Full%20Rajasthan%20Tour%20package." class="action-btn whatsapp-btn" target="_blank" rel="noopener noreferrer"><i class="ri-whatsapp-line"></i> WhatsApp</a>
               </div>
             </div>
           </div>
@@ -745,9 +833,10 @@
                 <span class="tour-duration"><i class="ri-time-line"></i> 12 Nights / 13 Days</span>
                 <span class="tour-guests"><i class="ri-user-line"></i> Max 10 Guests</span>
               </div>
-              <div class="tour-actions">
+              <div class="tour-actions three-buttons">
                 <a href="#quote-form" class="action-btn enquiry-btn">Send Enquiry</a>
                 <a href="#" class="action-btn details-btn">View Details</a>
+                <a href="https://wa.me/919289990112?text=Hi%2C%20I%20am%20interested%20in%20the%20Rajasthan%20Forts%20%26%20Palaces%20package." class="action-btn whatsapp-btn" target="_blank" rel="noopener noreferrer"><i class="ri-whatsapp-line"></i> WhatsApp</a>
               </div>
             </div>
           </div>
@@ -787,9 +876,10 @@
                 <span class="tour-duration"><i class="ri-time-line"></i> 15 Nights / 16 Days</span>
                 <span class="tour-guests"><i class="ri-user-line"></i> Max 12 Guests</span>
               </div>
-              <div class="tour-actions">
+              <div class="tour-actions three-buttons">
                 <a href="#quote-form" class="action-btn enquiry-btn">Send Enquiry</a>
                 <a href="#" class="action-btn details-btn">View Details</a>
+                <a href="https://wa.me/919289990112?text=Hi%2C%20I%20am%20interested%20in%20the%20Taj%20Mahal%20%26%20Ganges%20Tour%20package." class="action-btn whatsapp-btn" target="_blank" rel="noopener noreferrer"><i class="ri-whatsapp-line"></i> WhatsApp</a>
               </div>
             </div>
           </div>
@@ -829,9 +919,10 @@
                 <span class="tour-duration"><i class="ri-time-line"></i> 14 Nights / 15 Days</span>
                 <span class="tour-guests"><i class="ri-user-line"></i> Max 10 Guests</span>
               </div>
-              <div class="tour-actions">
+              <div class="tour-actions three-buttons">
                 <a href="#quote-form" class="action-btn enquiry-btn">Send Enquiry</a>
                 <a href="#" class="action-btn details-btn">View Details</a>
+                <a href="https://wa.me/919289990112?text=Hi%2C%20I%20am%20interested%20in%20the%20North%20India%20%26%20Nepal%20Tour%20package." class="action-btn whatsapp-btn" target="_blank" rel="noopener noreferrer"><i class="ri-whatsapp-line"></i> WhatsApp</a>
               </div>
             </div>
           </div>
@@ -871,9 +962,10 @@
                 <span class="tour-duration"><i class="ri-time-line"></i> 07 Nights / 08 Days</span>
                 <span class="tour-guests"><i class="ri-user-line"></i> Max 12 Guests</span>
               </div>
-              <div class="tour-actions">
+              <div class="tour-actions three-buttons">
                 <a href="#quote-form" class="action-btn enquiry-btn">Send Enquiry</a>
                 <a href="#" class="action-btn details-btn">View Details</a>
+                <a href="https://wa.me/919289990112?text=Hi%2C%20I%20am%20interested%20in%20the%20Paradise%20Of%20The%20South%20package." class="action-btn whatsapp-btn" target="_blank" rel="noopener noreferrer"><i class="ri-whatsapp-line"></i> WhatsApp</a>
               </div>
             </div>
           </div>
@@ -913,9 +1005,10 @@
                 <span class="tour-duration"><i class="ri-time-line"></i> 09 Nights / 10 Days</span>
                 <span class="tour-guests"><i class="ri-user-line"></i> Max 8 Guests</span>
               </div>
-              <div class="tour-actions">
+              <div class="tour-actions three-buttons">
                 <a href="#quote-form" class="action-btn enquiry-btn">Send Enquiry</a>
                 <a href="#" class="action-btn details-btn">View Details</a>
+                <a href="https://wa.me/919289990112?text=Hi%2C%20I%20am%20interested%20in%20the%20In%20Search%20Of%20Big%20Cat%20package." class="action-btn whatsapp-btn" target="_blank" rel="noopener noreferrer"><i class="ri-whatsapp-line"></i> WhatsApp</a>
               </div>
             </div>
           </div>
@@ -969,9 +1062,10 @@
                 <span class="tour-duration"><i class="ri-time-line"></i> 09 Nights / 10 Days</span>
                 <span class="tour-guests"><i class="ri-user-line"></i> Max 12 Guests</span>
               </div>
-              <div class="tour-actions">
+              <div class="tour-actions three-buttons">
                 <a href="#quote-form" class="action-btn enquiry-btn">Send Enquiry</a>
                 <a href="#" class="action-btn details-btn">View Details</a>
+                <a href="https://wa.me/919289990112?text=Hi%2C%20I%20am%20interested%20in%20the%20Colour%20Full%20Rajasthan%20Tour%20package." class="action-btn whatsapp-btn" target="_blank" rel="noopener noreferrer"><i class="ri-whatsapp-line"></i> WhatsApp</a>
               </div>
             </div>
           </div>
@@ -1006,9 +1100,10 @@
                 <span class="tour-duration"><i class="ri-time-line"></i> 13 Nights / 14 Days</span>
                 <span class="tour-guests"><i class="ri-user-line"></i> Max 10 Guests</span>
               </div>
-              <div class="tour-actions">
+              <div class="tour-actions three-buttons">
                 <a href="#quote-form" class="action-btn enquiry-btn">Send Enquiry</a>
                 <a href="#" class="action-btn details-btn">View Details</a>
+                <a href="https://wa.me/919289990112?text=Hi%2C%20I%20am%20interested%20in%20the%20Royal%20Rajasthan%20Tour%20package." class="action-btn whatsapp-btn" target="_blank" rel="noopener noreferrer"><i class="ri-whatsapp-line"></i> WhatsApp</a>
               </div>
             </div>
           </div>
@@ -1043,9 +1138,10 @@
                 <span class="tour-duration"><i class="ri-time-line"></i> 12 Nights / 13 Days</span>
                 <span class="tour-guests"><i class="ri-user-line"></i> Max 12 Guests</span>
               </div>
-              <div class="tour-actions">
+              <div class="tour-actions three-buttons">
                 <a href="#quote-form" class="action-btn enquiry-btn">Send Enquiry</a>
                 <a href="#" class="action-btn details-btn">View Details</a>
+                <a href="https://wa.me/919289990112?text=Hi%2C%20I%20am%20interested%20in%20the%20Rajasthan%20Forts%20%26%20Palaces%20package." class="action-btn whatsapp-btn" target="_blank" rel="noopener noreferrer"><i class="ri-whatsapp-line"></i> WhatsApp</a>
               </div>
             </div>
           </div>
@@ -1102,9 +1198,10 @@
                 <span class="tour-duration"><i class="ri-time-line"></i> 05 Nights / 06 Days</span>
                 <span class="tour-guests"><i class="ri-user-line"></i> Max 12 Guests</span>
               </div>
-              <div class="tour-actions">
+              <div class="tour-actions three-buttons">
                 <a href="#quote-form" class="action-btn enquiry-btn">Send Enquiry</a>
                 <a href="#" class="action-btn details-btn">View Details</a>
+                <a href="https://wa.me/919289990112?text=Hi%2C%20I%20am%20interested%20in%20the%20Golden%20Triangle%20Tour%20package." class="action-btn whatsapp-btn" target="_blank" rel="noopener noreferrer"><i class="ri-whatsapp-line"></i> WhatsApp</a>
               </div>
             </div>
           </div>
@@ -1139,9 +1236,10 @@
                 <span class="tour-duration"><i class="ri-time-line"></i> 07 Nights / 08 Days</span>
                 <span class="tour-guests"><i class="ri-user-line"></i> Max 10 Guests</span>
               </div>
-              <div class="tour-actions">
+              <div class="tour-actions three-buttons">
                 <a href="#quote-form" class="action-btn enquiry-btn">Send Enquiry</a>
                 <a href="#" class="action-btn details-btn">View Details</a>
+                <a href="https://wa.me/919289990112?text=Hi%2C%20I%20am%20interested%20in%20the%20Golden%20Triangle%20%26%20Ranthambore%20package." class="action-btn whatsapp-btn" target="_blank" rel="noopener noreferrer"><i class="ri-whatsapp-line"></i> WhatsApp</a>
               </div>
             </div>
           </div>
@@ -1176,9 +1274,10 @@
                 <span class="tour-duration"><i class="ri-time-line"></i> 15 Nights / 16 Days</span>
                 <span class="tour-guests"><i class="ri-user-line"></i> Max 12 Guests</span>
               </div>
-              <div class="tour-actions">
+              <div class="tour-actions three-buttons">
                 <a href="#quote-form" class="action-btn enquiry-btn">Send Enquiry</a>
                 <a href="#" class="action-btn details-btn">View Details</a>
+                <a href="https://wa.me/919289990112?text=Hi%2C%20I%20am%20interested%20in%20the%20North%20India%20%26%20Varanasi%20Tour%20package." class="action-btn whatsapp-btn" target="_blank" rel="noopener noreferrer"><i class="ri-whatsapp-line"></i> WhatsApp</a>
               </div>
             </div>
           </div>
@@ -1235,9 +1334,10 @@
                 <span class="tour-duration"><i class="ri-time-line"></i> 14 Nights / 15 Days</span>
                 <span class="tour-guests"><i class="ri-user-line"></i> Max 12 Guests</span>
               </div>
-              <div class="tour-actions">
+              <div class="tour-actions three-buttons">
                 <a href="#quote-form" class="action-btn enquiry-btn">Send Enquiry</a>
                 <a href="#" class="action-btn details-btn">View Details</a>
+                <a href="https://wa.me/919289990112?text=Hi%2C%20I%20am%20interested%20in%20the%20Historical%20Palaces%20%26%20Havelis%20package." class="action-btn whatsapp-btn" target="_blank" rel="noopener noreferrer"><i class="ri-whatsapp-line"></i> WhatsApp</a>
               </div>
             </div>
           </div>
@@ -1272,9 +1372,10 @@
                 <span class="tour-duration"><i class="ri-time-line"></i> 14 Nights / 15 Days</span>
                 <span class="tour-guests"><i class="ri-user-line"></i> Max 10 Guests</span>
               </div>
-              <div class="tour-actions">
+              <div class="tour-actions three-buttons">
                 <a href="#quote-form" class="action-btn enquiry-btn">Send Enquiry</a>
                 <a href="#" class="action-btn details-btn">View Details</a>
+                <a href="https://wa.me/919289990112?text=Hi%2C%20I%20am%20interested%20in%20the%20North%20India%20%26%20Nepal%20Tour%20package." class="action-btn whatsapp-btn" target="_blank" rel="noopener noreferrer"><i class="ri-whatsapp-line"></i> WhatsApp</a>
               </div>
             </div>
           </div>
@@ -1309,9 +1410,10 @@
                 <span class="tour-duration"><i class="ri-time-line"></i> 15 Nights / 16 Days</span>
                 <span class="tour-guests"><i class="ri-user-line"></i> Max 12 Guests</span>
               </div>
-              <div class="tour-actions">
+              <div class="tour-actions three-buttons">
                 <a href="#quote-form" class="action-btn enquiry-btn">Send Enquiry</a>
                 <a href="#" class="action-btn details-btn">View Details</a>
+                <a href="https://wa.me/919289990112?text=Hi%2C%20I%20am%20interested%20in%20the%20North%20India%20%26%20Ganges%20Tour%20package." class="action-btn whatsapp-btn" target="_blank" rel="noopener noreferrer"><i class="ri-whatsapp-line"></i> WhatsApp</a>
               </div>
             </div>
           </div>
@@ -1368,9 +1470,10 @@
                 <span class="tour-duration"><i class="ri-time-line"></i> 07 Nights / 08 Days</span>
                 <span class="tour-guests"><i class="ri-user-line"></i> Max 12 Guests</span>
               </div>
-              <div class="tour-actions">
+              <div class="tour-actions three-buttons">
                 <a href="#quote-form" class="action-btn enquiry-btn">Send Enquiry</a>
                 <a href="#" class="action-btn details-btn">View Details</a>
+                <a href="https://wa.me/919289990112?text=Hi%2C%20I%20am%20interested%20in%20the%20Paradise%20Of%20The%20South%20package." class="action-btn whatsapp-btn" target="_blank" rel="noopener noreferrer"><i class="ri-whatsapp-line"></i> WhatsApp</a>
               </div>
             </div>
           </div>
@@ -1405,9 +1508,10 @@
                 <span class="tour-duration"><i class="ri-time-line"></i> 10 Nights / 11 Days</span>
                 <span class="tour-guests"><i class="ri-user-line"></i> Max 8 Guests</span>
               </div>
-              <div class="tour-actions">
+              <div class="tour-actions three-buttons">
                 <a href="#quote-form" class="action-btn enquiry-btn">Send Enquiry</a>
                 <a href="#" class="action-btn details-btn">View Details</a>
+                <a href="https://wa.me/919289990112?text=Hi%2C%20I%20am%20interested%20in%20the%20South%20India%20Bliss%20package." class="action-btn whatsapp-btn" target="_blank" rel="noopener noreferrer"><i class="ri-whatsapp-line"></i> WhatsApp</a>
               </div>
             </div>
           </div>
@@ -1442,9 +1546,10 @@
                 <span class="tour-duration"><i class="ri-time-line"></i> 09 Nights / 10 Days</span>
                 <span class="tour-guests"><i class="ri-user-line"></i> Max 12 Guests</span>
               </div>
-              <div class="tour-actions">
+              <div class="tour-actions three-buttons">
                 <a href="#quote-form" class="action-btn enquiry-btn">Send Enquiry</a>
                 <a href="#" class="action-btn details-btn">View Details</a>
+                <a href="https://wa.me/919289990112?text=Hi%2C%20I%20am%20interested%20in%20the%2010%20Days%20Kerala%20Package%20package." class="action-btn whatsapp-btn" target="_blank" rel="noopener noreferrer"><i class="ri-whatsapp-line"></i> WhatsApp</a>
               </div>
             </div>
           </div>
@@ -1833,6 +1938,25 @@
 
     <!-- Dynamic Footer Placeholder -->
     <div id="footer-placeholder"></div>
+
+    <!-- Floating Action Widgets -->
+    <!-- Left Side: Quick Contact Action Buttons (WhatsApp, Call, Book) -->
+    <div class="floating-left-actions">
+      <a href="https://wa.me/919289990112" target="_blank" rel="noopener noreferrer" class="floating-action-btn wa-float" title="Chat on WhatsApp">
+        <i class="ri-whatsapp-line"></i>
+      </a>
+      <a href="tel:+919289990112" class="floating-action-btn call-float" title="Call Us">
+        <i class="ri-phone-line"></i>
+      </a>
+      <a href="#quote-form" class="floating-action-btn book-float" title="Request Quote / Book">
+        <i class="ri-calendar-check-line"></i>
+      </a>
+    </div>
+
+    <!-- Right Side: Scroll To Top Button (Square Type) -->
+    <button class="scroll-to-top-btn" id="scrollToTopBtn" title="Scroll to Top">
+      <i class="ri-arrow-up-line"></i>
+    </button>
 
     <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
