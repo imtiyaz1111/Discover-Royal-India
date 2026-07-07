@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Discover Royal India</title>
+    <!-- Remix Icon for Premium Vector Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <!-- Main Style Sheet -->
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .page-header {
+            background: linear-gradient(135deg, var(--color-primary), #111e38);
+            padding: 160px 5% 80px;
+            text-align: center;
+            color: var(--color-text-light);
+        }
+        .page-header h1 {
+            font-family: var(--font-heading);
+            font-size: 3rem;
+            margin-bottom: 15px;
+        }
+        .contact-section {
+            max-width: 1100px;
+            margin: 60px auto;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+        }
+        .contact-info h2, .contact-form h2 {
+            font-family: var(--font-heading);
+            margin-bottom: 25px;
+            color: var(--color-primary);
+        }
+        .info-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+        .info-item i {
+            font-size: 1.5rem;
+            color: var(--color-accent);
+        }
+        .info-text h3 {
+            font-size: 1.1rem;
+            margin-bottom: 5px;
+            color: var(--color-primary);
+        }
+        .info-text p {
+            color: #64748b;
+        }
+        .c-form {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        .c-group {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+        .c-group label {
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: #64748b;
+        }
+        .c-input {
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            padding: 12px 15px;
+            font-size: 0.95rem;
+            width: 100%;
+        }
+        .c-input:focus {
+            border-color: var(--color-accent);
+        }
+        .c-btn {
+            background: linear-gradient(135deg, var(--color-secondary), var(--color-secondary-hover));
+            color: #ffffff;
+            font-weight: 700;
+            padding: 14px 30px;
+            border-radius: 8px;
+            cursor: pointer;
+            align-self: flex-start;
+            transition: var(--transition-smooth);
+        }
+        .c-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(244, 63, 94, 0.3);
+        }
+        @media (max-width: 768px) {
+            .contact-section {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Dynamic Navbar Placeholder -->
+    <div id="navbar-placeholder"></div>
+
+    <!-- Header Section -->
+    <section class="page-header">
+        <h1>Contact Our Concierge</h1>
+        <p>Get in touch to begin tailoring your exclusive Indian itinerary.</p>
+    </section>
+
+    <!-- Content Section -->
+    <main class="contact-section">
+        <div class="contact-info">
+            <h2>Reach Us Directly</h2>
+            <div class="info-item">
+                <i class="ri-phone-fill"></i>
+                <div class="info-text">
+                    <h3>Phone Support</h3>
+                    <p>+91 9289990112</p>
+                </div>
+            </div>
+            <div class="info-item">
+                <i class="ri-mail-fill"></i>
+                <div class="info-text">
+                    <h3>Email Address</h3>
+                    <p>info@discoverroyalindia.com</p>
+                </div>
+            </div>
+            <div class="info-item">
+                <i class="ri-map-pin-fill"></i>
+                <div class="info-text">
+                    <h3>Main Office</h3>
+                    <p>New Delhi, India</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="contact-form">
+            <h2>Send an Inquiry</h2>
+            <form class="c-form" onsubmit="event.preventDefault(); alert('Inquiry Sent! Our agent will contact you soon.');">
+                <div class="c-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" class="c-input" required placeholder="John Doe">
+                </div>
+                <div class="c-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" class="c-input" required placeholder="john@example.com">
+                </div>
+                <div class="c-group">
+                    <label for="msg">Your Message</label>
+                    <textarea id="msg" class="c-input" rows="4" required placeholder="Tell us about your dream trip..."></textarea>
+                </div>
+                <button type="submit" class="c-btn">Send Inquiry</button>
+            </form>
+        </div>
+    </main>
+
+    <!-- Dynamic Footer Placeholder -->
+    <div id="footer-placeholder"></div>
+
+    <!-- Main JavaScript File -->
+    <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,1842 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Discover Royal India | Luxury Travel & Packages</title>
+    <!-- Remix Icon for Premium Vector Icons -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <!-- Main Style Sheet -->
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- Dynamic Navbar Placeholder -->
+    <div id="navbar-placeholder"></div>
+
+    <!-- Hero Section -->
+    <main class="hero-section">
+      <!-- Hero Background Slider -->
+      <div class="hero-slider">
+        <div
+          class="slide active"
+          style="
+            background-image: url('images/hero-taj-mahal.png');
+          "
+        ></div>
+        <div
+          class="slide"
+          style="
+            background-image: url('images/hero-jaipur.png');
+          "
+        ></div>
+        <div
+          class="slide"
+          style="
+            background-image: url('images/hero-kerala.png');
+          "
+        ></div>
+      </div>
+      <div class="hero-overlay"></div>
+
+      <!-- Slider Vertical Dots Indicators -->
+      <div class="slider-dots">
+        <div class="dot active"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+      </div>
+
+      <!-- Hero Main Content -->
+      <div class="hero-content">
+        <h2 class="hero-subtitle">Experience Heritage & Splendor</h2>
+        <h1 class="hero-title">Discover <span>Royal India</span></h1>
+        <p class="hero-description">
+          Embark on an unforgettable bespoke journey through majestic palaces,
+          sacred temples, and vibrant landscapes custom-tailored for
+          international explorers.
+        </p>
+      </div>
+    </main>
+
+    <!-- Get Free Quote Form Wrapper -->
+    <section class="quote-form-wrapper">
+      <div class="quote-form-card">
+        <div class="quote-form-header">
+          <h2>Get Free Quote</h2>
+          <p>Just fill in the form and we will get back to you with a custom made tour plan.</p>
+        </div>
+        <form class="quote-form" onsubmit="event.preventDefault(); alert('Enquiry Sent! Our agent will contact you soon.');">
+          
+          <!-- Tour Details Row (Hotel, Days, Date, Adults, Child) -->
+          <div class="form-row tour-details-row">
+            <div class="form-col col-hotel">
+              <select class="quote-input" required>
+                <option value="" disabled selected>Select Hotel*</option>
+                <option value="standard">Standard (3 Star)</option>
+                <option value="first-class">First Class (4 Star)</option>
+                <option value="deluxe">Deluxe (5 Star)</option>
+                <option value="luxury">Luxury</option>
+              </select>
+            </div>
+            <div class="form-col col-days">
+              <select class="quote-input" required>
+                <option value="" disabled selected>No of Days*</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+                <option value="13">13</option>
+                <option value="14">14</option>
+                <option value="15">15</option>
+              </select>
+            </div>
+            <div class="form-col col-date">
+              <input type="date" class="quote-input" value="2026-11-08" required>
+            </div>
+            <div class="form-col col-adults">
+              <select class="quote-input" required>
+                <option value="" disabled selected>Adults*</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5+</option>
+              </select>
+            </div>
+            <div class="form-col col-child">
+              <select class="quote-input">
+                <option value="" selected>Child</option>
+                <option value="0">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3+</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Contact Details Header -->
+          <h3 class="contact-details-title">Contact Details</h3>
+
+          <!-- Contact Details Row (Name, Country, Phone, Email) -->
+          <div class="form-row contact-details-row">
+            <div class="form-col col-name">
+              <input type="text" class="quote-input" placeholder="Your Name*" required>
+            </div>
+            <div class="form-col col-country">
+              <select class="quote-input" required>
+                <option value="" disabled selected>Your Country*</option>
+                <option value="United States">United States</option>
+                <option value="United Kingdom">United Kingdom</option>
+                <option value="India">India</option>
+                <option value="Canada">Canada</option>
+                <option value="Australia">Australia</option>
+                <option value="Germany">Germany</option>
+                <option value="France">France</option>
+                <option value="Afghanistan">Afghanistan</option>
+                <option value="Albania">Albania</option>
+                <option value="Algeria">Algeria</option>
+                <option value="Andorra">Andorra</option>
+                <option value="Angola">Angola</option>
+                <option value="Antigua and Barbuda">Antigua and Barbuda</option>
+                <option value="Argentina">Argentina</option>
+                <option value="Armenia">Armenia</option>
+                <option value="Austria">Austria</option>
+                <option value="Azerbaijan">Azerbaijan</option>
+                <option value="Bahamas">Bahamas</option>
+                <option value="Bahrain">Bahrain</option>
+                <option value="Bangladesh">Bangladesh</option>
+                <option value="Barbados">Barbados</option>
+                <option value="Belarus">Belarus</option>
+                <option value="Belgium">Belgium</option>
+                <option value="Belize">Belize</option>
+                <option value="Benin">Benin</option>
+              </select>
+            </div>
+            <div class="form-col col-phone">
+              <input type="text" class="quote-input" placeholder="Phone Number*" required>
+            </div>
+            <div class="form-col col-email">
+              <input type="email" class="quote-input" placeholder="Email address*" required>
+            </div>
+          </div>
+
+          <!-- Requirements & Action Row -->
+          <div class="form-row footer-row">
+            <div class="form-col col-req">
+              <textarea class="quote-textarea" placeholder="Other Tour Requirements"></textarea>
+            </div>
+            <div class="form-col col-submit">
+              <div class="privacy-notes">
+                <p><i class="ri-check-line"></i> We assure the privacy of your contact data.</p>
+                <p><i class="ri-check-line"></i> This data will only be used by our team to contact you.</p>
+              </div>
+              <button type="submit" class="quote-submit-btn">SEND ENQUIRY</button>
+            </div>
+          </div>
+
+        </form>
+      </div>
+    </section>
+
+    <!-- Homepage About Us Section -->
+    <section class="home-about-section">
+      <div class="home-about-container">
+        <!-- Left Side: Interactive image collage -->
+        <div class="about-image-collage">
+          <div class="about-img-wrapper main-img">
+            <img
+              src="images/about-palace.png"
+              alt="Royal Palace Courtyard"
+            />
+          </div>
+          <div class="about-img-wrapper offset-img">
+            <img
+              src="images/about-lake.png"
+              alt="Lake Palace Udaipur"
+            />
+          </div>
+          <!-- Interactive experience badge -->
+          <div class="experience-badge">
+            <span class="badge-number">15+</span>
+            <span class="badge-text">Years of Curating Royal Journeys</span>
+          </div>
+        </div>
+
+        <!-- Right Side: Text details -->
+        <div class="about-text-content">
+          <span class="about-tag">WHO WE ARE</span>
+          <h2 class="about-heading">
+            Crafting Royal Journeys for the Discerning Traveler
+          </h2>
+          <p class="about-intro">
+            Discover Royal India is an elite travel coordinator dedicated to
+            crafting personalized, high-end travel experiences for international
+            explorers.
+          </p>
+          <p class="about-body">
+            We specialize in combining absolute luxury with authenticity,
+            ensuring that you don't just visit India, but experience it like
+            royalty. Every tour package is uniquely customized to suit your pace
+            and taste.
+          </p>
+
+          <!-- Quick features list -->
+          <div class="about-features">
+            <div class="feature-item">
+              <div class="feature-icon"><i class="ri-compass-3-line"></i></div>
+              <div class="feature-info">
+                <h4>Tailored Itineraries</h4>
+                <p>Bespoke travel routes matched to your preferences.</p>
+              </div>
+            </div>
+            <div class="feature-item">
+              <div class="feature-icon"><i class="ri-hotel-line"></i></div>
+              <div class="feature-info">
+                <h4>Luxury Stays</h4>
+                <p>Handpicked 5-star palaces, retreats & houseboats.</p>
+              </div>
+            </div>
+          </div>
+
+          <a href="about-us.html" class="about-cta-btn"
+            >Read Our Story <i class="ri-arrow-right-line"></i
+          ></a>
+        </div>
+    </section>
+
+    <!-- Benefits & Advantages Section -->
+    <section class="benefits-section" id="benefits">
+      <div class="benefits-container">
+        <div class="benefits-header">
+          <h2 class="benefits-title">Our <span class="underline-accent">Benefits</span> & Key Advantages</h2>
+          <p class="benefits-subtitle">Discover Royal India, a premier coordinator specializing in bespoke luxury journeys, offers a variety of benefits for travelers.</p>
+        </div>
+
+        <div class="benefits-road-wrapper">
+          <!-- Colorful connecting road path in background -->
+          <div class="benefits-road-line">
+            <svg viewBox="0 0 1200 80" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+              <path d="M0 40 Q 300 10, 600 40 T 1200 40" stroke="url(#roadGrad)" stroke-width="6" stroke-dasharray="10 15"/>
+              <defs>
+                <linearGradient id="roadGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+                  <stop offset="0%" stop-color="#3b82f6" />
+                  <stop offset="50%" stop-color="#8b5cf6" />
+                  <stop offset="100%" stop-color="#ff6b00" />
+                </linearGradient>
+              </defs>
+            </svg>
+          </div>
+
+          <div class="benefits-grid">
+            <!-- Benefit 1 -->
+            <div class="benefit-card">
+              <div class="benefit-icon icon-green">
+                <i class="ri-hotel-star-line"></i>
+              </div>
+              <h3>VIP Packages</h3>
+              <p>Includes 5-star palace stays, private guides, and exclusive entry passes to heritage landmarks.</p>
+            </div>
+
+            <!-- Benefit 2 -->
+            <div class="benefit-card">
+              <div class="benefit-icon icon-orange">
+                <i class="ri-compass-3-line"></i>
+              </div>
+              <h3>Bespoke Itineraries</h3>
+              <p>Customizable travel routes curated by our destination experts to match your personal interests.</p>
+            </div>
+
+            <!-- Benefit 3 -->
+            <div class="benefit-card">
+              <div class="benefit-icon icon-purple">
+                <i class="ri-customer-service-2-line"></i>
+              </div>
+              <h3>Seamless Logistics</h3>
+              <p>Bundled luxury transport, boutique accommodations, and 24/7 concierge assistance.</p>
+            </div>
+
+            <!-- Benefit 4 -->
+            <div class="benefit-card">
+              <div class="benefit-icon icon-teal">
+                <i class="ri-shield-check-line"></i>
+              </div>
+              <h3>Best Price Guarantee</h3>
+              <p>We guarantee optimal prices for high-end hospitality services across all Indian states.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Travelers & Preferences / Featured Categories Section -->
+    <section class="featured-categories-section">
+      <div class="categories-container">
+        <div class="categories-header">
+          <div class="header-left">
+            <span class="categories-tag">Featured Categories</span>
+            <h2 class="categories-title">Travelers & Preferences.</h2>
+          </div>
+          <div class="header-right">
+            <a href="#" class="view-all-btn">View All Categories <i class="ri-arrow-right-s-line"></i></a>
+          </div>
+        </div>
+        
+        <!-- Slider Wrapper -->
+        <div class="categories-slider-wrapper" id="categoriesSliderWrapper">
+          <div class="categories-slider" id="categoriesSlider">
+            <!-- Card 1: Golden Triangle -->
+            <div class="category-card">
+              <img src="https://images.unsplash.com/photo-1564507592333-c60657eea523?auto=format&fit=crop&w=500&q=80" alt="Golden Triangle">
+              <div class="card-overlay"></div>
+              <div class="card-content">
+                <h3>Golden Triangle</h3>
+                <span>3 Tours</span>
+              </div>
+              <div class="card-arrow"><i class="ri-arrow-right-line"></i></div>
+            </div>
+            <!-- Card 2: Rajasthan Heritage -->
+            <div class="category-card">
+              <img src="https://images.unsplash.com/photo-1599661046289-e31897846e41?auto=format&fit=crop&w=500&q=80" alt="Rajasthan Heritage">
+              <div class="card-overlay"></div>
+              <div class="card-content">
+                <h3>Rajasthan</h3>
+                <span>5 Tours</span>
+              </div>
+              <div class="card-arrow"><i class="ri-arrow-right-line"></i></div>
+            </div>
+            <!-- Card 3: Kerala Backwaters -->
+            <div class="category-card">
+              <img src="https://images.unsplash.com/photo-1593693397690-362cb9666fc2?auto=format&fit=crop&w=500&q=80" alt="Kerala Backwaters">
+              <div class="card-overlay"></div>
+              <div class="card-content">
+                <h3>Kerala Tours</h3>
+                <span>4 Tours</span>
+              </div>
+              <div class="card-arrow"><i class="ri-arrow-right-line"></i></div>
+            </div>
+            <!-- Card 4: Varanasi Spiritual -->
+            <div class="category-card">
+              <img src="https://images.unsplash.com/photo-1561361513-2d000a50f0db?auto=format&fit=crop&w=500&q=80" alt="Varanasi Spiritual">
+              <div class="card-overlay"></div>
+              <div class="card-content">
+                <h3>Varanasi</h3>
+                <span>2 Tours</span>
+              </div>
+              <div class="card-arrow"><i class="ri-arrow-right-line"></i></div>
+            </div>
+            <!-- Card 5: Ladakh Adventure -->
+            <div class="category-card">
+              <img src="https://images.unsplash.com/photo-1598091383021-15ddea10925d?auto=format&fit=crop&w=500&q=80" alt="Ladakh Adventure">
+              <div class="card-overlay"></div>
+              <div class="card-content">
+                <h3>Ladakh</h3>
+                <span>2 Tours</span>
+              </div>
+              <div class="card-arrow"><i class="ri-arrow-right-line"></i></div>
+            </div>
+            <!-- Card 6: Goa Beaches -->
+            <div class="category-card">
+              <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=500&q=80" alt="Goa Beaches">
+              <div class="card-overlay"></div>
+              <div class="card-content">
+                <h3>Goa Beaches</h3>
+                <span>3 Tours</span>
+              </div>
+              <div class="card-arrow"><i class="ri-arrow-right-line"></i></div>
+            </div>
+            <!-- Card 7: Wildlife Safaris -->
+            <div class="category-card">
+              <img src="https://images.unsplash.com/photo-1602491453631-e2a5ad90a131?auto=format&fit=crop&w=500&q=80" alt="Wildlife Safaris">
+              <div class="card-overlay"></div>
+              <div class="card-content">
+                <h3>Wildlife Tours</h3>
+                <span>3 Tours</span>
+              </div>
+              <div class="card-arrow"><i class="ri-arrow-right-line"></i></div>
+            </div>
+            <!-- Card 8: Luxury Train -->
+            <div class="category-card">
+              <img src="https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=500&q=80" alt="Luxury Train">
+              <div class="card-overlay"></div>
+              <div class="card-content">
+                <h3>Luxury Train</h3>
+                <span>2 Tours</span>
+              </div>
+              <div class="card-arrow"><i class="ri-arrow-right-line"></i></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slider Navigation Dots -->
+        <div class="slider-nav-dots" id="sliderNavDots">
+          <span class="nav-dot active" data-slide="0"></span>
+          <span class="nav-dot" data-slide="1"></span>
+          <span class="nav-dot" data-slide="2"></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- India Trip By Theme Section -->
+    <section class="theme-section" id="trip-by-theme">
+      <div class="theme-container">
+        <div class="theme-header">
+          <span class="theme-tag">Trip By Theme</span>
+          <h2 class="theme-title">India Trip By Theme</h2>
+          <div class="theme-divider">
+            <span class="line"></span>
+            <i class="ri-plane-fill plane-icon"></i>
+            <span class="line"></span>
+          </div>
+          <div class="theme-desc-wrapper">
+            <p class="theme-desc" id="themeDesc">
+              Planning to visit India with our popular India holiday packages, tailored to various themes. Our pride lies in delivering unparalleled holidays that unveil India's rich heritage, diverse culture, and famous monuments. Our India tours packages cater to a spectrum of themes – wildlife tours, golden triangle tours, family holidays, luxury trains and more. Whether you crave opulence, historical exploration, or pristine nature, we have the perfect itinerary.
+            </p>
+            <button class="read-more-btn" id="themeReadMoreToggle">Read More <i class="ri-arrow-down-s-line"></i></button>
+          </div>
+        </div>
+
+        <div class="theme-slider-outer">
+          <!-- Navigation Buttons -->
+          <div class="theme-nav-btn theme-prev-btn" id="themePrevBtn"><i class="ri-arrow-left-s-line"></i></div>
+          <div class="theme-nav-btn theme-next-btn" id="themeNextBtn"><i class="ri-arrow-right-s-line"></i></div>
+
+          <!-- Swiper Container -->
+          <div class="swiper theme-swiper">
+            <div class="swiper-wrapper">
+              <!-- Slide 1: Golden Triangle -->
+              <div class="swiper-slide">
+                <div class="theme-card">
+                  <img src="https://images.unsplash.com/photo-1564507592333-c60657eea523?auto=format&fit=crop&w=600&q=80" alt="Golden Triangle Tours">
+                  <div class="theme-card-overlay active">
+                    <h3>Golden Triangle Tours</h3>
+                    <p>Incredible India takes pride in being recognized as one of India's premier tour and travel company...</p>
+                    <a href="golden-triangle-tours.html" class="theme-card-btn">View All Tours</a>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Slide 2: Wildlife Tours -->
+              <div class="swiper-slide">
+                <div class="theme-card">
+                  <img src="https://images.unsplash.com/photo-1602491453631-e2a5ad90a131?auto=format&fit=crop&w=600&q=80" alt="Wildlife Tours India">
+                  <div class="theme-card-overlay">
+                    <h3>Wildlife Tours India</h3>
+                    <p>Explore India's raw wilderness, exotic safaris, tiger reserves, and tropical sanctuaries...</p>
+                    <a href="#" class="theme-card-btn">View All Tours</a>
+                  </div>
+                  <div class="theme-card-label">
+                    <h3>Wildlife Tours India</h3>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Slide 3: Family Tours -->
+              <div class="swiper-slide">
+                <div class="theme-card">
+                  <img src="https://images.unsplash.com/photo-1590001155093-a3c66ab0c3ff?auto=format&fit=crop&w=600&q=80" alt="Family Tours">
+                  <div class="theme-card-overlay">
+                    <h3>Family Tours</h3>
+                    <p>Crafting perfect vacations for your loved ones, blending relaxation, heritage, and pure fun...</p>
+                    <a href="#" class="theme-card-btn">View All Tours</a>
+                  </div>
+                  <div class="theme-card-label">
+                    <h3>Family Tours</h3>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Slide 4: Honeymoon Tours -->
+              <div class="swiper-slide">
+                <div class="theme-card">
+                  <img src="https://images.unsplash.com/photo-1593693397690-362cb9666fc2?auto=format&fit=crop&w=600&q=80" alt="Honeymoon Tours">
+                  <div class="theme-card-overlay">
+                    <h3>Honeymoon Tours</h3>
+                    <p>Experience romantic getaways, serene houseboat retreats, and intimate dinners under the stars...</p>
+                    <a href="#" class="theme-card-btn">View All Tours</a>
+                  </div>
+                  <div class="theme-card-label">
+                    <h3>Honeymoon Tours</h3>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Slide 5: Spiritual Tours -->
+              <div class="swiper-slide">
+                <div class="theme-card">
+                  <img src="https://images.unsplash.com/photo-1561361513-2d000a50f0db?auto=format&fit=crop&w=600&q=80" alt="Spiritual Tours">
+                  <div class="theme-card-overlay">
+                    <h3>Spiritual Tours</h3>
+                    <p>Reconnect with tranquility along Varanasi's sacred ghats, temples, and yoga retreats...</p>
+                    <a href="#" class="theme-card-btn">View All Tours</a>
+                  </div>
+                  <div class="theme-card-label">
+                    <h3>Spiritual Tours</h3>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Incredible India Tours Section -->
+    <section class="tours-section" id="tours">
+      <div class="tours-container">
+        <div class="tours-header">
+          <span class="tours-tag">Choose India Trip</span>
+          <h2 class="tours-title">Incredible India Tours</h2>
+          <p class="tours-subtitle">Handcrafted bespoke itineraries designed for luxury, comfort, and authenticity.</p>
+        </div>
+
+        <div class="tours-grid">
+          <!-- Card 1: India First Timer Tour -->
+          <div class="tour-card">
+            <div class="tour-img-wrapper">
+              <img src="https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=600&q=80" alt="India First Timer Tour">
+              <button class="fav-btn"><i class="ri-heart-line"></i></button>
+              <span class="trending-badge"><i class="ri-fire-fill"></i> Best Seller</span>
+              <div class="img-slider-dots">
+                <span class="slider-dot active"></span>
+                <span class="slider-dot"></span>
+                <span class="slider-dot"></span>
+              </div>
+            </div>
+            <div class="tour-content">
+              <div class="tour-meta">
+                <span class="tour-category"><i class="ri-map-2-line"></i> India Tour</span>
+                <div class="tour-rating">
+                  <i class="ri-star-fill"></i>
+                  <span>5.0 (24 Reviews)</span>
+                </div>
+              </div>
+              <h3 class="tour-title-text">India First Timer Tour</h3>
+              <div class="tour-cities">
+                <i class="ri-map-pin-line"></i>
+                <p>Delhi - Mandawa - Bikaner - Jaisalmer - Jodhpur - Ranakpur - Mount Abu - Udaipur - Chittorgarh - Ajmer - Pushkar - Agra - Delhi</p>
+              </div>
+              <div class="tour-price">
+                <span class="price-label">Starts From</span>
+                <span class="price-val">$1,299</span>
+                <span class="price-old">$1,499</span>
+              </div>
+              <hr class="card-divider">
+              <div class="tour-footer">
+                <span class="tour-duration"><i class="ri-time-line"></i> 14 Nights / 15 Days</span>
+                <span class="tour-guests"><i class="ri-user-line"></i> Max 12 Guests</span>
+              </div>
+              <div class="tour-actions">
+                <a href="#quote-form" class="action-btn enquiry-btn">Send Enquiry</a>
+                <a href="#" class="action-btn details-btn">View Details</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2: Golden Triangle & Tiger Tour -->
+          <div class="tour-card">
+            <div class="tour-img-wrapper">
+              <img src="https://images.unsplash.com/photo-1615959189197-484c0fc44f12?auto=format&fit=crop&w=600&q=80" alt="Golden Triangle & Tiger Tour">
+              <button class="fav-btn"><i class="ri-heart-line"></i></button>
+              <span class="trending-badge"><i class="ri-fire-fill"></i> Trending</span>
+              <div class="img-slider-dots">
+                <span class="slider-dot active"></span>
+                <span class="slider-dot"></span>
+                <span class="slider-dot"></span>
+              </div>
+            </div>
+            <div class="tour-content">
+              <div class="tour-meta">
+                <span class="tour-category"><i class="ri-map-2-line"></i> Wildlife Tour</span>
+                <div class="tour-rating">
+                  <i class="ri-star-fill"></i>
+                  <span>4.9 (18 Reviews)</span>
+                </div>
+              </div>
+              <h3 class="tour-title-text">Golden Triangle & Tiger Tour</h3>
+              <div class="tour-cities">
+                <i class="ri-map-pin-line"></i>
+                <p>Delhi - Agra - Fatehpur Sikri - Ranthambore - Jaipur - Delhi</p>
+              </div>
+              <div class="tour-price">
+                <span class="price-label">Starts From</span>
+                <span class="price-val">$899</span>
+                <span class="price-old">$1,099</span>
+              </div>
+              <hr class="card-divider">
+              <div class="tour-footer">
+                <span class="tour-duration"><i class="ri-time-line"></i> 07 Nights / 08 Days</span>
+                <span class="tour-guests"><i class="ri-user-line"></i> Max 10 Guests</span>
+              </div>
+              <div class="tour-actions">
+                <a href="#quote-form" class="action-btn enquiry-btn">Send Enquiry</a>
+                <a href="#" class="action-btn details-btn">View Details</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3: Golden Triangle Tour -->
+          <div class="tour-card">
+            <div class="tour-img-wrapper">
+              <img src="https://images.unsplash.com/photo-1564507592333-c60657eea523?auto=format&fit=crop&w=600&q=80" alt="Golden Triangle Tour">
+              <button class="fav-btn"><i class="ri-heart-line"></i></button>
+              <span class="trending-badge"><i class="ri-fire-fill"></i> Classic</span>
+              <div class="img-slider-dots">
+                <span class="slider-dot active"></span>
+                <span class="slider-dot"></span>
+                <span class="slider-dot"></span>
+              </div>
+            </div>
+            <div class="tour-content">
+              <div class="tour-meta">
+                <span class="tour-category"><i class="ri-map-2-line"></i> Cultural Tour</span>
+                <div class="tour-rating">
+                  <i class="ri-star-fill"></i>
+                  <span>4.8 (32 Reviews)</span>
+                </div>
+              </div>
+              <h3 class="tour-title-text">Golden Triangle Tour</h3>
+              <div class="tour-cities">
+                <i class="ri-map-pin-line"></i>
+                <p>Delhi - Agra - Fatehpur Sikri - Jaipur - Delhi</p>
+              </div>
+              <div class="tour-price">
+                <span class="price-label">Starts From</span>
+                <span class="price-val">$699</span>
+                <span class="price-old">$899</span>
+              </div>
+              <hr class="card-divider">
+              <div class="tour-footer">
+                <span class="tour-duration"><i class="ri-time-line"></i> 05 Nights / 06 Days</span>
+                <span class="tour-guests"><i class="ri-user-line"></i> Max 12 Guests</span>
+              </div>
+              <div class="tour-actions">
+                <a href="#quote-form" class="action-btn enquiry-btn">Send Enquiry</a>
+                <a href="#" class="action-btn details-btn">View Details</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 4: Colour Full Rajasthan Tour With Taj Mahal -->
+          <div class="tour-card">
+            <div class="tour-img-wrapper">
+              <img src="https://images.unsplash.com/photo-1599661046289-e31897846e41?auto=format&fit=crop&w=600&q=80" alt="Colour Full Rajasthan Tour With Taj Mahal">
+              <button class="fav-btn"><i class="ri-heart-line"></i></button>
+              <span class="trending-badge"><i class="ri-fire-fill"></i> Colorful</span>
+              <div class="img-slider-dots">
+                <span class="slider-dot active"></span>
+                <span class="slider-dot"></span>
+                <span class="slider-dot"></span>
+              </div>
+            </div>
+            <div class="tour-content">
+              <div class="tour-meta">
+                <span class="tour-category"><i class="ri-map-2-line"></i> Heritage Tour</span>
+                <div class="tour-rating">
+                  <i class="ri-star-fill"></i>
+                  <span>5.0 (15 Reviews)</span>
+                </div>
+              </div>
+              <h3 class="tour-title-text">Colour Full Rajasthan Tour</h3>
+              <div class="tour-cities">
+                <i class="ri-map-pin-line"></i>
+                <p>Delhi - Agra - Fatehpur Sikri - Jaipur - Pushkar - Udaipur - Delhi</p>
+              </div>
+              <div class="tour-price">
+                <span class="price-label">Starts From</span>
+                <span class="price-val">$999</span>
+                <span class="price-old">$1,199</span>
+              </div>
+              <hr class="card-divider">
+              <div class="tour-footer">
+                <span class="tour-duration"><i class="ri-time-line"></i> 09 Nights / 10 Days</span>
+                <span class="tour-guests"><i class="ri-user-line"></i> Max 12 Guests</span>
+              </div>
+              <div class="tour-actions">
+                <a href="#quote-form" class="action-btn enquiry-btn">Send Enquiry</a>
+                <a href="#" class="action-btn details-btn">View Details</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 5: Rajasthan Forts & Palaces -->
+          <div class="tour-card">
+            <div class="tour-img-wrapper">
+              <img src="https://images.unsplash.com/photo-1603262110263-fb0112e7cc33?auto=format&fit=crop&w=600&q=80" alt="Rajasthan Forts & Palaces">
+              <button class="fav-btn"><i class="ri-heart-line"></i></button>
+              <span class="trending-badge"><i class="ri-fire-fill"></i> Royal</span>
+              <div class="img-slider-dots">
+                <span class="slider-dot active"></span>
+                <span class="slider-dot"></span>
+                <span class="slider-dot"></span>
+              </div>
+            </div>
+            <div class="tour-content">
+              <div class="tour-meta">
+                <span class="tour-category"><i class="ri-map-2-line"></i> Palace Tour</span>
+                <div class="tour-rating">
+                  <i class="ri-star-fill"></i>
+                  <span>4.9 (21 Reviews)</span>
+                </div>
+              </div>
+              <h3 class="tour-title-text">Rajasthan Forts & Palaces</h3>
+              <div class="tour-cities">
+                <i class="ri-map-pin-line"></i>
+                <p>Delhi - Agra - Fatehpur Sikri - Jaipur - Udaipur - Ranakpur - Jodhpur - Jaisalmer - Bikaner - Mandawa - Delhi</p>
+              </div>
+              <div class="tour-price">
+                <span class="price-label">Starts From</span>
+                <span class="price-val">$1,199</span>
+                <span class="price-old">$1,399</span>
+              </div>
+              <hr class="card-divider">
+              <div class="tour-footer">
+                <span class="tour-duration"><i class="ri-time-line"></i> 12 Nights / 13 Days</span>
+                <span class="tour-guests"><i class="ri-user-line"></i> Max 10 Guests</span>
+              </div>
+              <div class="tour-actions">
+                <a href="#quote-form" class="action-btn enquiry-btn">Send Enquiry</a>
+                <a href="#" class="action-btn details-btn">View Details</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 6: North India With Taj Mahal And Ganges -->
+          <div class="tour-card">
+            <div class="tour-img-wrapper">
+              <img src="https://images.unsplash.com/photo-1561361513-2d000a50f0db?auto=format&fit=crop&w=600&q=80" alt="North India With Taj Mahal And Ganges">
+              <button class="fav-btn"><i class="ri-heart-line"></i></button>
+              <span class="trending-badge"><i class="ri-fire-fill"></i> Spiritual</span>
+              <div class="img-slider-dots">
+                <span class="slider-dot active"></span>
+                <span class="slider-dot"></span>
+                <span class="slider-dot"></span>
+              </div>
+            </div>
+            <div class="tour-content">
+              <div class="tour-meta">
+                <span class="tour-category"><i class="ri-map-2-line"></i> Explorer Tour</span>
+                <div class="tour-rating">
+                  <i class="ri-star-fill"></i>
+                  <span>5.0 (19 Reviews)</span>
+                </div>
+              </div>
+              <h3 class="tour-title-text">Taj Mahal & Ganges Tour</h3>
+              <div class="tour-cities">
+                <i class="ri-map-pin-line"></i>
+                <p>Delhi - Mandawa - Bikaner - Jaisalmer - Jodhpur - Ranakpur - Udaipur - Jaipur - Fatehpur Sikri - Agra - Khajuraho - Varanasi - Delhi</p>
+              </div>
+              <div class="tour-price">
+                <span class="price-label">Starts From</span>
+                <span class="price-val">$1,399</span>
+                <span class="price-old">$1,599</span>
+              </div>
+              <hr class="card-divider">
+              <div class="tour-footer">
+                <span class="tour-duration"><i class="ri-time-line"></i> 15 Nights / 16 Days</span>
+                <span class="tour-guests"><i class="ri-user-line"></i> Max 12 Guests</span>
+              </div>
+              <div class="tour-actions">
+                <a href="#quote-form" class="action-btn enquiry-btn">Send Enquiry</a>
+                <a href="#" class="action-btn details-btn">View Details</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 7: North India Tour With Nepal -->
+          <div class="tour-card">
+            <div class="tour-img-wrapper">
+              <img src="https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=600&q=80" alt="North India Tour With Nepal">
+              <button class="fav-btn"><i class="ri-heart-line"></i></button>
+              <span class="trending-badge"><i class="ri-fire-fill"></i> Multi-Country</span>
+              <div class="img-slider-dots">
+                <span class="slider-dot active"></span>
+                <span class="slider-dot"></span>
+                <span class="slider-dot"></span>
+              </div>
+            </div>
+            <div class="tour-content">
+              <div class="tour-meta">
+                <span class="tour-category"><i class="ri-map-2-line"></i> Nepal & India</span>
+                <div class="tour-rating">
+                  <i class="ri-star-fill"></i>
+                  <span>4.9 (11 Reviews)</span>
+                </div>
+              </div>
+              <h3 class="tour-title-text">North India & Nepal Tour</h3>
+              <div class="tour-cities">
+                <i class="ri-map-pin-line"></i>
+                <p>Delhi - Jaipur - Fatehpur Sikri - Agra - Jhansi - Orchha - Khajuraho - Varanasi - Kathmandu - Chitwan - Pokhra - Kathmandu</p>
+              </div>
+              <div class="tour-price">
+                <span class="price-label">Starts From</span>
+                <span class="price-val">$1,499</span>
+                <span class="price-old">$1,699</span>
+              </div>
+              <hr class="card-divider">
+              <div class="tour-footer">
+                <span class="tour-duration"><i class="ri-time-line"></i> 14 Nights / 15 Days</span>
+                <span class="tour-guests"><i class="ri-user-line"></i> Max 10 Guests</span>
+              </div>
+              <div class="tour-actions">
+                <a href="#quote-form" class="action-btn enquiry-btn">Send Enquiry</a>
+                <a href="#" class="action-btn details-btn">View Details</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 8: Paradise Of The South -->
+          <div class="tour-card">
+            <div class="tour-img-wrapper">
+              <img src="https://images.unsplash.com/photo-1593693397690-362cb9666fc2?auto=format&fit=crop&w=600&q=80" alt="Paradise Of The South">
+              <button class="fav-btn"><i class="ri-heart-line"></i></button>
+              <span class="trending-badge"><i class="ri-fire-fill"></i> Tropical</span>
+              <div class="img-slider-dots">
+                <span class="slider-dot active"></span>
+                <span class="slider-dot"></span>
+                <span class="slider-dot"></span>
+              </div>
+            </div>
+            <div class="tour-content">
+              <div class="tour-meta">
+                <span class="tour-category"><i class="ri-map-2-line"></i> South India</span>
+                <div class="tour-rating">
+                  <i class="ri-star-fill"></i>
+                  <span>4.8 (26 Reviews)</span>
+                </div>
+              </div>
+              <h3 class="tour-title-text">Paradise Of The South</h3>
+              <div class="tour-cities">
+                <i class="ri-map-pin-line"></i>
+                <p>Kochi - Thekkady (Periyar) - Kumarakom - Alleppey - Varkala - Kovalam</p>
+              </div>
+              <div class="tour-price">
+                <span class="price-label">Starts From</span>
+                <span class="price-val">$849</span>
+                <span class="price-old">$1,049</span>
+              </div>
+              <hr class="card-divider">
+              <div class="tour-footer">
+                <span class="tour-duration"><i class="ri-time-line"></i> 07 Nights / 08 Days</span>
+                <span class="tour-guests"><i class="ri-user-line"></i> Max 12 Guests</span>
+              </div>
+              <div class="tour-actions">
+                <a href="#quote-form" class="action-btn enquiry-btn">Send Enquiry</a>
+                <a href="#" class="action-btn details-btn">View Details</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 9: In Search Of Big Cat -->
+          <div class="tour-card">
+            <div class="tour-img-wrapper">
+              <img src="https://images.unsplash.com/photo-1602491453979-54a3a1a72e0b?auto=format&fit=crop&w=600&q=80" alt="In Search Of Big Cat">
+              <button class="fav-btn"><i class="ri-heart-line"></i></button>
+              <span class="trending-badge"><i class="ri-fire-fill"></i> Wildlife</span>
+              <div class="img-slider-dots">
+                <span class="slider-dot active"></span>
+                <span class="slider-dot"></span>
+                <span class="slider-dot"></span>
+              </div>
+            </div>
+            <div class="tour-content">
+              <div class="tour-meta">
+                <span class="tour-category"><i class="ri-map-2-line"></i> tiger Safari</span>
+                <div class="tour-rating">
+                  <i class="ri-star-fill"></i>
+                  <span>5.0 (17 Reviews)</span>
+                </div>
+              </div>
+              <h3 class="tour-title-text">In Search Of Big Cat</h3>
+              <div class="tour-cities">
+                <i class="ri-map-pin-line"></i>
+                <p>Delhi - Nagpur - Pench - Kanha - Bandhavgarh - Agra - Delhi</p>
+              </div>
+              <div class="tour-price">
+                <span class="price-label">Starts From</span>
+                <span class="price-val">$999</span>
+                <span class="price-old">$1,199</span>
+              </div>
+              <hr class="card-divider">
+              <div class="tour-footer">
+                <span class="tour-duration"><i class="ri-time-line"></i> 09 Nights / 10 Days</span>
+                <span class="tour-guests"><i class="ri-user-line"></i> Max 8 Guests</span>
+              </div>
+              <div class="tour-actions">
+                <a href="#quote-form" class="action-btn enquiry-btn">Send Enquiry</a>
+                <a href="#" class="action-btn details-btn">View Details</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Rajasthan Tours Section -->
+    <section class="tours-section rajasthan-tours-section" id="rajasthan-tours">
+      <div class="tours-container">
+        <div class="tours-header">
+          <span class="tours-tag">Choose India Trip</span>
+          <h2 class="tours-title">Rajasthan Tours</h2>
+          <div class="tours-desc-wrapper">
+            <p class="tours-desc" id="rajasthanDesc">
+              Incredible India offers a diverse range of Rajasthan Tour Packages to suit all age groups and budgets. Our Rajasthan Tours are incredibly flexible and customizable to cater to your unique preferences. As one of India's most trusted and dependable tour and travel companies, we ensure a memorable experience to Rajasthan. A trip to Rajasthan is a once-in-a-lifetime adventure for anyone. During your journey through Rajasthan, you'll visit iconic cities such as Jaipur, Ajmer, Pushkar, Udaipur, Jodhpur, Jaisalmer, Bikaner, and Mandawa, experiencing the vibrant colors, heritage forts, and warm hospitality of this royal state.
+            </p>
+            <button class="read-more-btn" id="readMoreToggle">Read More <i class="ri-arrow-down-s-line"></i></button>
+          </div>
+        </div>
+
+        <div class="tours-grid">
+          <!-- Card 1: Colour Full Rajasthan Tour With Taj Mahal -->
+          <div class="tour-card">
+            <div class="tour-img-wrapper">
+              <img src="https://images.unsplash.com/photo-1599661046289-e31897846e41?auto=format&fit=crop&w=600&q=80" alt="Colour Full Rajasthan Tour With Taj Mahal">
+              <button class="fav-btn"><i class="ri-heart-line"></i></button>
+              <span class="trending-badge"><i class="ri-fire-fill"></i> Best Seller</span>
+              <div class="img-slider-dots">
+                <span class="slider-dot active"></span>
+                <span class="slider-dot"></span>
+                <span class="slider-dot"></span>
+              </div>
+            </div>
+            <div class="tour-content">
+              <div class="tour-meta">
+                <span class="tour-category"><i class="ri-map-2-line"></i> Rajasthan Tour</span>
+                <div class="tour-rating">
+                  <i class="ri-star-fill"></i>
+                  <span>4.9 (18 Reviews)</span>
+                </div>
+              </div>
+              <h3 class="tour-title-text">Colour Full Rajasthan Tour</h3>
+              <div class="tour-cities">
+                <i class="ri-map-pin-line"></i>
+                <p>Delhi - Agra - Fatehpur Sikri - Jaipur - Pushkar - Udaipur - Delhi</p>
+              </div>
+              <hr class="card-divider">
+              <div class="tour-footer">
+                <span class="tour-duration"><i class="ri-time-line"></i> 09 Nights / 10 Days</span>
+                <span class="tour-guests"><i class="ri-user-line"></i> Max 12 Guests</span>
+              </div>
+              <div class="tour-actions">
+                <a href="#quote-form" class="action-btn enquiry-btn">Send Enquiry</a>
+                <a href="#" class="action-btn details-btn">View Details</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2: Royal Rajasthan Tour With Mumbai -->
+          <div class="tour-card">
+            <div class="tour-img-wrapper">
+              <img src="https://images.unsplash.com/photo-1590001155093-a3c66ab0c3ff?auto=format&fit=crop&w=600&q=80" alt="Royal Rajasthan Tour With Mumbai">
+              <button class="fav-btn"><i class="ri-heart-line"></i></button>
+              <span class="trending-badge"><i class="ri-fire-fill"></i> Grand Heritage</span>
+              <div class="img-slider-dots">
+                <span class="slider-dot active"></span>
+                <span class="slider-dot"></span>
+                <span class="slider-dot"></span>
+              </div>
+            </div>
+            <div class="tour-content">
+              <div class="tour-meta">
+                <span class="tour-category"><i class="ri-map-2-line"></i> Rajasthan Tour</span>
+                <div class="tour-rating">
+                  <i class="ri-star-fill"></i>
+                  <span>5.0 (15 Reviews)</span>
+                </div>
+              </div>
+              <h3 class="tour-title-text">Royal Rajasthan Tour</h3>
+              <div class="tour-cities">
+                <i class="ri-map-pin-line"></i>
+                <p>Delhi - Agra - Fatehpur Sikri - Jaipur - Mandawa - Bikaner - Jaisalmer - Jodhpur - Ranakpur - Udaipur - Mumbai</p>
+              </div>
+              <hr class="card-divider">
+              <div class="tour-footer">
+                <span class="tour-duration"><i class="ri-time-line"></i> 13 Nights / 14 Days</span>
+                <span class="tour-guests"><i class="ri-user-line"></i> Max 10 Guests</span>
+              </div>
+              <div class="tour-actions">
+                <a href="#quote-form" class="action-btn enquiry-btn">Send Enquiry</a>
+                <a href="#" class="action-btn details-btn">View Details</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3: Rajasthan Forts And Palaces -->
+          <div class="tour-card">
+            <div class="tour-img-wrapper">
+              <img src="https://images.unsplash.com/photo-1603262110263-fb0112e7cc33?auto=format&fit=crop&w=600&q=80" alt="Rajasthan Forts And Palaces">
+              <button class="fav-btn"><i class="ri-heart-line"></i></button>
+              <span class="trending-badge"><i class="ri-fire-fill"></i> Palace Special</span>
+              <div class="img-slider-dots">
+                <span class="slider-dot active"></span>
+                <span class="slider-dot"></span>
+                <span class="slider-dot"></span>
+              </div>
+            </div>
+            <div class="tour-content">
+              <div class="tour-meta">
+                <span class="tour-category"><i class="ri-map-2-line"></i> Rajasthan Tour</span>
+                <div class="tour-rating">
+                  <i class="ri-star-fill"></i>
+                  <span>4.9 (22 Reviews)</span>
+                </div>
+              </div>
+              <h3 class="tour-title-text">Rajasthan Forts & Palaces</h3>
+              <div class="tour-cities">
+                <i class="ri-map-pin-line"></i>
+                <p>Delhi - Agra - Fatehpur Sikri - Jaipur - Udaipur - Ranakpur - Jodhpur - Jaisalmer - Bikaner - Mandawa - Delhi</p>
+              </div>
+              <hr class="card-divider">
+              <div class="tour-footer">
+                <span class="tour-duration"><i class="ri-time-line"></i> 12 Nights / 13 Days</span>
+                <span class="tour-guests"><i class="ri-user-line"></i> Max 12 Guests</span>
+              </div>
+              <div class="tour-actions">
+                <a href="#quote-form" class="action-btn enquiry-btn">Send Enquiry</a>
+                <a href="#" class="action-btn details-btn">View Details</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="view-all-tours-wrapper">
+          <a href="rajasthan-tours.html" class="view-all-tours-btn">View All Tours <i class="ri-arrow-right-line"></i></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Golden Triangle Tours Section -->
+    <section class="tours-section golden-triangle-tours-section" id="golden-triangle-tours">
+      <div class="tours-container">
+        <div class="tours-header">
+          <span class="tours-tag">Choose India Trip</span>
+          <h2 class="tours-title">Golden Triangle Tours</h2>
+          <div class="tours-desc-wrapper">
+            <p class="tours-desc" id="goldenDesc">
+              Incredible India takes immense pride in being recognized as one of India's premier tour and travel companies. With a wealth of experience and a professional team, we have successfully served countless travelers. Our Golden Triangle Tour Packages are meticulously crafted to be both customized and affordable, making it easy for you to explore three historic cities in a single, comprehensive Golden Triangle tour of India. These packages are designed with flexibility in mind, allowing you to choose the pace and destinations that match your interests.
+            </p>
+            <button class="read-more-btn" id="goldenReadMoreToggle">Read More <i class="ri-arrow-down-s-line"></i></button>
+          </div>
+        </div>
+
+        <div class="tours-grid">
+          <!-- Card 1: Golden Triangle Tour -->
+          <div class="tour-card">
+            <div class="tour-img-wrapper">
+              <img src="https://images.unsplash.com/photo-1564507592333-c60657eea523?auto=format&fit=crop&w=600&q=80" alt="Golden Triangle Tour">
+              <button class="fav-btn"><i class="ri-heart-line"></i></button>
+              <span class="trending-badge"><i class="ri-fire-fill"></i> Classic</span>
+              <div class="img-slider-dots">
+                <span class="slider-dot active"></span>
+                <span class="slider-dot"></span>
+                <span class="slider-dot"></span>
+              </div>
+            </div>
+            <div class="tour-content">
+              <div class="tour-meta">
+                <span class="tour-category"><i class="ri-map-2-line"></i> Golden Triangle</span>
+                <div class="tour-rating">
+                  <i class="ri-star-fill"></i>
+                  <span>4.8 (32 Reviews)</span>
+                </div>
+              </div>
+              <h3 class="tour-title-text">Golden Triangle Tour</h3>
+              <div class="tour-cities">
+                <i class="ri-map-pin-line"></i>
+                <p>Delhi - Agra - Fatehpur Sikri - Jaipur</p>
+              </div>
+              <hr class="card-divider">
+              <div class="tour-footer">
+                <span class="tour-duration"><i class="ri-time-line"></i> 05 Nights / 06 Days</span>
+                <span class="tour-guests"><i class="ri-user-line"></i> Max 12 Guests</span>
+              </div>
+              <div class="tour-actions">
+                <a href="#quote-form" class="action-btn enquiry-btn">Send Enquiry</a>
+                <a href="#" class="action-btn details-btn">View Details</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2: Golden Triangle Tour With Ranthambore -->
+          <div class="tour-card">
+            <div class="tour-img-wrapper">
+              <img src="https://images.unsplash.com/photo-1615959189197-484c0fc44f12?auto=format&fit=crop&w=600&q=80" alt="Golden Triangle Tour With Ranthambore">
+              <button class="fav-btn"><i class="ri-heart-line"></i></button>
+              <span class="trending-badge"><i class="ri-fire-fill"></i> Wildlife Combo</span>
+              <div class="img-slider-dots">
+                <span class="slider-dot active"></span>
+                <span class="slider-dot"></span>
+                <span class="slider-dot"></span>
+              </div>
+            </div>
+            <div class="tour-content">
+              <div class="tour-meta">
+                <span class="tour-category"><i class="ri-map-2-line"></i> Wildlife Tour</span>
+                <div class="tour-rating">
+                  <i class="ri-star-fill"></i>
+                  <span>4.9 (18 Reviews)</span>
+                </div>
+              </div>
+              <h3 class="tour-title-text">Golden Triangle & Ranthambore</h3>
+              <div class="tour-cities">
+                <i class="ri-map-pin-line"></i>
+                <p>Delhi - Agra - Fatehpur Sikri - Ranthambore - Jaipur</p>
+              </div>
+              <hr class="card-divider">
+              <div class="tour-footer">
+                <span class="tour-duration"><i class="ri-time-line"></i> 07 Nights / 08 Days</span>
+                <span class="tour-guests"><i class="ri-user-line"></i> Max 10 Guests</span>
+              </div>
+              <div class="tour-actions">
+                <a href="#quote-form" class="action-btn enquiry-btn">Send Enquiry</a>
+                <a href="#" class="action-btn details-btn">View Details</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3: North India With Taj Mahal & Varanasi -->
+          <div class="tour-card">
+            <div class="tour-img-wrapper">
+              <img src="https://images.unsplash.com/photo-1561361513-2d000a50f0db?auto=format&fit=crop&w=600&q=80" alt="North India With Taj Mahal & Varanasi">
+              <button class="fav-btn"><i class="ri-heart-line"></i></button>
+              <span class="trending-badge"><i class="ri-fire-fill"></i> Spiritual</span>
+              <div class="img-slider-dots">
+                <span class="slider-dot active"></span>
+                <span class="slider-dot"></span>
+                <span class="slider-dot"></span>
+              </div>
+            </div>
+            <div class="tour-content">
+              <div class="tour-meta">
+                <span class="tour-category"><i class="ri-map-2-line"></i> Spiritual Tour</span>
+                <div class="tour-rating">
+                  <i class="ri-star-fill"></i>
+                  <span>5.0 (29 Reviews)</span>
+                </div>
+              </div>
+              <h3 class="tour-title-text">North India & Varanasi Tour</h3>
+              <div class="tour-cities">
+                <i class="ri-map-pin-line"></i>
+                <p>Delhi - Mandawa - Bikaner - Jaisalmer - Jaisalmer - Jodhpur And Luni - Ranakpur - Udaipur - Jaipur - Fatehpur Sikri - Agra - Khajuraho - Varanasi - Delhi</p>
+              </div>
+              <hr class="card-divider">
+              <div class="tour-footer">
+                <span class="tour-duration"><i class="ri-time-line"></i> 15 Nights / 16 Days</span>
+                <span class="tour-guests"><i class="ri-user-line"></i> Max 12 Guests</span>
+              </div>
+              <div class="tour-actions">
+                <a href="#quote-form" class="action-btn enquiry-btn">Send Enquiry</a>
+                <a href="#" class="action-btn details-btn">View Details</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="view-all-tours-wrapper">
+          <a href="golden-triangle-tours.html" class="view-all-tours-btn">View All Tours <i class="ri-arrow-right-line"></i></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- North India Tours Section -->
+    <section class="tours-section rajasthan-tours-section" id="north-india-tours">
+      <div class="tours-container">
+        <div class="tours-header">
+          <span class="tours-tag">Choose India Trip</span>
+          <h2 class="tours-title">North India Tours</h2>
+          <div class="tours-desc-wrapper">
+            <p class="tours-desc" id="northDesc">
+              North India is a region of unparalleled beauty and cultural richness, and North India tour packages offer an immersive experience that showcases the grandeur and diversity of this part of the country. Spanning from the iconic Taj Mahal to the snow-capped Himalayan peaks, these tours capture the essence of North India's history, culture, and natural wonders. Golden Triangle Tours: A quintessential North India tour begins with the Golden Triangle, encompassing Delhi, Agra, and Jaipur. In Delhi, you'll explore ancient heritage and temples.
+            </p>
+            <button class="read-more-btn" id="northReadMoreToggle">Read More <i class="ri-arrow-down-s-line"></i></button>
+          </div>
+        </div>
+
+        <div class="tours-grid">
+          <!-- Card 1: Historical Palaces And Havelis Tour -->
+          <div class="tour-card">
+            <div class="tour-img-wrapper">
+              <img src="https://images.unsplash.com/photo-1602643163983-ed0babc39797?auto=format&fit=crop&w=600&q=80" alt="Historical Palaces And Havelis Tour">
+              <button class="fav-btn"><i class="ri-heart-line"></i></button>
+              <span class="trending-badge"><i class="ri-fire-fill"></i> Havelis Special</span>
+              <div class="img-slider-dots">
+                <span class="slider-dot active"></span>
+                <span class="slider-dot"></span>
+                <span class="slider-dot"></span>
+              </div>
+            </div>
+            <div class="tour-content">
+              <div class="tour-meta">
+                <span class="tour-category"><i class="ri-map-2-line"></i> Heritage Tour</span>
+                <div class="tour-rating">
+                  <i class="ri-star-fill"></i>
+                  <span>4.9 (16 Reviews)</span>
+                </div>
+              </div>
+              <h3 class="tour-title-text">Historical Palaces & Havelis</h3>
+              <div class="tour-cities">
+                <i class="ri-map-pin-line"></i>
+                <p>Delhi - Mandawa - Bikaner - Jaisalmer - Jodhpur - Ranakpur - Mount Abu - Udaipur - Chittorgarh - Ajmer - Pushkar - Ajmer - Jaipur - Agra - Delhi</p>
+              </div>
+              <hr class="card-divider">
+              <div class="tour-footer">
+                <span class="tour-duration"><i class="ri-time-line"></i> 14 Nights / 15 Days</span>
+                <span class="tour-guests"><i class="ri-user-line"></i> Max 12 Guests</span>
+              </div>
+              <div class="tour-actions">
+                <a href="#quote-form" class="action-btn enquiry-btn">Send Enquiry</a>
+                <a href="#" class="action-btn details-btn">View Details</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2: North India Tour With Nepal -->
+          <div class="tour-card">
+            <div class="tour-img-wrapper">
+              <img src="https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=600&q=80" alt="North India Tour With Nepal">
+              <button class="fav-btn"><i class="ri-heart-line"></i></button>
+              <span class="trending-badge"><i class="ri-fire-fill"></i> Multi-Country</span>
+              <div class="img-slider-dots">
+                <span class="slider-dot active"></span>
+                <span class="slider-dot"></span>
+                <span class="slider-dot"></span>
+              </div>
+            </div>
+            <div class="tour-content">
+              <div class="tour-meta">
+                <span class="tour-category"><i class="ri-map-2-line"></i> Nepal & India</span>
+                <div class="tour-rating">
+                  <i class="ri-star-fill"></i>
+                  <span>4.9 (14 Reviews)</span>
+                </div>
+              </div>
+              <h3 class="tour-title-text">North India & Nepal Tour</h3>
+              <div class="tour-cities">
+                <i class="ri-map-pin-line"></i>
+                <p>Delhi - Jaipur - Fatehpur Sikri - Agra - Jhansi - Orcha - Khajuraho - Varanasi - Kathmandu - Chitwan - Pokhra - Kathmandu</p>
+              </div>
+              <hr class="card-divider">
+              <div class="tour-footer">
+                <span class="tour-duration"><i class="ri-time-line"></i> 14 Nights / 15 Days</span>
+                <span class="tour-guests"><i class="ri-user-line"></i> Max 10 Guests</span>
+              </div>
+              <div class="tour-actions">
+                <a href="#quote-form" class="action-btn enquiry-btn">Send Enquiry</a>
+                <a href="#" class="action-btn details-btn">View Details</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3: North India With Taj Mahal And Ganges -->
+          <div class="tour-card">
+            <div class="tour-img-wrapper">
+              <img src="https://images.unsplash.com/photo-1561361513-2d000a50f0db?auto=format&fit=crop&w=600&q=80" alt="North India With Taj Mahal And Ganges">
+              <button class="fav-btn"><i class="ri-heart-line"></i></button>
+              <span class="trending-badge"><i class="ri-fire-fill"></i> Best Seller</span>
+              <div class="img-slider-dots">
+                <span class="slider-dot active"></span>
+                <span class="slider-dot"></span>
+                <span class="slider-dot"></span>
+              </div>
+            </div>
+            <div class="tour-content">
+              <div class="tour-meta">
+                <span class="tour-category"><i class="ri-map-2-line"></i> Explorer Tour</span>
+                <div class="tour-rating">
+                  <i class="ri-star-fill"></i>
+                  <span>5.0 (29 Reviews)</span>
+                </div>
+              </div>
+              <h3 class="tour-title-text">North India & Ganges Tour</h3>
+              <div class="tour-cities">
+                <i class="ri-map-pin-line"></i>
+                <p>Delhi - Mandawa - Bikaner - Jaisalmer - Jaisalmer - Jodhpur And Luni - Ranakpur - Udaipur - Jaipur - Fatehpur Sikri - Agra - Khajuraho - Varanasi - Delhi</p>
+              </div>
+              <hr class="card-divider">
+              <div class="tour-footer">
+                <span class="tour-duration"><i class="ri-time-line"></i> 15 Nights / 16 Days</span>
+                <span class="tour-guests"><i class="ri-user-line"></i> Max 12 Guests</span>
+              </div>
+              <div class="tour-actions">
+                <a href="#quote-form" class="action-btn enquiry-btn">Send Enquiry</a>
+                <a href="#" class="action-btn details-btn">View Details</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="view-all-tours-wrapper">
+          <a href="north-india-tours.html" class="view-all-tours-btn">View All Tours <i class="ri-arrow-right-line"></i></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- South India Tours Section -->
+    <section class="tours-section" id="south-india-tours">
+      <div class="tours-container">
+        <div class="tours-header">
+          <span class="tours-tag">Choose India Trip</span>
+          <h2 class="tours-title">South India Tours</h2>
+          <div class="tours-desc-wrapper">
+            <p class="tours-desc" id="southDesc">
+              South India, with its enchanting landscapes, rich cultural heritage, and warm hospitality, beckons travelers to embark on a journey of discovery. South India Tour Packages offer a unique blend of history, spirituality, and natural beauty, making it a must-visit destination for those seeking a diverse and immersive travel experience. South India Tour promise a multifaceted journey, where every traveler can find something that resonates with their interests. From the spiritually inclined to the nature lover.
+            </p>
+            <button class="read-more-btn" id="southReadMoreToggle">Read More <i class="ri-arrow-down-s-line"></i></button>
+          </div>
+        </div>
+
+        <div class="tours-grid">
+          <!-- Card 1: Paradise Of The South -->
+          <div class="tour-card">
+            <div class="tour-img-wrapper">
+              <img src="https://images.unsplash.com/photo-1593693397690-362cb9666fc2?auto=format&fit=crop&w=600&q=80" alt="Paradise Of The South">
+              <button class="fav-btn"><i class="ri-heart-line"></i></button>
+              <span class="trending-badge"><i class="ri-fire-fill"></i> Tropical</span>
+              <div class="img-slider-dots">
+                <span class="slider-dot active"></span>
+                <span class="slider-dot"></span>
+                <span class="slider-dot"></span>
+              </div>
+            </div>
+            <div class="tour-content">
+              <div class="tour-meta">
+                <span class="tour-category"><i class="ri-map-2-line"></i> South India</span>
+                <div class="tour-rating">
+                  <i class="ri-star-fill"></i>
+                  <span>4.8 (26 Reviews)</span>
+                </div>
+              </div>
+              <h3 class="tour-title-text">Paradise Of The South</h3>
+              <div class="tour-cities">
+                <i class="ri-map-pin-line"></i>
+                <p>Kochi - Thekkady (Periyar) - Kumarakom - Alleppey - Varkala - Kovalam</p>
+              </div>
+              <hr class="card-divider">
+              <div class="tour-footer">
+                <span class="tour-duration"><i class="ri-time-line"></i> 07 Nights / 08 Days</span>
+                <span class="tour-guests"><i class="ri-user-line"></i> Max 12 Guests</span>
+              </div>
+              <div class="tour-actions">
+                <a href="#quote-form" class="action-btn enquiry-btn">Send Enquiry</a>
+                <a href="#" class="action-btn details-btn">View Details</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2: South India Bliss -->
+          <div class="tour-card">
+            <div class="tour-img-wrapper">
+              <img src="https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=600&q=80" alt="South India Bliss">
+              <button class="fav-btn"><i class="ri-heart-line"></i></button>
+              <span class="trending-badge"><i class="ri-fire-fill"></i> Backwaters Special</span>
+              <div class="img-slider-dots">
+                <span class="slider-dot active"></span>
+                <span class="slider-dot"></span>
+                <span class="slider-dot"></span>
+              </div>
+            </div>
+            <div class="tour-content">
+              <div class="tour-meta">
+                <span class="tour-category"><i class="ri-map-2-line"></i> South India</span>
+                <div class="tour-rating">
+                  <i class="ri-star-fill"></i>
+                  <span>5.0 (21 Reviews)</span>
+                </div>
+              </div>
+              <h3 class="tour-title-text">South India Bliss</h3>
+              <div class="tour-cities">
+                <i class="ri-map-pin-line"></i>
+                <p>Chennai - Mamallapuram - Chennai - Bangalore - Mysore - Mudumalai - Ooty - Kochi - Kumarakom - Kovalam - Trivandrum</p>
+              </div>
+              <hr class="card-divider">
+              <div class="tour-footer">
+                <span class="tour-duration"><i class="ri-time-line"></i> 10 Nights / 11 Days</span>
+                <span class="tour-guests"><i class="ri-user-line"></i> Max 8 Guests</span>
+              </div>
+              <div class="tour-actions">
+                <a href="#quote-form" class="action-btn enquiry-btn">Send Enquiry</a>
+                <a href="#" class="action-btn details-btn">View Details</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3: 10 Days Kerala Tour Package -->
+          <div class="tour-card">
+            <div class="tour-img-wrapper">
+              <img src="https://images.unsplash.com/photo-1593693397690-362cb9666fc2?auto=format&fit=crop&w=600&q=80" alt="10 Days Kerala Tour Package">
+              <button class="fav-btn"><i class="ri-heart-line"></i></button>
+              <span class="trending-badge"><i class="ri-fire-fill"></i> Kerala Special</span>
+              <div class="img-slider-dots">
+                <span class="slider-dot active"></span>
+                <span class="slider-dot"></span>
+                <span class="slider-dot"></span>
+              </div>
+            </div>
+            <div class="tour-content">
+              <div class="tour-meta">
+                <span class="tour-category"><i class="ri-map-2-line"></i> Kerala Tour</span>
+                <div class="tour-rating">
+                  <i class="ri-star-fill"></i>
+                  <span>4.9 (34 Reviews)</span>
+                </div>
+              </div>
+              <h3 class="tour-title-text">10 Days Kerala Package</h3>
+              <div class="tour-cities">
+                <i class="ri-map-pin-line"></i>
+                <p>Kochi - Kodanad - Munnar - Thekkady - Periyar National Park - Alleppey - Mararikulam - Kochi</p>
+              </div>
+              <hr class="card-divider">
+              <div class="tour-footer">
+                <span class="tour-duration"><i class="ri-time-line"></i> 09 Nights / 10 Days</span>
+                <span class="tour-guests"><i class="ri-user-line"></i> Max 12 Guests</span>
+              </div>
+              <div class="tour-actions">
+                <a href="#quote-form" class="action-btn enquiry-btn">Send Enquiry</a>
+                <a href="#" class="action-btn details-btn">View Details</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="view-all-tours-wrapper">
+          <a href="south-india-tours.html" class="view-all-tours-btn">View All Tours <i class="ri-arrow-right-line"></i></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="gallery-section" id="gallery">
+      <div class="gallery-container">
+        <div class="gallery-header">
+          <span class="gallery-pill">Visual Journeys</span>
+          <h2 class="gallery-title">Capture The Moments</h2>
+          <p class="gallery-subtitle">A curated collection of breathtaking destinations, vibrant cultures, and royal architectural marvels across India.</p>
+        </div>
+
+        <div class="gallery-grid">
+          <!-- Item 1: Large -->
+          <div class="gallery-item item-large">
+            <img src="https://images.unsplash.com/photo-1564507592333-c60657eea523?auto=format&fit=crop&w=800&q=80" alt="Taj Mahal Agra">
+            <div class="gallery-overlay">
+              <span class="gallery-cat">Heritage</span>
+              <h3>Taj Mahal</h3>
+              <p>Agra, Uttar Pradesh</p>
+              <a href="#" class="gallery-zoom-btn"><i class="ri-zoom-in-line"></i></a>
+            </div>
+          </div>
+
+          <!-- Item 2: Tall -->
+          <div class="gallery-item item-tall">
+            <img src="https://images.unsplash.com/photo-1603262110263-fb0112e7cc33?auto=format&fit=crop&w=600&h=800&q=80" alt="Amber Fort Jaipur">
+            <div class="gallery-overlay">
+              <span class="gallery-cat">Palaces</span>
+              <h3>Amber Fort</h3>
+              <p>Jaipur, Rajasthan</p>
+              <a href="#" class="gallery-zoom-btn"><i class="ri-zoom-in-line"></i></a>
+            </div>
+          </div>
+
+          <!-- Item 3: Standard -->
+          <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1593693397690-362cb9666fc2?auto=format&fit=crop&w=600&q=80" alt="Kerala Backwaters">
+            <div class="gallery-overlay">
+              <span class="gallery-cat">Nature</span>
+              <h3>Backwaters</h3>
+              <p>Alleppey, Kerala</p>
+              <a href="#" class="gallery-zoom-btn"><i class="ri-zoom-in-line"></i></a>
+            </div>
+          </div>
+
+          <!-- Item 4: Standard -->
+          <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1561361513-2d000a50f0db?auto=format&fit=crop&w=600&q=80" alt="Varanasi Ganges">
+            <div class="gallery-overlay">
+              <span class="gallery-cat">Spiritual</span>
+              <h3>Ganga Aarti</h3>
+              <p>Varanasi, Uttar Pradesh</p>
+              <a href="#" class="gallery-zoom-btn"><i class="ri-zoom-in-line"></i></a>
+            </div>
+          </div>
+
+          <!-- Item 5: Wide -->
+          <div class="gallery-item item-wide">
+            <img src="https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?auto=format&fit=crop&w=800&q=80" alt="Himalayas Ladakh">
+            <div class="gallery-overlay">
+              <span class="gallery-cat">Adventure</span>
+              <h3>Pangong Lake</h3>
+              <p>Leh Ladakh, Jammu & Kashmir</p>
+              <a href="#" class="gallery-zoom-btn"><i class="ri-zoom-in-line"></i></a>
+            </div>
+          </div>
+
+          <!-- Item 6: Standard -->
+          <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1590001155093-a3c66ab0c3ff?auto=format&fit=crop&w=600&q=80" alt="Mehrangarh Fort Jodhpur">
+            <div class="gallery-overlay">
+              <span class="gallery-cat">Forts</span>
+              <h3>Mehrangarh Fort</h3>
+              <p>Jodhpur, Rajasthan</p>
+              <a href="#" class="gallery-zoom-btn"><i class="ri-zoom-in-line"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  
+
+    <!-- How It Works Section -->
+    <section class="how-it-works-section" id="how-it-works">
+      <div class="how-it-works-container">
+        <!-- Left Side: Title & Description -->
+        <div class="how-header-block">
+          <span class="how-tag"><span class="dot-indicator"></span>How It Works</span>
+          <h2 class="how-title">Here's a breakdown of how our services work<span class="red-dot">.</span></h2>
+        </div>
+        
+        <!-- Right Side: 3 Steps Cards -->
+        <div class="how-steps-grid">
+          <!-- Step 1: Checking Availability -->
+          <div class="step-card step-card-teal">
+            <div class="card-header">
+              <div class="step-icon step-icon-teal">
+                <i class="ri-calendar-check-line"></i>
+              </div>
+              <span class="step-number step-num-teal">01</span>
+            </div>
+            <h3>Checking Availability</h3>
+            <p>Ensure that the tour is available on the dates you plan to travel. Browse available tours in your destination.</p>
+          </div>
+          
+          <!-- Step 2: Booking & Confirmation -->
+          <div class="step-card step-card-orange">
+            <div class="card-header">
+              <div class="step-icon step-icon-orange">
+                <i class="ri-ticket-2-line"></i>
+              </div>
+              <span class="step-number step-num-orange">02</span>
+            </div>
+            <h3>Booking & Confirmation</h3>
+            <p>Upon arrival, check in at our reception. Our friendly staff will guide you through.</p>
+          </div>
+          
+          <!-- Step 3: Enjoy Your Stay -->
+          <div class="step-card step-card-purple">
+            <div class="card-header">
+              <div class="step-icon step-icon-purple">
+                <i class="ri-hotel-bed-line"></i>
+              </div>
+              <span class="step-number step-num-purple">03</span>
+            </div>
+            <h3>Enjoy Your Stay</h3>
+            <p>Make sure to be at the meeting point on time, Ask questions and enjoy the experience!</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section class="why-choose-section" id="why-choose-us">
+      <div class="why-choose-container">
+        <div class="why-choose-header">
+          <span class="why-choose-pill">Why Choose Us</span>
+          <h2 class="why-choose-title">Bespoke Excellence in Travel</h2>
+          <p class="why-choose-subtitle">We don't just book trips; we craft authentic experiences, royal palace stays, and lifelong memories across India.</p>
+        </div>
+
+        <div class="why-choose-grid">
+          <!-- Item 1 -->
+          <div class="why-card">
+            <div class="why-icon-wrapper">
+              <i class="ri-award-line"></i>
+            </div>
+            <h3>15+ Years Experience</h3>
+            <p>We possess over a decade of dedication to crafting elite, hassle-free tour packages for global tourists.</p>
+          </div>
+
+          <!-- Item 2 -->
+          <div class="why-card">
+            <div class="why-icon-wrapper">
+              <i class="ri-settings-4-line"></i>
+            </div>
+            <h3>100% Customizable</h3>
+            <p>Every single day of your itinerary is flexible. Travel at your own pace and handpick your destinations.</p>
+          </div>
+
+          <!-- Item 3 -->
+          <div class="why-card">
+            <div class="why-icon-wrapper">
+              <i class="ri-team-line"></i>
+            </div>
+            <h3>Local Destination Experts</h3>
+            <p>Our handpicked network of English-speaking historians and local guides brings monument stories alive.</p>
+          </div>
+
+          <!-- Item 4 -->
+          <div class="why-card">
+            <div class="why-icon-wrapper">
+              <i class="ri-hotel-line"></i>
+            </div>
+            <h3>5-Star Palace Stays</h3>
+            <p>Enjoy exclusive access to royal heritage hotels, majestic houseboats, and elite retreats.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+      <!-- Testimonials Section -->
+    <section class="testimonial-section" id="testimonials">
+      <div class="testimonial-container">
+        <!-- Left Side: Image with target background decoration -->
+        <div class="testimonial-image-block">
+          <div class="target-bg-decor"></div>
+          <img src="images/testimonial-img-03.png" alt="Travelers Couple" class="couple-img">
+        </div>
+
+        <!-- Right Side: Swiper Slider reviews -->
+        <div class="testimonial-content-block">
+          <span class="testimonial-pill">Testimonials</span>
+          <h2 class="testimonial-title">What Our Clients Says</h2>
+          
+          <div class="testimonial-rating-bar">
+            <div class="stars">
+              <i class="ri-star-fill"></i>
+              <i class="ri-star-fill"></i>
+              <i class="ri-star-fill"></i>
+              <i class="ri-star-fill"></i>
+              <i class="ri-star-fill"></i>
+            </div>
+            <span class="rating-num">5.0</span>
+          </div>
+
+          <!-- Swiper Slider Container -->
+          <div class="swiper testimonial-swiper">
+            <div class="swiper-wrapper">
+              <!-- Slide 1 -->
+              <div class="swiper-slide">
+                <p class="review-text">
+                  I recently booked a tour through Discover Royal India, and I couldn't be happier with the experience. From the beautiful heritage palaces to the seamless travel logistics, everything was managed with absolute perfection.
+                </p>
+                <div class="client-badge">
+                  <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=100&q=80" alt="Rachel Mariscal" class="client-avatar">
+                  <div class="client-info">
+                    <h4>Rachel Mariscal</h4>
+                    <p>United States</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Slide 2 -->
+              <div class="swiper-slide">
+                <p class="review-text">
+                  Visiting Rajasthan was a lifelong dream. Thanks to their bespoke itineraries and private guides, we felt like royalty throughout the entire trip. We got amazing deals and experienced true cultural heritage.
+                </p>
+                <div class="client-badge">
+                  <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=100&q=80" alt="Thomas Jenkins" class="client-avatar">
+                  <div class="client-info">
+                    <h4>Thomas Jenkins</h4>
+                    <p>United Kingdom</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Slide 3 -->
+              <div class="swiper-slide">
+                <p class="review-text">
+                  An absolutely flawless journey through Kerala. Houseboats, spice plantations, and the local cuisine was exquisite. Discover Royal India took care of every transfer and detail with absolute dedication!
+                </p>
+                <div class="client-badge">
+                  <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=100&q=80" alt="Emma Watson" class="client-avatar">
+                  <div class="client-info">
+                    <h4>Emma Watson</h4>
+                    <p>Canada</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Swiper Pagination dots -->
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section" id="faq">
+      <div class="faq-container">
+        <!-- Left Side: Trust cards and highlight title -->
+        <div class="faq-left-block">
+          <div class="faq-heading-wrapper">
+            <h2 class="faq-main-title">
+              Trusted Solution Of Your 
+              <span class="faq-pill-img">
+                <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=120&h=45&q=80" alt="Beach Pill">
+              </span>
+              <br>
+              <span class="text-orange">Tourism Services</span>
+            </h2>
+          </div>
+
+          <div class="faq-trust-cards">
+            <!-- Card 1 -->
+            <div class="faq-trust-card border-green">
+              <div class="faq-card-icon bg-green">
+                <i class="ri-hotel-star-line"></i>
+              </div>
+              <div class="faq-card-content">
+                <h3>VIP Packages</h3>
+                <p>Includes 5-star palace stays, private guides, and exclusive entry passes.</p>
+              </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="faq-trust-card border-purple">
+              <div class="faq-card-icon bg-purple">
+                <i class="ri-customer-service-2-line"></i>
+              </div>
+              <div class="faq-card-content">
+                <h3>Travel Packages</h3>
+                <p>Bundled luxury transport, boutique stays, and 24/7 concierge assistance.</p>
+              </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="faq-trust-card border-teal">
+              <div class="faq-card-icon bg-teal">
+                <i class="ri-shield-check-line"></i>
+              </div>
+              <div class="faq-card-content">
+                <h3>Best Price Guarantee</h3>
+                <p>We guarantee optimal prices for high-end hospitality services.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Side: FAQ Accordion -->
+        <div class="faq-right-block">
+          <span class="faq-pill-label">Most Popular Providers</span>
+          <h2 class="faq-right-title">Try Relaxing Accomodations.</h2>
+
+          <div class="accordion-wrapper">
+            <!-- Accordion 1 (Expanded by default) -->
+            <div class="accordion-item active">
+              <button class="accordion-header">
+                <span>What types of tours do you offer?</span>
+                <i class="ri-subtract-line toggle-icon"></i>
+              </button>
+              <div class="accordion-content">
+                <p>We offer a wide range of tours, including cultural, adventure, luxury, and customized itineraries. Popular destinations include Rajasthan, Kerala, and the Golden Triangle.</p>
+              </div>
+            </div>
+
+            <!-- Accordion 2 -->
+            <div class="accordion-item">
+              <button class="accordion-header">
+                <span>Are the tours customizable?</span>
+                <i class="ri-add-line toggle-icon"></i>
+              </button>
+              <div class="accordion-content">
+                <p>Yes, all our tour packages are 100% customizable to suit your schedule, budget, and travel interests. Contact our coordinators to customize your route.</p>
+              </div>
+            </div>
+
+            <!-- Accordion 3 -->
+            <div class="accordion-item">
+              <button class="accordion-header">
+                <span>What safety measures do you follow?</span>
+                <i class="ri-add-line toggle-icon"></i>
+              </button>
+              <div class="accordion-content">
+                <p>We work only with verified luxury hotel partners, provide private chauffeured cars, and offer 24/7 concierge support during your stay.</p>
+              </div>
+            </div>
+
+            <!-- Accordion 4 -->
+            <div class="accordion-item">
+              <button class="accordion-header">
+                <span>How far in advance should I book?</span>
+                <i class="ri-add-line toggle-icon"></i>
+              </button>
+              <div class="accordion-content">
+                <p>We recommend booking at least 3 to 6 months in advance, especially during the peak tourist season (October to March) to guarantee top hotel availability.</p>
+              </div>
+            </div>
+
+            <!-- Accordion 5 -->
+            <div class="accordion-item">
+              <button class="accordion-header">
+                <span>What is your cancellation policy?</span>
+                <i class="ri-add-line toggle-icon"></i>
+              </button>
+              <div class="accordion-content">
+                <p>We offer flexible cancellation policies depending on the package type. Please contact our travel coordinator for details on refunds and modifications.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Dynamic Footer Placeholder -->
+    <div id="footer-placeholder"></div>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <!-- Main JavaScript File -->
+    <script src="js/script.js"></script>
+  </body>
+</html>
