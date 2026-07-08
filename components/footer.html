@@ -126,3 +126,162 @@
         </div>
     </div>
 </footer>
+
+<!-- Booking Modal Popup -->
+<div id="bookingModal" class="booking-modal-overlay">
+    <div class="booking-modal-card">
+        <span class="booking-modal-close">&times;</span>
+        <div class="booking-modal-header">
+            <h2>Book Your Royal Tour</h2>
+            <p>Fill in details to get a customized, high-end tailor-made tour plan from our experts.</p>
+        </div>
+        <form class="booking-modal-form" onsubmit="event.preventDefault(); alert('Booking Enquiry Sent! Our travel coordinator will contact you shortly.'); document.getElementById('bookingModal').classList.remove('show');">
+            <!-- Details Grid -->
+            <div class="booking-form-grid">
+                <!-- Select Hotel -->
+                <div class="modal-form-group">
+                    <label>Hotel Preference*</label>
+                    <div class="modal-input-wrapper">
+                        <select class="modal-input" required>
+                            <option value="" disabled selected>Select Hotel Class</option>
+                            <option value="standard">Standard (3 Star)</option>
+                            <option value="first-class">First Class (4 Star)</option>
+                            <option value="deluxe">Deluxe (5 Star)</option>
+                            <option value="luxury">Luxury Stays</option>
+                        </select>
+                        <i class="ri-hotel-bed-line"></i>
+                    </div>
+                </div>
+
+                <!-- No of Days -->
+                <div class="modal-form-group">
+                    <label>Duration (Days)*</label>
+                    <div class="modal-input-wrapper">
+                        <select class="modal-input" required>
+                            <option value="" disabled selected>No of Days</option>
+                            <option value="1">1 Day</option>
+                            <option value="2">2 Days</option>
+                            <option value="3">3 Days</option>
+                            <option value="4">4 Days</option>
+                            <option value="5">5 Days</option>
+                            <option value="6">6 Days</option>
+                            <option value="7">7 Days</option>
+                            <option value="8">8 Days</option>
+                            <option value="9">9 Days</option>
+                            <option value="10">10 Days</option>
+                            <option value="11">11 Days</option>
+                            <option value="12">12 Days</option>
+                            <option value="13">13 Days</option>
+                            <option value="14">14 Days</option>
+                            <option value="15">15+ Days</option>
+                        </select>
+                        <i class="ri-calendar-todo-line"></i>
+                    </div>
+                </div>
+
+                <!-- Date of Arrival -->
+                <div class="modal-form-group">
+                    <label>Arrival Date*</label>
+                    <div class="modal-input-wrapper">
+                        <input type="date" class="modal-input" value="2026-11-08" required>
+                        <i class="ri-calendar-line"></i>
+                    </div>
+                </div>
+
+                <!-- Adults -->
+                <div class="modal-form-group">
+                    <label>Adults*</label>
+                    <div class="modal-input-wrapper">
+                        <select class="modal-input" required>
+                            <option value="" disabled selected>Select Adults</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5+</option>
+                        </select>
+                        <i class="ri-group-line"></i>
+                    </div>
+                </div>
+
+                <!-- Child -->
+                <div class="modal-form-group">
+                    <label>Children</label>
+                    <div class="modal-input-wrapper">
+                        <select class="modal-input">
+                            <option value="0" selected>0 Children</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3+</option>
+                        </select>
+                        <i class="ri-user-smile-line"></i>
+                    </div>
+                </div>
+
+                <!-- Name -->
+                <div class="modal-form-group">
+                    <label>Full Name*</label>
+                    <div class="modal-input-wrapper">
+                        <input type="text" class="modal-input" placeholder="Your Name" required>
+                        <i class="ri-user-3-line"></i>
+                    </div>
+                </div>
+
+                <!-- Country -->
+                <div class="modal-form-group">
+                    <label>Country*</label>
+                    <div class="modal-input-wrapper">
+                        <select class="modal-input" required>
+                            <option value="" disabled selected>Your Country</option>
+                            <option value="United States">United States</option>
+                            <option value="United Kingdom">United Kingdom</option>
+                            <option value="India">India</option>
+                            <option value="Canada">Canada</option>
+                            <option value="Australia">Australia</option>
+                            <option value="Germany">Germany</option>
+                            <option value="France">France</option>
+                            <option value="Afghanistan">Afghanistan</option>
+                            <option value="Albania">Albania</option>
+                        </select>
+                        <i class="ri-earth-line"></i>
+                    </div>
+                </div>
+
+                <!-- Phone -->
+                <div class="modal-form-group">
+                    <label>Phone Number*</label>
+                    <div class="modal-input-wrapper">
+                        <input type="text" class="modal-input" placeholder="Phone with country code" required>
+                        <i class="ri-phone-line"></i>
+                    </div>
+                </div>
+
+                <!-- Email -->
+                <div class="modal-form-group modal-col-span-2">
+                    <label>Email Address*</label>
+                    <div class="modal-input-wrapper">
+                        <input type="email" class="modal-input" placeholder="Your email address" required>
+                        <i class="ri-mail-line"></i>
+                    </div>
+                </div>
+
+                <!-- Other Tour Requirements -->
+                <div class="modal-form-group modal-col-span-2">
+                    <label>Special Requirements / Tour Plan Notes</label>
+                    <div class="modal-input-wrapper textarea-group">
+                        <textarea class="modal-textarea" placeholder="Tell us about destinations you want to visit, custom routing, or special preferences..."></textarea>
+                        <i class="ri-chat-4-line"></i>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Submit Section -->
+            <div class="modal-submit-container">
+                <div class="privacy-note">
+                    <i class="ri-shield-check-line"></i> We assure absolute privacy of your personal data.
+                </div>
+                <button type="submit" class="modal-submit-btn">SUBMIT BOOKING ENQUIRY</button>
+            </div>
+        </form>
+    </div>
+</div>

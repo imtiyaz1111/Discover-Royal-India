@@ -63,7 +63,7 @@
     </main>
 
     <!-- Get Free Quote Form Wrapper -->
-    <section class="quote-form-wrapper">
+    <section class="quote-form-wrapper" id="quote-form">
       <div class="quote-form-card">
         <div class="quote-form-header">
           <h2>Get Free Quote</h2>
@@ -225,68 +225,106 @@
       <div class="home-about-container">
         <!-- Left Side: Interactive image collage -->
         <div class="about-image-collage">
-          <div class="about-img-wrapper main-img">
-            <img
-              src="/images/about-img.png"
-              alt="Royal Palace Courtyard"
-            />
-          </div>
+          <!-- Background offset image (heritage palace/hotel room) -->
           <div class="about-img-wrapper offset-img">
             <img
               src="/images/about-img2.png"
-              alt="Lake Palace Udaipur"
+              alt="Luxury Palace Accommodation"
             />
           </div>
-          <!-- Interactive experience badge -->
-          <div class="experience-badge">
-            <span class="badge-number">15+</span>
-            <span class="badge-text">Years of Curating Royal Journeys</span>
+          <!-- Foreground main image (traveling couple) -->
+          <div class="about-img-wrapper main-img">
+            <img
+              src="/images/about-img.png"
+              alt="Royal India Travelers"
+            />
+          </div>
+          <!-- Floating reviews card -->
+          <div class="floating-reviews-badge">
+            <div class="reviews-badge-content">
+              <div class="avatar-group">
+                <span class="avatar-item" style="background-color: #fce7f3; color: #db2777;">R</span>
+                <span class="avatar-item" style="background-color: #dbeafe; color: #2563eb;">A</span>
+                <span class="avatar-item" style="background-color: #e0f2fe; color: #0284c7;">J</span>
+                <span class="avatar-item" style="background-color: #fef3c7; color: #d97706;">M</span>
+              </div>
+              <div class="reviews-info">
+                <div class="stars-row">
+                  <i class="ri-star-fill"></i>
+                  <i class="ri-star-fill"></i>
+                  <i class="ri-star-fill"></i>
+                  <i class="ri-star-fill"></i>
+                  <i class="ri-star-fill"></i>
+                  <span class="stars-val">5.0</span>
+                </div>
+                <span class="reviews-count">2K+ Reviews</span>
+              </div>
+            </div>
           </div>
         </div>
 
         <!-- Right Side: Text details -->
         <div class="about-text-content">
-          <span class="about-tag">WHO WE ARE</span>
+          <div class="about-tag-pill">
+            <span class="pill-dot"></span>
+            Get To Know About Us
+          </div>
           <h2 class="about-heading">
-            Crafting Royal Journeys for the Discerning Traveler
+            Provide high-quality Accommodations & service make journeys seamless & enjoyable.
           </h2>
           <p class="about-intro">
-            Discover Royal India is an elite travel coordinator dedicated to
-            crafting personalized, high-end travel experiences for international
-            explorers.
-          </p>
-          <p class="about-body">
-            We specialize in combining absolute luxury with authenticity,
-            ensuring that you don't just visit India, but experience it like
-            royalty. Every tour package is uniquely customized to suit your pace
-            and taste.
+            We offer a diverse range of tailor-made India tours, from golden triangle heritage exploration to luxury stays in five-star heritage palaces and premium chauffeur-driven excursions.
           </p>
 
-          <!-- Quick features list -->
-          <div class="about-features">
-            <div class="feature-item">
-              <div class="feature-icon"><i class="ri-compass-3-line"></i></div>
-              <div class="feature-info">
-                <h4>Tailored Itineraries</h4>
-                <p>Bespoke travel routes matched to your preferences.</p>
+          <!-- Quick features row -->
+          <div class="about-features-row">
+            <div class="feature-card">
+              <div class="feature-check-icon check-green">
+                <i class="ri-checkbox-circle-fill"></i>
+              </div>
+              <div class="feature-card-content">
+                <h4>Convenient Stays</h4>
+                <p>Handpicked heritage hotels and luxury palace resorts across key destinations.</p>
               </div>
             </div>
-            <div class="feature-item">
-              <div class="feature-icon"><i class="ri-hotel-line"></i></div>
-              <div class="feature-info">
-                <h4>Luxury Stays</h4>
-                <p>Handpicked 5-star palaces, retreats & houseboats.</p>
+            <div class="feature-card">
+              <div class="feature-check-icon check-orange">
+                <i class="ri-checkbox-circle-fill"></i>
+              </div>
+              <div class="feature-card-content">
+                <h4>Customer-Centric Service</h4>
+                <p>24/7 dedicated travel guides, private chauffeurs, and support at every step.</p>
               </div>
             </div>
           </div>
 
-          <div class="about-actions-group">
-            <a href="about-us.html" class="about-cta-btn">Read Our Story <i class="ri-arrow-right-line"></i></a>
-            <a href="https://wa.me/919289990112" class="about-whatsapp-btn" target="_blank" rel="noopener noreferrer">
-              <i class="ri-whatsapp-line"></i> Chat on WhatsApp
+          <!-- Actions: Book Now & WhatsApp -->
+          <div class="about-actions-row">
+            <a href="#quote-form" class="btn-get-started">
+              Book Now <i class="ri-calendar-check-line"></i>
+            </a>
+            <a href="https://wa.me/919289990112" target="_blank" rel="noopener noreferrer" class="btn-whatsapp">
+              <span class="wa-icon-circle"><i class="ri-whatsapp-line"></i></span> Chat on WhatsApp
             </a>
           </div>
+
+          <!-- Bottom statistics row -->
+          <div class="about-stats-grid">
+            <div class="stat-card">
+              <h3 class="stat-number">56+</h3>
+              <p class="stat-label">Destinations Worldwide</p>
+            </div>
+            <div class="stat-card">
+              <h3 class="stat-number">7098+</h3>
+              <p class="stat-label">Booking Completed</p>
+            </div>
+            <div class="stat-card">
+              <h3 class="stat-number">67+</h3>
+              <p class="stat-label">Clients Globally</p>
+            </div>
+          </div>
         </div>
+      </div>
     </section>
 
     <!-- Benefits & Advantages Section -->
@@ -542,7 +580,7 @@
               <!-- Slide 1: Golden Triangle -->
               <div class="swiper-slide">
                 <div class="theme-card">
-                  <img src="https://images.unsplash.com/photo-1564507592333-c60657eea523?auto=format&fit=crop&w=600&q=80" alt="Golden Triangle Tours">
+                  <img src="/images/GoldenTriangle.avif" alt="Golden Triangle Tours">
                   <div class="theme-card-overlay active">
                     <h3>Golden Triangle Tours</h3>
                     <p>Incredible India takes pride in being recognized as one of India's premier tour and travel company...</p>
@@ -554,7 +592,7 @@
               <!-- Slide 2: Wildlife Tours -->
               <div class="swiper-slide">
                 <div class="theme-card">
-                  <img src="https://images.unsplash.com/photo-1602491453631-e2a5ad90a131?auto=format&fit=crop&w=600&q=80" alt="Wildlife Tours India">
+                  <img src="/images/WildlifeTours.avif" alt="Wildlife Tours India">
                   <div class="theme-card-overlay">
                     <h3>Wildlife Tours India</h3>
                     <p>Explore India's raw wilderness, exotic safaris, tiger reserves, and tropical sanctuaries...</p>
@@ -569,7 +607,7 @@
               <!-- Slide 3: Family Tours -->
               <div class="swiper-slide">
                 <div class="theme-card">
-                  <img src="https://images.unsplash.com/photo-1590001155093-a3c66ab0c3ff?auto=format&fit=crop&w=600&q=80" alt="Family Tours">
+                  <img src="/images/FamilyTours.jpg" alt="Family Tours">
                   <div class="theme-card-overlay">
                     <h3>Family Tours</h3>
                     <p>Crafting perfect vacations for your loved ones, blending relaxation, heritage, and pure fun...</p>
@@ -581,12 +619,12 @@
                 </div>
               </div>
 
-              <!-- Slide 4: Honeymoon Tours -->
+              <!-- Slide 4: First Timer India Tour -->
               <div class="swiper-slide">
                 <div class="theme-card">
-                  <img src="https://images.unsplash.com/photo-1593693397690-362cb9666fc2?auto=format&fit=crop&w=600&q=80" alt="Honeymoon Tours">
+                  <img src="/images/FirstTimerIndiaTour.jpg" alt="Honeymoon Tours">
                   <div class="theme-card-overlay">
-                    <h3>Honeymoon Tours</h3>
+                    <h3>First Timer India Tour</h3>
                     <p>Experience romantic getaways, serene houseboat retreats, and intimate dinners under the stars...</p>
                     <a href="#" class="theme-card-btn">View All Tours</a>
                   </div>
@@ -596,20 +634,7 @@
                 </div>
               </div>
 
-              <!-- Slide 5: Spiritual Tours -->
-              <div class="swiper-slide">
-                <div class="theme-card">
-                  <img src="https://images.unsplash.com/photo-1561361513-2d000a50f0db?auto=format&fit=crop&w=600&q=80" alt="Spiritual Tours">
-                  <div class="theme-card-overlay">
-                    <h3>Spiritual Tours</h3>
-                    <p>Reconnect with tranquility along Varanasi's sacred ghats, temples, and yoga retreats...</p>
-                    <a href="#" class="theme-card-btn">View All Tours</a>
-                  </div>
-                  <div class="theme-card-label">
-                    <h3>Spiritual Tours</h3>
-                  </div>
-                </div>
-              </div>
+             
             </div>
           </div>
         </div>
@@ -1573,67 +1598,89 @@
         <div class="gallery-grid">
           <!-- Item 1: Large -->
           <div class="gallery-item item-large">
-            <img src="https://images.unsplash.com/photo-1564507592333-c60657eea523?auto=format&fit=crop&w=800&q=80" alt="Taj Mahal Agra">
+            <img src="/images/gallery/gallery1.avif" alt="Taj Mahal Agra">
             <div class="gallery-overlay">
               <span class="gallery-cat">Heritage</span>
               <h3>Taj Mahal</h3>
               <p>Agra, Uttar Pradesh</p>
-              <a href="#" class="gallery-zoom-btn"><i class="ri-zoom-in-line"></i></a>
+              <a href="#" class="gallery-zoom-btn" data-index="0"><i class="ri-zoom-in-line"></i></a>
             </div>
           </div>
 
           <!-- Item 2: Tall -->
           <div class="gallery-item item-tall">
-            <img src="https://images.unsplash.com/photo-1603262110263-fb0112e7cc33?auto=format&fit=crop&w=600&h=800&q=80" alt="Amber Fort Jaipur">
+            <img src="/images/gallery/gallery2.avif" alt="Amber Fort Jaipur">
             <div class="gallery-overlay">
               <span class="gallery-cat">Palaces</span>
               <h3>Amber Fort</h3>
               <p>Jaipur, Rajasthan</p>
-              <a href="#" class="gallery-zoom-btn"><i class="ri-zoom-in-line"></i></a>
+              <a href="#" class="gallery-zoom-btn" data-index="1"><i class="ri-zoom-in-line"></i></a>
             </div>
           </div>
 
           <!-- Item 3: Standard -->
           <div class="gallery-item">
-            <img src="https://images.unsplash.com/photo-1593693397690-362cb9666fc2?auto=format&fit=crop&w=600&q=80" alt="Kerala Backwaters">
+            <img src="/images/gallery/gallery3.avif" alt="Kerala Backwaters">
             <div class="gallery-overlay">
               <span class="gallery-cat">Nature</span>
               <h3>Backwaters</h3>
               <p>Alleppey, Kerala</p>
-              <a href="#" class="gallery-zoom-btn"><i class="ri-zoom-in-line"></i></a>
+              <a href="#" class="gallery-zoom-btn" data-index="2"><i class="ri-zoom-in-line"></i></a>
             </div>
           </div>
 
           <!-- Item 4: Standard -->
           <div class="gallery-item">
-            <img src="https://images.unsplash.com/photo-1561361513-2d000a50f0db?auto=format&fit=crop&w=600&q=80" alt="Varanasi Ganges">
+            <img src="/images/gallery/gallery4.avif" alt="Varanasi Ganges">
             <div class="gallery-overlay">
               <span class="gallery-cat">Spiritual</span>
               <h3>Ganga Aarti</h3>
               <p>Varanasi, Uttar Pradesh</p>
-              <a href="#" class="gallery-zoom-btn"><i class="ri-zoom-in-line"></i></a>
+              <a href="#" class="gallery-zoom-btn" data-index="3"><i class="ri-zoom-in-line"></i></a>
             </div>
           </div>
 
           <!-- Item 5: Wide -->
           <div class="gallery-item item-wide">
-            <img src="https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?auto=format&fit=crop&w=800&q=80" alt="Himalayas Ladakh">
+            <img src="/images/gallery/gallery5.avif" alt="Himalayas Ladakh">
             <div class="gallery-overlay">
               <span class="gallery-cat">Adventure</span>
               <h3>Pangong Lake</h3>
               <p>Leh Ladakh, Jammu & Kashmir</p>
-              <a href="#" class="gallery-zoom-btn"><i class="ri-zoom-in-line"></i></a>
+              <a href="#" class="gallery-zoom-btn" data-index="4"><i class="ri-zoom-in-line"></i></a>
             </div>
           </div>
 
           <!-- Item 6: Standard -->
           <div class="gallery-item">
-            <img src="https://images.unsplash.com/photo-1590001155093-a3c66ab0c3ff?auto=format&fit=crop&w=600&q=80" alt="Mehrangarh Fort Jodhpur">
+            <img src="/images/gallery/gallery6.jpg" alt="Mehrangarh Fort Jodhpur">
             <div class="gallery-overlay">
               <span class="gallery-cat">Forts</span>
               <h3>Mehrangarh Fort</h3>
               <p>Jodhpur, Rajasthan</p>
-              <a href="#" class="gallery-zoom-btn"><i class="ri-zoom-in-line"></i></a>
+              <a href="#" class="gallery-zoom-btn" data-index="5"><i class="ri-zoom-in-line"></i></a>
+            </div>
+          </div>
+
+          <!-- Item 7: Standard -->
+          <div class="gallery-item">
+            <img src="/images/gallery/gallery7.jpg" alt="Maharajas Express">
+            <div class="gallery-overlay">
+              <span class="gallery-cat">Luxury</span>
+              <h3>Maharajas' Express</h3>
+              <p>Luxury Train, India</p>
+              <a href="#" class="gallery-zoom-btn" data-index="6"><i class="ri-zoom-in-line"></i></a>
+            </div>
+          </div>
+
+          <!-- Item 8: Wide -->
+          <div class="gallery-item item-wide">
+            <img src="/images/gallery/gallery8.jpg" alt="Ranthambore Wildlife Safari">
+            <div class="gallery-overlay">
+              <span class="gallery-cat">Wildlife</span>
+              <h3>Ranthambore Safari</h3>
+              <p>Sawai Madhopur, Rajasthan</p>
+              <a href="#" class="gallery-zoom-btn" data-index="7"><i class="ri-zoom-in-line"></i></a>
             </div>
           </div>
         </div>
@@ -1957,6 +2004,17 @@
     <button class="scroll-to-top-btn" id="scrollToTopBtn" title="Scroll to Top">
       <i class="ri-arrow-up-line"></i>
     </button>
+
+    <!-- Lightbox Modal for Gallery -->
+    <div id="galleryLightbox" class="lightbox-modal">
+      <span class="lightbox-close">&times;</span>
+      <div class="lightbox-content">
+        <img id="lightboxImage" src="" alt="Full Screen View">
+        <div id="lightboxCaption" class="lightbox-caption"></div>
+      </div>
+      <button class="lightbox-prev" aria-label="Previous image"><i class="ri-arrow-left-s-line"></i></button>
+      <button class="lightbox-next" aria-label="Next image"><i class="ri-arrow-right-s-line"></i></button>
+    </div>
 
     <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>

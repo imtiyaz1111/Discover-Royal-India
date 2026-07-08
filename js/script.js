@@ -1,17 +1,61 @@
 document.addEventListener('DOMContentLoaded', () => {
+    // Determine path prefix based on URL depth (e.g. if in a subfolder like /delhi-tours/)
+    let pathPrefix = '';
+    const isSubFolder = window.location.pathname.includes('-tours/');
+    if (isSubFolder) {
+        pathPrefix = '../';
+    }
+
+    // Helper to fix asset paths when inside subfolders
+    function adjustPaths() {
+        if (!isSubFolder) return;
+        
+        // Fix images
+        document.querySelectorAll('img').forEach(img => {
+            const src = img.getAttribute('src');
+            if (src && !src.startsWith('http') && !src.startsWith('/') && !src.startsWith('../')) {
+                img.setAttribute('src', pathPrefix + src);
+            }
+        });
+        
+        // Fix stylesheets
+        document.querySelectorAll('link[rel="stylesheet"]').forEach(link => {
+            const href = link.getAttribute('href');
+            if (href && !href.startsWith('http') && !href.startsWith('/') && !href.startsWith('../')) {
+                link.setAttribute('href', pathPrefix + href);
+            }
+        });
+
+        // Fix script sources
+        document.querySelectorAll('script').forEach(script => {
+            const src = script.getAttribute('src');
+            if (src && !src.startsWith('http') && !src.startsWith('/') && !src.startsWith('../')) {
+                script.setAttribute('src', pathPrefix + src);
+            }
+        });
+
+        // Fix menu/page links
+        document.querySelectorAll('a').forEach(a => {
+            const href = a.getAttribute('href');
+            if (href && !href.startsWith('http') && !href.startsWith('/') && !href.startsWith('#') && !href.startsWith('../') && !href.startsWith('mailto:') && !href.startsWith('tel:')) {
+                a.setAttribute('href', pathPrefix + href);
+            }
+        });
+    }
+
     // 1. Dynamic Component Loader
     async function loadComponent(placeholderId, filePath, callback) {
         const placeholder = document.getElementById(placeholderId);
         if (!placeholder) {
-            // If placeholder not found, execute callback immediately
             if (callback) callback();
             return;
         }
         try {
-            const response = await fetch(filePath);
+            const response = await fetch(pathPrefix + filePath);
             if (response.ok) {
                 const html = await response.text();
                 placeholder.outerHTML = html;
+                adjustPaths();
                 if (callback) callback();
             } else {
                 console.error(`Failed to load component: ${filePath}`);
@@ -87,11 +131,11 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         // Mobile Menu Dropdown Accordion/Toggle
-        const mobileDropdownToggles = document.querySelectorAll('.mobile-dropdown-toggle');
-        mobileDropdownToggles.forEach(toggle => {
-            toggle.addEventListener('click', (e) => {
+        const mobileDropdownHeaders = document.querySelectorAll('.mobile-dropdown-header');
+        mobileDropdownHeaders.forEach(header => {
+            header.addEventListener('click', (e) => {
                 e.preventDefault();
-                const parent = toggle.parentElement;
+                const parent = header.parentElement;
                 parent.classList.toggle('open');
             });
         });
@@ -433,6 +477,145 @@ document.addEventListener('DOMContentLoaded', () => {
             window.scrollTo({
                 top: 0,
                 behavior: 'smooth'
+            });
+        });
+    }
+
+    // 11. Gallery Lightbox Slider Modal Logic
+    const galleryItems = document.querySelectorAll('.gallery-section .gallery-item');
+    const lightbox = document.getElementById('galleryLightbox');
+    const lightboxImg = document.getElementById('lightboxImage');
+    const lightboxCap = document.getElementById('lightboxCaption');
+    const closeBtn = document.querySelector('.lightbox-close');
+    const prevBtn = document.querySelector('.lightbox-prev');
+    const nextBtn = document.querySelector('.lightbox-next');
+    
+    if (galleryItems.length > 0 && lightbox && lightboxImg && lightboxCap) {
+        let currentIndex = 0;
+        
+        // Extract all images data (src and caption) from grid layout
+        const imagesList = Array.from(galleryItems).map(item => {
+            const img = item.querySelector('img');
+            const title = item.querySelector('.gallery-overlay h3')?.textContent || '';
+            const location = item.querySelector('.gallery-overlay p')?.textContent || '';
+            return {
+                src: img ? img.getAttribute('src') : '',
+                caption: title ? `${title} (${location})` : ''
+            };
+        });
+
+        function showLightboxImage(index) {
+            if (index < 0) {
+                currentIndex = imagesList.length - 1;
+            } else if (index >= imagesList.length) {
+                currentIndex = 0;
+            } else {
+                currentIndex = index;
+            }
+            
+            const currentItemData = imagesList[currentIndex];
+            if (currentItemData) {
+                lightboxImg.setAttribute('src', currentItemData.src);
+                lightboxCap.textContent = currentItemData.caption;
+            }
+        }
+
+        function openLightbox(index) {
+            showLightboxImage(index);
+            lightbox.classList.add('show');
+            document.body.style.overflow = 'hidden'; // Disable background scrolling
+        }
+
+        function closeLightbox() {
+            lightbox.classList.remove('show');
+            document.body.style.overflow = ''; // Re-enable background scrolling
+        }
+
+        // Attach click listeners to gallery elements
+        galleryItems.forEach((item, index) => {
+            // Clicking zoom button opens lightbox
+            const zoomBtn = item.querySelector('.gallery-zoom-btn');
+            if (zoomBtn) {
+                zoomBtn.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    openLightbox(index);
+                });
+            }
+            
+            // Also, clicking anywhere on the item/overlay triggers the zoom/full-screen behavior
+            item.addEventListener('click', () => {
+                openLightbox(index);
+            });
+        });
+
+        // Navigation actions
+        if (closeBtn) closeBtn.addEventListener('click', closeLightbox);
+        if (prevBtn) prevBtn.addEventListener('click', () => showLightboxImage(currentIndex - 1));
+        if (nextBtn) nextBtn.addEventListener('click', () => showLightboxImage(currentIndex + 1));
+
+        // Click outside image content to close
+        lightbox.addEventListener('click', (e) => {
+            if (e.target === lightbox) {
+                closeLightbox();
+            }
+        });
+
+        // Keyboard accessibility
+        window.addEventListener('keydown', (e) => {
+            if (!lightbox.classList.contains('show')) return;
+            if (e.key === 'ArrowLeft') {
+                showLightboxImage(currentIndex - 1);
+            } else if (e.key === 'ArrowRight') {
+                showLightboxImage(currentIndex + 1);
+            } else if (e.key === 'Escape') {
+                closeLightbox();
+            }
+        });
+    }
+
+    // 12. Booking Modal Popup Logic
+    const bookingModal = document.getElementById('bookingModal');
+    const modalCloseBtn = document.querySelector('.booking-modal-close');
+    
+    if (bookingModal) {
+        function openBookingModal() {
+            bookingModal.classList.add('show');
+            document.body.style.overflow = 'hidden';
+        }
+        
+        function closeBookingModal() {
+            bookingModal.classList.remove('show');
+            document.body.style.overflow = '';
+        }
+        
+        if (modalCloseBtn) {
+            modalCloseBtn.addEventListener('click', closeBookingModal);
+        }
+        
+        // Close modal when clicking on the overlay backdrop
+        bookingModal.addEventListener('click', (e) => {
+            if (e.target === bookingModal) {
+                closeBookingModal();
+            }
+        });
+        
+        // Listen to ESC key to close modal
+        window.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && bookingModal.classList.contains('show')) {
+                closeBookingModal();
+            }
+        });
+
+        // Intercept Book Now / Send Enquiry clicks unconditionally across the entire site
+        const allBookTriggers = document.querySelectorAll(
+            'a[href="#quote-form"], .floating-action-btn.book-float, .btn-get-started, .book-btn, .enquiry-btn, .action-btn.enquiry-btn'
+        );
+
+        allBookTriggers.forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                e.preventDefault();
+                openBookingModal();
             });
         });
     }
