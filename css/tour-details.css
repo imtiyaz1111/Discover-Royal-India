@@ -1,0 +1,149 @@
+/* Common Styles for Tour Details Pages */
+
+.tour-details-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 40px;
+    padding: 40px 0;
+}
+
+.tour-gallery {
+    margin-bottom: 30px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+}
+
+.tour-gallery img {
+    width: 100%;
+    height: auto;
+    display: block;
+    max-height: 500px;
+    object-fit: cover;
+}
+
+.detail-card {
+    background: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    margin-bottom: 30px;
+    border: 1px solid #f1f5f9;
+}
+
+.detail-card h3 {
+    color: #111e38;
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.detail-card h3::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50px;
+    height: 3px;
+    background: var(--color-accent, #c89d7c);
+    border-radius: 2px;
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background: #f8fafc;
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid #f1f5f9;
+}
+
+.info-item i {
+    font-size: 1.8rem;
+    color: var(--color-accent, #c89d7c);
+}
+
+.info-item div h5 {
+    margin: 0;
+    color: #64748b;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+}
+
+.info-item div p {
+    margin: 0;
+    color: #111e38;
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.itinerary-list {
+    position: relative;
+    padding-left: 30px;
+}
+
+.itinerary-list::before {
+    content: '';
+    position: absolute;
+    left: 7px;
+    top: 10px;
+    bottom: 10px;
+    width: 2px;
+    background: #e2e8f0;
+}
+
+.itinerary-item {
+    position: relative;
+    margin-bottom: 25px;
+}
+
+.itinerary-item::before {
+    content: '';
+    position: absolute;
+    left: -29px;
+    top: 5px;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: #fff;
+    border: 3px solid var(--color-accent, #c89d7c);
+    box-shadow: 0 0 0 4px #fff;
+    transition: all 0.3s ease;
+}
+
+.itinerary-item:hover::before {
+    background: var(--color-accent, #c89d7c);
+}
+
+.itinerary-item h4 {
+    margin: 0 0 8px 0;
+    color: #111e38;
+    font-size: 1.15rem;
+}
+
+.itinerary-item p {
+    margin: 0;
+    color: #475569;
+    line-height: 1.6;
+}
+
+.sidebar-sticky {
+    position: sticky;
+    top: 100px;
+}
+
+@media (max-width: 991px) {
+    .tour-details-container {
+        grid-template-columns: 1fr;
+    }
+}

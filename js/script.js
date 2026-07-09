@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
         // Fix menu/page links
         document.querySelectorAll('a').forEach(a => {
             const href = a.getAttribute('href');
-            if (href && !href.startsWith('http') && !href.startsWith('/') && !href.startsWith('#') && !href.startsWith('../') && !href.startsWith('mailto:') && !href.startsWith('tel:')) {
+            if (href && !href.startsWith('http') && !href.startsWith('/') && !href.startsWith('#') && !href.startsWith('../') && !href.startsWith('./') && !href.startsWith('mailto:') && !href.startsWith('tel:')) {
                 a.setAttribute('href', pathPrefix + href);
             }
         });
