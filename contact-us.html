@@ -6,96 +6,9 @@
     <title>Contact Us | Discover Royal India</title>
     <!-- Remix Icon for Premium Vector Icons -->
     <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
-    <!-- Main Style Sheet -->
+    <!-- Main Style Sheets -->
     <link rel="stylesheet" href="css/style.css">
-    <style>
-        .page-header {
-            background: linear-gradient(135deg, var(--color-primary), #111e38);
-            padding: 160px 5% 80px;
-            text-align: center;
-            color: var(--color-text-light);
-        }
-        .page-header h1 {
-            font-family: var(--font-heading);
-            font-size: 3rem;
-            margin-bottom: 15px;
-        }
-        .contact-section {
-            max-width: 1100px;
-            margin: 60px auto;
-            padding: 0 20px;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 50px;
-        }
-        .contact-info h2, .contact-form h2 {
-            font-family: var(--font-heading);
-            margin-bottom: 25px;
-            color: var(--color-primary);
-        }
-        .info-item {
-            display: flex;
-            align-items: flex-start;
-            gap: 15px;
-            margin-bottom: 30px;
-        }
-        .info-item i {
-            font-size: 1.5rem;
-            color: var(--color-accent);
-        }
-        .info-text h3 {
-            font-size: 1.1rem;
-            margin-bottom: 5px;
-            color: var(--color-primary);
-        }
-        .info-text p {
-            color: #64748b;
-        }
-        .c-form {
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-        }
-        .c-group {
-            display: flex;
-            flex-direction: column;
-            gap: 8px;
-        }
-        .c-group label {
-            font-size: 0.85rem;
-            font-weight: 600;
-            color: #64748b;
-        }
-        .c-input {
-            border: 1px solid #e2e8f0;
-            border-radius: 8px;
-            padding: 12px 15px;
-            font-size: 0.95rem;
-            width: 100%;
-        }
-        .c-input:focus {
-            border-color: var(--color-accent);
-        }
-        .c-btn {
-            background: linear-gradient(135deg, var(--color-secondary), var(--color-secondary-hover));
-            color: #ffffff;
-            font-weight: 700;
-            padding: 14px 30px;
-            border-radius: 8px;
-            cursor: pointer;
-            align-self: flex-start;
-            transition: var(--transition-smooth);
-        }
-        .c-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 4px 15px rgba(244, 63, 94, 0.3);
-        }
-        @media (max-width: 768px) {
-            .contact-section {
-                grid-template-columns: 1fr;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="css/contact.css">
 </head>
 <body>
 
@@ -103,57 +16,192 @@
     <div id="navbar-placeholder"></div>
 
     <!-- Header Section -->
-    <section class="page-header">
+    <section class="page-header-banner">
         <h1>Contact Our Concierge</h1>
         <p>Get in touch to begin tailoring your exclusive Indian itinerary.</p>
+        <div class="breadcrumb">
+            <a href="index.html"><i class="ri-home-4-line"></i> Home</a>
+            <i class="ri-arrow-right-s-line separator"></i>
+            <span class="current">Contact Us</span>
+        </div>
     </section>
 
     <!-- Content Section -->
     <main class="contact-section">
         <div class="contact-info">
-            <h2>Reach Us Directly</h2>
-            <div class="info-item">
-                <i class="ri-phone-fill"></i>
-                <div class="info-text">
-                    <h3>Phone Support</h3>
+            <span class="contact-tag">Royal Concierge Desk</span>
+            <h2>Start Your Journey Here</h2>
+            <p class="contact-desc">Our dedicated travel managers are available round-the-clock to design, refine, and perfect your custom itinerary. Connect with us directly for any requests.</p>
+            
+            <div class="info-card">
+                <div class="card-icon">
+                    <i class="ri-phone-fill"></i>
+                </div>
+                <div class="card-content">
+                    <h3>Phone & WhatsApp</h3>
                     <p>+91 9289990112</p>
+                    <span class="hours">Concierge hours: 24/7 Available</span>
                 </div>
             </div>
-            <div class="info-item">
-                <i class="ri-mail-fill"></i>
-                <div class="info-text">
-                    <h3>Email Address</h3>
+
+            <div class="info-card">
+                <div class="card-icon">
+                    <i class="ri-mail-fill"></i>
+                </div>
+                <div class="card-content">
+                    <h3>Email Concierge</h3>
                     <p>info@discoverroyalindia.com</p>
+                    <span class="hours">Response within 2 hours</span>
                 </div>
             </div>
-            <div class="info-item">
-                <i class="ri-map-pin-fill"></i>
-                <div class="info-text">
-                    <h3>Main Office</h3>
+
+            <div class="info-card">
+                <div class="card-icon">
+                    <i class="ri-map-pin-fill"></i>
+                </div>
+                <div class="card-content">
+                    <h3>Registered Headquarters</h3>
                     <p>New Delhi, India</p>
+                    <span class="hours">Visits by appointment only</span>
+                </div>
+            </div>
+
+            <div class="social-connect">
+                <h3>Connect Socially</h3>
+                <div class="social-links">
+                    <a href="#" title="Facebook"><i class="ri-facebook-fill"></i></a>
+                    <a href="#" title="Instagram"><i class="ri-instagram-fill"></i></a>
+                    <a href="#" title="Twitter"><i class="ri-twitter-fill"></i></a>
+                    <a href="https://wa.me/919289990112" target="_blank" rel="noopener noreferrer" title="WhatsApp Chat"><i class="ri-whatsapp-fill"></i></a>
                 </div>
             </div>
         </div>
 
-        <div class="contact-form">
-            <h2>Send an Inquiry</h2>
-            <form class="c-form" onsubmit="event.preventDefault(); alert('Inquiry Sent! Our agent will contact you soon.');">
+        <div class="contact-form-card">
+            <span class="form-tag">Custom Curation Enquiry</span>
+            <h2>Bespoke Request</h2>
+            <form class="c-form" onsubmit="event.preventDefault(); alert('Inquiry Sent! Our travel coordinator will contact you soon.');">
                 <div class="c-group">
-                    <label for="name">Full Name</label>
-                    <input type="text" id="name" class="c-input" required placeholder="John Doe">
+                    <label for="name">Full Name*</label>
+                    <div class="input-icon-wrapper">
+                        <input type="text" id="name" class="c-input" required placeholder="John Doe">
+                        <i class="ri-user-line"></i>
+                    </div>
                 </div>
                 <div class="c-group">
-                    <label for="email">Email Address</label>
-                    <input type="email" id="email" class="c-input" required placeholder="john@example.com">
+                    <label for="email">Email Address*</label>
+                    <div class="input-icon-wrapper">
+                        <input type="email" id="email" class="c-input" required placeholder="john@example.com">
+                        <i class="ri-mail-line"></i>
+                    </div>
                 </div>
                 <div class="c-group">
-                    <label for="msg">Your Message</label>
-                    <textarea id="msg" class="c-input" rows="4" required placeholder="Tell us about your dream trip..."></textarea>
+                    <label for="destination">Destination of Interest*</label>
+                    <div class="input-icon-wrapper">
+                        <select id="destination" class="c-input" required style="padding-left: 50px; appearance: none; -webkit-appearance: none;">
+                            <option value="" disabled selected>Select Destination</option>
+                            <option value="rajasthan">Rajasthan Forts & Palaces</option>
+                            <option value="kerala">Kerala Backwaters & Hills</option>
+                            <option value="golden-triangle">Golden Triangle Tour</option>
+                            <option value="north-india">North India Tour</option>
+                            <option value="south-india">South India Tour</option>
+                            <option value="other">Other Destinations</option>
+                        </select>
+                        <i class="ri-map-pin-line"></i>
+                    </div>
+                </div>
+                
+                <div class="form-flex-row">
+                    <div class="c-group">
+                        <label for="arrival-date">Arrival Date*</label>
+                        <div class="input-icon-wrapper">
+                            <input type="date" id="arrival-date" class="c-input" required>
+                            <i class="ri-calendar-line"></i>
+                        </div>
+                    </div>
+                    <div class="c-group">
+                        <label for="duration">Duration (Days)*</label>
+                        <div class="input-icon-wrapper">
+                            <select id="duration" class="c-input" required style="padding-left: 50px; appearance: none; -webkit-appearance: none;">
+                                <option value="" disabled selected>No of Days</option>
+                                <option value="1-5">1 - 5 Days</option>
+                                <option value="6-10">6 - 10 Days</option>
+                                <option value="11-15">11 - 15 Days</option>
+                                <option value="15+">15+ Days</option>
+                            </select>
+                            <i class="ri-time-line"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="c-group">
+                    <label for="msg">Your Message / Travel Dreams*</label>
+                    <div class="input-icon-wrapper">
+                        <textarea id="msg" class="c-input" rows="4" required placeholder="Tell us about your dream trip, hotel choice, and preferences..." style="padding-left: 50px; resize: none;"></textarea>
+                        <i class="ri-chat-1-line" style="top: 24px;"></i>
+                    </div>
                 </div>
                 <button type="submit" class="c-btn">Send Inquiry</button>
             </form>
         </div>
     </main>
+
+    <!-- FAQ Section -->
+    <section class="contact-faq-section" id="faq">
+        <div class="faq-container">
+            <div class="section-title text-center">
+                <span class="faq-tag">Frequently Asked Questions</span>
+                <h2>Pre-Travel Enquiries</h2>
+                <div class="title-divider"></div>
+            </div>
+
+            <div class="faq-accordion">
+                <!-- FAQ Item 1 -->
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>How do I customize my itinerary?</span>
+                        <i class="ri-add-line toggle-icon"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>All our tours are 100% tailor-made. You can share your travel dates, preferred destinations, and style of travel through our inquiry forms or WhatsApp. Our travel coordinators will schedule a consultation and draft a personalized day-by-day itinerary matching your vision.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 2 -->
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Are airport transfers and private drivers included?</span>
+                        <i class="ri-add-line toggle-icon"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Yes, all our luxury packages include private, air-conditioned transfers with dedicated professional chauffeurs. From the moment you land at the airport until your departure, your chauffeur and transfers are fully managed by us.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 3 -->
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>What are the hotel preference classes available?</span>
+                        <i class="ri-add-line toggle-icon"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>We partner with high-end properties categorized into three tiers: Standard (premium 3-star heritage hotels), First-Class (boutique 4-star palatial stays), and Deluxe/Luxury (five-star grand palaces like Taj, Oberoi, and Leela Palace properties).</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 4 -->
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>What is your cancellation and booking deposit policy?</span>
+                        <i class="ri-add-line toggle-icon"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>To secure heritage bookings, we require a partial advance deposit upon itinerary approval. Cancellation policies vary based on the season and specific hotels (such as private palace wings). Complete details will be provided alongside your customized quote.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- Dynamic Footer Placeholder -->
     <div id="footer-placeholder"></div>

@@ -6,32 +6,9 @@
     <title>About Us | Discover Royal India</title>
     <!-- Remix Icon for Premium Vector Icons -->
     <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
-    <!-- Main Style Sheet -->
+    <!-- Main Style Sheets -->
     <link rel="stylesheet" href="css/style.css">
-    <style>
-        .page-header {
-            background: linear-gradient(135deg, var(--color-primary), #111e38);
-            padding: 160px 5% 80px;
-            text-align: center;
-            color: var(--color-text-light);
-        }
-        .page-header h1 {
-            font-family: var(--font-heading);
-            font-size: 3rem;
-            margin-bottom: 15px;
-        }
-        .page-content {
-            max-width: 900px;
-            margin: 60px auto;
-            padding: 0 20px;
-            line-height: 1.8;
-            font-size: 1.1rem;
-            color: #475569;
-        }
-        .page-content p {
-            margin-bottom: 25px;
-        }
-    </style>
+    <link rel="stylesheet" href="css/about.css">
 </head>
 <body>
 
@@ -39,16 +16,222 @@
     <div id="navbar-placeholder"></div>
 
     <!-- Header Section -->
-    <section class="page-header">
+    <section class="page-header-banner">
         <h1>About Discover Royal India</h1>
         <p>Curating bespoke journeys across India's legacy, culture, and nature.</p>
+        <div class="breadcrumb">
+            <a href="index.html"><i class="ri-home-4-line"></i> Home</a>
+            <i class="ri-arrow-right-s-line separator"></i>
+            <span class="current">About Us</span>
+        </div>
     </section>
 
     <!-- Content Section -->
-    <main class="page-content">
-        <p>Discover Royal India is an elite travel coordinator dedicated to crafting personalized, high-end travel experiences for international explorers. Our mission is to show the genuine warmth, architectural grandeur, and rich heritage of India with unmatched service quality.</p>
-        <p>Whether exploring Rajasthan’s opulent palaces, cruising through the serene backwaters of Kerala, or witnessing the sacred rituals along the Ganges in Varanasi, we ensure every detail of your journey is managed with absolute perfection.</p>
-    </main>
+    <section class="about-us-section">
+        <div class="about-us-container">
+            <!-- Left Side: Interactive image collage -->
+            <div class="about-collage">
+                <div class="collage-bg-img">
+                    <img src="images/about_heritage_hotel.png" alt="Heritage Luxury Accommodation">
+                </div>
+                <div class="collage-fg-img">
+                    <img src="images/about_taj_travelers.png" alt="Travelers in India">
+                </div>
+                <!-- Rating badge -->
+                <div class="collage-rating-badge">
+                    <div class="rating-avatars">
+                        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=100&q=80" alt="Client 1">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=100&q=80" alt="Client 2">
+                        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=100&q=80" alt="Client 3">
+                    </div>
+                    <div class="rating-text">
+                        <div class="stars">
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <span class="rating-num">5.0</span>
+                        </div>
+                        <span class="reviews-count">2K+ Reviews</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Side: Content and Details -->
+            <div class="about-content-block">
+                <span class="about-badge-tag"><span class="dot"></span> Get To Know Us</span>
+                <h2>Providing Luxury Accommodations & Elite Services to Make Your Indian Journey Seamless & Royal.</h2>
+                <p class="about-intro-desc">We offer a curated collection of bespoke heritage journeys, luxury palace stays, private guided excursions, and tailored wildlife safaris designed exclusively for international explorers looking to experience the true majesty of India.</p>
+                
+                <!-- Features Grid -->
+                <div class="about-features-grid">
+                    <div class="feature-item">
+                        <div class="feature-icon icon-green">
+                            <i class="ri-checkbox-circle-fill"></i>
+                        </div>
+                        <div class="feature-text">
+                            <h3>Curated Destinations</h3>
+                            <p>Handpicked heritage forts, palaces, and scenic retreats across Rajasthan, Kerala, and the Golden Triangle.</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon icon-orange">
+                            <i class="ri-checkbox-circle-fill"></i>
+                        </div>
+                        <div class="feature-text">
+                            <h3>24/7 Concierge Support</h3>
+                            <p>A dedicated travel coordinator handles every detail, ensuring premium comfort from arrival to departure.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="about-cta-row">
+                    <a href="#quote-form" class="cta-btn-primary enquiry-btn">Book Your Tour <i class="ri-calendar-check-line"></i></a>
+                    <a href="https://wa.me/919289990112" target="_blank" rel="noopener noreferrer" class="cta-btn-whatsapp">
+                        <span class="whatsapp-btn-circle"><i class="ri-whatsapp-line"></i></span> Chat on WhatsApp
+                    </a>
+                </div>
+
+                <!-- Stats Grid -->
+                <div class="about-stats-grid">
+                    <div class="stat-card">
+                        <h3>50+</h3>
+                        <p>Royal Destinations</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>10K+</h3>
+                        <p>Happy Guests</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>20+</h3>
+                        <p>Years of Legacy</p>
+                    </div>
+                </div>
+            </div>
+    </section>
+
+    <!-- Core Pillars Section -->
+    <section class="about-pillars-section">
+        <div class="section-title text-center">
+            <span class="pillars-sub-title">Why Travel With Us</span>
+            <h2>Our Core Pillars of Royalty</h2>
+            <div class="title-divider"></div>
+        </div>
+
+        <div class="pillars-grid">
+            <!-- Pillar 1 -->
+            <div class="pillar-card">
+                <div class="pillar-icon-wrapper">
+                    <i class="ri-compass-3-line"></i>
+                </div>
+                <h3>Bespoke Customization</h3>
+                <p>We reject rigid pre-packaged travel. Every journey is designed from scratch, customized to match your pace, architectural interests, and culinary desires.</p>
+                <div class="pillar-card-hover-border"></div>
+            </div>
+
+            <!-- Pillar 2 -->
+            <div class="pillar-card">
+                <div class="pillar-icon-wrapper">
+                    <i class="ri-hotel-line"></i>
+                </div>
+                <h3>Palace Partnerships</h3>
+                <p>Gain access to private palace wings, iconic heritage properties, and royal retreats that are otherwise unavailable to standard tour coordinators.</p>
+                <div class="pillar-card-hover-border"></div>
+            </div>
+
+            <!-- Pillar 3 -->
+            <div class="pillar-card">
+                <div class="pillar-icon-wrapper">
+                    <i class="ri-shield-user-line"></i>
+                </div>
+                <h3>Private Chauffeurs & Guides</h3>
+                <p>Explore with trust. Travel in luxury air-conditioned vehicles driven by professional chauffeurs and escorted by certified local heritage experts.</p>
+                <div class="pillar-card-hover-border"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Curation Process Section -->
+    <section class="about-process-section">
+        <div class="section-title text-center">
+            <span class="process-sub-title">How We Curate</span>
+            <h2>Our Curation Process</h2>
+            <div class="title-divider"></div>
+        </div>
+
+        <div class="process-timeline">
+            <!-- Step 1 -->
+            <div class="timeline-step">
+                <div class="step-number">01</div>
+                <div class="step-card-content">
+                    <div class="step-icon-box">
+                        <i class="ri-chat-smile-2-line"></i>
+                    </div>
+                    <h3>Share Your Vision</h3>
+                    <p>Connect with our concierge team via our booking modal or directly through WhatsApp. Outline your desired destinations, dates, and preferred class of hotel luxury.</p>
+                </div>
+            </div>
+
+            <!-- Step 2 -->
+            <div class="timeline-step">
+                <div class="step-number">02</div>
+                <div class="step-card-content">
+                    <div class="step-icon-box">
+                        <i class="ri-edit-box-line"></i>
+                    </div>
+                    <h3>Bespoke Customization</h3>
+                    <p>Our travel architects design a unique, day-by-day itinerary tailored entirely to your interests. We tweak and refine it until it matches your dream trip perfectly.</p>
+                </div>
+            </div>
+
+            <!-- Step 3 -->
+            <div class="timeline-step">
+                <div class="step-number">03</div>
+                <div class="step-card-content">
+                    <div class="step-icon-box">
+                        <i class="ri-sparkling-2-line"></i>
+                    </div>
+                    <h3>Uncompromising Execution</h3>
+                    <p>Arrive in India to find private airport transfers, luxury vehicles, private local guides, and a dedicated 24/7 coordinator handling all trip logistics.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Trust Partners Section -->
+    <section class="about-partners-section">
+        <div class="partners-container">
+            <div class="partners-track">
+                <!-- Partner 1 -->
+                <div class="partner-logo">
+                    <i class="ri-government-line"></i>
+                    <span>Ministry of Tourism</span>
+                </div>
+                <!-- Partner 2 -->
+                <div class="partner-logo">
+                    <i class="ri-global-line"></i>
+                    <span>IATO Member</span>
+                </div>
+                <!-- Partner 3 -->
+                <div class="partner-logo">
+                    <i class="ri-tripadvisor-fill"></i>
+                    <span>TripAdvisor Approved</span>
+                </div>
+                <!-- Partner 4 -->
+                <div class="partner-logo">
+                    <i class="ri-compass-discover-line"></i>
+                    <span>PATA Partner</span>
+                </div>
+                <!-- Partner 5 -->
+                <div class="partner-logo">
+                    <i class="ri-ancient-gate-line"></i>
+                    <span>Heritage Hotels Assoc.</span>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- Dynamic Footer Placeholder -->
     <div id="footer-placeholder"></div>

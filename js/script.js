@@ -67,15 +67,29 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    // Load both navbar and footer components
+    // Create and append a placeholder for the modal form dynamically to body if not already present
+    let modalPlaceholder = document.getElementById('modalform-placeholder');
+    if (!modalPlaceholder) {
+        modalPlaceholder = document.createElement('div');
+        modalPlaceholder.id = 'modalform-placeholder';
+        document.body.appendChild(modalPlaceholder);
+    }
+
+    // Load navbar, footer and modalform components
     loadComponent('navbar-placeholder', 'components/navbar.html', () => {
         loadComponent('footer-placeholder', 'components/footer.html', () => {
-            initializeInteractivity();
+            loadComponent('modalform-placeholder', 'components/modalform.html', () => {
+                initializeInteractivity();
+                setupModalAndWidgets();
+            });
         });
     });
 
     // 2. Initialize Page Interactivity (after navbar & footer load)
     function initializeInteractivity() {
+        // Highlight active navbar links matching current page
+        setActiveMenuItem();
+
         // Sticky Navigation on Scroll
         const headerWrapper = document.querySelector('.header-wrapper');
         const topBar = document.querySelector('.top-bar');
@@ -574,49 +588,186 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // 12. Booking Modal Popup Logic
-    const bookingModal = document.getElementById('bookingModal');
-    const modalCloseBtn = document.querySelector('.booking-modal-close');
-    
-    if (bookingModal) {
-        function openBookingModal() {
-            bookingModal.classList.add('show');
-            document.body.style.overflow = 'hidden';
-        }
+    // Dynamic Active Navbar Link Handler
+    function setActiveMenuItem() {
+        const currentPath = window.location.pathname;
+        const navLinks = document.querySelectorAll('.nav-link, .mobile-link');
         
-        function closeBookingModal() {
-            bookingModal.classList.remove('show');
-            document.body.style.overflow = '';
-        }
+        // Remove active class from all links first
+        navLinks.forEach(link => link.classList.remove('active'));
         
-        if (modalCloseBtn) {
-            modalCloseBtn.addEventListener('click', closeBookingModal);
-        }
+        let matched = false;
         
-        // Close modal when clicking on the overlay backdrop
-        bookingModal.addEventListener('click', (e) => {
-            if (e.target === bookingModal) {
-                closeBookingModal();
-            }
-        });
-        
-        // Listen to ESC key to close modal
-        window.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape' && bookingModal.classList.contains('show')) {
-                closeBookingModal();
-            }
-        });
-
-        // Intercept Book Now / Send Enquiry clicks unconditionally across the entire site
-        const allBookTriggers = document.querySelectorAll(
-            'a[href="#quote-form"], .floating-action-btn.book-float, .btn-get-started, .book-btn, .enquiry-btn, .action-btn.enquiry-btn'
-        );
-
-        allBookTriggers.forEach(btn => {
-            btn.addEventListener('click', (e) => {
-                e.preventDefault();
-                openBookingModal();
+        if (currentPath.includes('about-us.html')) {
+            navLinks.forEach(link => {
+                if (link.getAttribute('href') && link.getAttribute('href').includes('about-us.html')) {
+                    link.classList.add('active');
+                    matched = true;
+                }
             });
-        });
+        } else if (currentPath.includes('contact-us.html')) {
+            navLinks.forEach(link => {
+                if (link.getAttribute('href') && link.getAttribute('href').includes('contact-us.html')) {
+                    link.classList.add('active');
+                    matched = true;
+                }
+            });
+        } else if (currentPath.includes('-tours/')) {
+            // Highlight "India Tour" dropdown parent link
+            navLinks.forEach(link => {
+                if (link.textContent.includes('India Tour')) {
+                    link.classList.add('active');
+                    matched = true;
+                }
+            });
+        }
+        
+        // If not matched, default to Home
+        if (!matched) {
+            navLinks.forEach(link => {
+                const href = link.getAttribute('href');
+                if (href && (href.includes('index.html') || href === '/')) {
+                    link.classList.add('active');
+                }
+            });
+        }
+    }
+
+    // 12. Booking Modal Popup & Scroll To Top Widgets Logic
+    function setupModalAndWidgets() {
+        // Scroll To Top Button
+        const scrollToTopBtn = document.getElementById('scrollToTopBtn');
+        if (scrollToTopBtn) {
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 300) {
+                    scrollToTopBtn.classList.add('show');
+                } else {
+                    scrollToTopBtn.classList.remove('show');
+                }
+            });
+            scrollToTopBtn.addEventListener('click', () => {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+        }
+
+        // Booking Modal Popup
+        const bookingModal = document.getElementById('bookingModal');
+        const modalCloseBtn = document.querySelector('.booking-modal-close');
+        
+        if (bookingModal) {
+            function openBookingModal() {
+                bookingModal.classList.add('show');
+                document.body.style.overflow = 'hidden';
+            }
+            
+            function closeBookingModal() {
+                bookingModal.classList.remove('show');
+                document.body.style.overflow = '';
+            }
+            
+            if (modalCloseBtn) {
+                modalCloseBtn.addEventListener('click', closeBookingModal);
+            }
+            
+            // Close modal when clicking on the overlay backdrop
+            bookingModal.addEventListener('click', (e) => {
+                if (e.target === bookingModal) {
+                    closeBookingModal();
+                }
+            });
+            
+            // Listen to ESC key to close modal
+            window.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape' && bookingModal.classList.contains('show')) {
+                    closeBookingModal();
+                }
+            });
+
+            // Intercept Book Now / Send Enquiry clicks unconditionally across the entire site
+            function bindTriggers() {
+                const allBookTriggers = document.querySelectorAll(
+                    'a[href="#quote-form"], .floating-action-btn.book-float, .btn-get-started, .book-btn, .enquiry-btn, .action-btn.enquiry-btn'
+                );
+
+                allBookTriggers.forEach(btn => {
+                    // Skip home page quote form elements and contact us page form submit buttons
+                    if (btn.classList.contains('quote-submit-btn') || btn.closest('.quote-form-card') || btn.closest('.contact-form')) {
+                        return;
+                    }
+
+                    if (!btn.dataset.modalBound) {
+                        btn.dataset.modalBound = 'true';
+                        btn.addEventListener('click', (e) => {
+                            e.preventDefault();
+                            openBookingModal();
+                        });
+                    }
+                });
+            }
+
+            bindTriggers();
+            // Double check triggers after dynamic layout changes or delayed renders
+            setTimeout(bindTriggers, 500);
+            setTimeout(bindTriggers, 1500);
+
+            // Map Pin Interaction
+            const pins = document.querySelectorAll('.map-pin');
+            const infoCards = document.querySelectorAll('.region-info-card');
+            const placeholder = document.querySelector('.info-card-placeholder');
+
+            pins.forEach(pin => {
+                const region = pin.getAttribute('data-region');
+                const tooltip = document.getElementById(`tooltip-${region}`);
+
+                // Hover triggers
+                pin.addEventListener('mouseenter', () => {
+                    if (tooltip) tooltip.classList.add('show-tooltip');
+                });
+                pin.addEventListener('mouseleave', () => {
+                    if (tooltip) tooltip.classList.remove('show-tooltip');
+                });
+
+                // Click triggers
+                pin.addEventListener('click', () => {
+                    pins.forEach(p => p.classList.remove('active'));
+                    infoCards.forEach(c => c.classList.remove('active'));
+                    if (placeholder) placeholder.style.display = 'none';
+
+                    pin.classList.add('active');
+                    const activeCard = document.getElementById(`info-${region}`);
+                    if (activeCard) {
+                        activeCard.classList.add('active');
+                    }
+                    
+                    // Bind newly revealed enquiry buttons
+                    bindTriggers();
+                });
+            });
+
+            // FAQ Accordion Interaction
+            const faqQuestions = document.querySelectorAll('.faq-question');
+            faqQuestions.forEach(question => {
+                question.addEventListener('click', () => {
+                    const item = question.parentElement;
+                    const answer = question.nextElementSibling;
+                    const isActive = item.classList.contains('active');
+
+                    // Close all other items
+                    document.querySelectorAll('.faq-item').forEach(i => {
+                        i.classList.remove('active');
+                        i.querySelector('.faq-answer').style.maxHeight = null;
+                    });
+
+                    // Toggle current item
+                    if (!isActive) {
+                        item.classList.add('active');
+                        answer.style.maxHeight = answer.scrollHeight + 'px';
+                    }
+                });
+            });
+        }
     }
 });
