@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -14,6 +14,557 @@
         .page-header-banner {
             background: url('../images/NorthIndiaTours/taj_mahal_ganges.jpg') center/cover no-repeat !important;
         }
+        
+        /* Custom Premium styling for Ganges & Taj Tour page */
+        .info-grid {
+            margin-bottom: 25px;
+        }
+        
+        .custom-tour-banner {
+            background: linear-gradient(135deg, #111e38 0%, #1e293b 100%);
+            color: #fff;
+            padding: 20px 25px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            border-left: 5px solid var(--color-accent, #d93f21);
+        }
+        .custom-tour-banner .banner-icon {
+            font-size: 2.2rem;
+            color: var(--color-accent, #d93f21);
+            display: flex;
+            align-items: center;
+        }
+        .custom-tour-banner .banner-content {
+            flex-grow: 1;
+        }
+        .custom-tour-banner h4 {
+            margin: 0 0 5px 0;
+            font-size: 1.25rem;
+            color: #fff;
+            font-family: var(--font-heading);
+        }
+        .custom-tour-banner p {
+            margin: 0;
+            color: #cbd5e1;
+            font-size: 0.95rem;
+            line-height: 1.4;
+        }
+        .custom-tour-banner .customize-btn {
+            background: var(--color-accent, #d93f21);
+            color: #fff;
+            padding: 12px 22px;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            white-space: nowrap;
+            transition: var(--transition-smooth);
+            box-shadow: 0 4px 10px rgba(217, 63, 33, 0.3);
+        }
+        .custom-tour-banner .customize-btn:hover {
+            background: var(--color-accent-hover, #b82e16);
+            transform: translateY(-2px);
+        }
+        
+        .highlights-container {
+            margin-bottom: 35px;
+        }
+        .highlights-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+        .highlight-card {
+            background: #fff;
+            padding: 15px 20px;
+            border-radius: 10px;
+            border: 1px solid #e2e8f0;
+            display: flex;
+            gap: 15px;
+            align-items: flex-start;
+            transition: var(--transition-smooth);
+        }
+        .highlight-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.05);
+            border-color: rgba(217, 63, 33, 0.2);
+        }
+        .highlight-card i {
+            color: var(--color-accent, #d93f21);
+            font-size: 1.3rem;
+            margin-top: 2px;
+            background: rgba(217, 63, 33, 0.08);
+            padding: 8px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 34px;
+            height: 34px;
+        }
+        .highlight-card p {
+            margin: 0;
+            color: #334155;
+            font-weight: 550;
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+
+        .itinerary-list {
+            position: relative;
+            padding-left: 35px;
+            margin-top: 20px;
+        }
+        .itinerary-list::before {
+            content: '';
+            position: absolute;
+            left: 7px;
+            top: 10px;
+            bottom: 10px;
+            width: 2px;
+            background: linear-gradient(to bottom, var(--color-accent, #d93f21) 0%, #cbd5e1 100%);
+        }
+        .itinerary-item {
+            position: relative;
+            background: #fff;
+            border: 1px solid #f1f5f9;
+            border-radius: 12px;
+            padding: 20px 25px;
+            margin-bottom: 25px;
+            transition: var(--transition-smooth);
+        }
+        .itinerary-item:hover {
+            border-color: rgba(217, 63, 33, 0.15);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+        }
+        .itinerary-item::before {
+            content: '';
+            position: absolute;
+            left: -35px;
+            top: 22px;
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+            background: #fff;
+            border: 3px solid var(--color-accent, #d93f21);
+            box-shadow: 0 0 0 6px #faf9f6;
+            transition: all 0.3s ease;
+        }
+        .itinerary-item:hover::before {
+            background: var(--color-accent, #d93f21);
+            transform: scale(1.2);
+        }
+        .itinerary-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 12px;
+            border-bottom: 1px dashed #e2e8f0;
+            padding-bottom: 10px;
+        }
+        .itinerary-day-badge {
+            background: var(--color-primary, #0f172a);
+            color: #fff;
+            font-weight: 700;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+        }
+        .itinerary-item h4 {
+            font-size: 1.2rem;
+            color: var(--color-primary, #0f172a);
+            font-family: var(--font-heading);
+            margin: 0;
+            flex-grow: 1;
+        }
+        .itinerary-item p {
+            color: #475569;
+            line-height: 1.7;
+            font-size: 0.98rem;
+            margin: 0;
+        }
+        
+        .inline-enquiry-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            margin-top: 15px;
+            padding: 8px 18px;
+            background: rgba(217, 63, 33, 0.08);
+            color: var(--color-accent, #d93f21);
+            border-radius: 6px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: var(--transition-smooth);
+            text-decoration: none;
+        }
+        .inline-enquiry-btn:hover {
+            background: var(--color-accent, #d93f21);
+            color: #fff;
+            transform: translateX(3px);
+        }
+
+        .inc-exc-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 25px;
+            margin-top: 30px;
+            margin-bottom: 30px;
+        }
+        
+        .inc-exc-card {
+            background: #fff;
+            padding: 25px;
+            border-radius: 12px;
+            border: 1px solid #f1f5f9;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.02);
+        }
+        .inc-exc-card h3 {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #f1f5f9;
+            padding-bottom: 12px;
+            margin-top: 0;
+        }
+        .inc-exc-card h3::after {
+            display: none; /* Hide default underlines */
+        }
+        .inc-exc-card.inclusions h3 {
+            color: #15803d;
+            border-bottom-color: rgba(21, 128, 61, 0.1);
+        }
+        .inc-exc-card.exclusions h3 {
+            color: #b91c1c;
+            border-bottom-color: rgba(185, 28, 28, 0.1);
+        }
+        
+        .inc-exc-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .inc-exc-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            margin-bottom: 15px;
+            line-height: 1.5;
+            font-size: 0.95rem;
+            color: #475569;
+        }
+        .inc-exc-list li i {
+            font-size: 1.2rem;
+            margin-top: 1px;
+            flex-shrink: 0;
+        }
+        .inc-exc-list.inc-list li i {
+            color: #16a34a;
+        }
+        .inc-exc-list.exc-list li i {
+            color: #dc2626;
+        }
+
+        /* Sidebar Booking Form Styling */
+        .sidebar-booking-card {
+            background: #fff;
+            border: 1px solid #e2e8f0;
+            border-radius: 12px;
+            padding: 25px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            margin-bottom: 25px;
+            border-top: 4px solid var(--color-accent, #d93f21);
+        }
+        .sidebar-booking-card h3 {
+            color: var(--color-primary, #0f172a);
+            font-size: 1.3rem;
+            margin-bottom: 5px;
+            font-family: var(--font-heading);
+            position: relative;
+            padding-bottom: 8px;
+            margin-top: 0;
+        }
+        .sidebar-booking-card h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 40px;
+            height: 3px;
+            background: var(--color-accent, #d93f21);
+            border-radius: 2px;
+        }
+        .sidebar-booking-card p {
+            color: #64748b;
+            font-size: 0.85rem;
+            margin-top: 8px;
+            margin-bottom: 20px;
+            line-height: 1.4;
+        }
+        .sidebar-form-group {
+            margin-bottom: 15px;
+            position: relative;
+        }
+        .sidebar-form-group.col-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+        }
+        .sidebar-form-group label {
+            display: block;
+            font-size: 0.78rem;
+            font-weight: 700;
+            color: #475569;
+            margin-bottom: 6px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        .sidebar-input-wrapper {
+            position: relative;
+            display: flex;
+            align-items: center;
+        }
+        .sidebar-input-wrapper i {
+            position: absolute;
+            left: 12px;
+            color: #94a3b8;
+            font-size: 1.05rem;
+            pointer-events: none;
+        }
+        .sidebar-input, .sidebar-textarea {
+            width: 100%;
+            padding: 10px 12px 10px 38px;
+            border: 1px solid #cbd5e1;
+            border-radius: 8px;
+            font-size: 0.88rem;
+            color: #334155;
+            background-color: #f8fafc;
+            transition: var(--transition-smooth);
+            font-family: var(--font-body);
+        }
+        .sidebar-input:focus, .sidebar-textarea:focus {
+            border-color: var(--color-accent, #d93f21);
+            background-color: #fff;
+            box-shadow: 0 0 0 3px rgba(217, 63, 33, 0.1);
+            outline: none;
+        }
+        .sidebar-textarea {
+            min-height: 80px;
+            resize: vertical;
+            padding-left: 38px;
+        }
+        .sidebar-submit-btn {
+            width: 100%;
+            background: var(--color-accent, #d93f21);
+            color: #fff;
+            padding: 12px;
+            border: none;
+            border-radius: 8px;
+            font-weight: 700;
+            font-size: 0.95rem;
+            cursor: pointer;
+            transition: var(--transition-smooth);
+            box-shadow: 0 4px 10px rgba(217, 63, 33, 0.2);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-top: 10px;
+        }
+        .sidebar-submit-btn:hover {
+            background: var(--color-accent-hover, #b82e16);
+            transform: translateY(-1px);
+            box-shadow: 0 6px 14px rgba(217, 63, 33, 0.3);
+        }
+        .sidebar-privacy-note {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+            font-size: 0.75rem;
+            color: #64748b;
+            margin-top: 10px;
+        }
+        .sidebar-privacy-note i {
+            color: #16a34a;
+            font-size: 0.9rem;
+        }
+        .sidebar-whatsapp-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            width: 100%;
+            background: #25D366;
+            color: #fff;
+            padding: 12px;
+            border-radius: 8px;
+            font-weight: 700;
+            font-size: 0.95rem;
+            margin-top: 12px;
+            transition: var(--transition-smooth);
+            text-decoration: none;
+        }
+        .sidebar-whatsapp-btn:hover {
+            background: #20ba5a;
+            transform: translateY(-2px);
+        }
+
+        /* High-End Destinations Route Timeline */
+        .destinations-route-container {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            position: relative;
+            padding-left: 5px;
+            margin-top: 15px;
+        }
+        .route-line-track {
+            position: absolute;
+            left: 21px;
+            top: 20px;
+            bottom: 20px;
+            width: 3px;
+            background: linear-gradient(to bottom, var(--color-accent, #d93f21) 0%, var(--color-primary, #0f172a) 50%, var(--color-accent, #d93f21) 100%);
+            border-radius: 4px;
+        }
+        .route-stop-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            position: relative;
+            z-index: 1;
+            padding: 8px 12px;
+            border-radius: 8px;
+            background: #f8fafc;
+            border: 1px solid #f1f5f9;
+            transition: var(--transition-smooth);
+        }
+        .route-stop-item:hover {
+            background: #fff;
+            border-color: rgba(217, 63, 33, 0.2);
+            transform: translateX(5px);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.04);
+        }
+        .route-stop-badge {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 26px;
+            height: 26px;
+            border-radius: 50%;
+            background: #fff;
+            border: 2px solid #cbd5e1;
+            color: #64748b;
+            font-size: 0.72rem;
+            font-weight: 750;
+            transition: var(--transition-smooth);
+            flex-shrink: 0;
+        }
+        .route-stop-icon-box {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 26px;
+            height: 26px;
+            border-radius: 50%;
+            background: rgba(15, 23, 42, 0.05);
+            color: var(--color-primary, #0f172a);
+            font-size: 1rem;
+            transition: var(--transition-smooth);
+            flex-shrink: 0;
+        }
+        .route-stop-item:hover .route-stop-badge {
+            border-color: var(--color-accent, #d93f21);
+            color: var(--color-accent, #d93f21);
+            transform: scale(1.1);
+        }
+        .route-stop-item:hover .route-stop-icon-box {
+            background: rgba(217, 63, 33, 0.1);
+            color: var(--color-accent, #d93f21);
+            transform: scale(1.1);
+        }
+        .route-stop-info {
+            display: flex;
+            flex-direction: column;
+        }
+        .route-stop-name {
+            font-size: 0.92rem;
+            font-weight: 700;
+            color: var(--color-primary, #0f172a);
+        }
+        .route-stop-label {
+            font-size: 0.7rem;
+            color: #64748b;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        /* Highlight specific stops like Start/End and key hubs */
+        .route-stop-item.start-stop {
+            background: #fff8f6;
+            border-color: rgba(217, 63, 33, 0.15);
+        }
+        .route-stop-item.start-stop .route-stop-badge {
+            background: var(--color-accent, #d93f21);
+            border-color: var(--color-accent, #d93f21);
+            color: #fff;
+        }
+        .route-stop-item.end-stop {
+            background: #f1f5f9;
+            border-color: #cbd5e1;
+        }
+        .route-stop-item.end-stop .route-stop-badge {
+            background: var(--color-primary, #0f172a);
+            border-color: var(--color-primary, #0f172a);
+            color: #fff;
+        }
+
+        @media (max-width: 991px) {
+            /* Banner header responsiveness */
+            .page-header-banner {
+                padding: 130px 20px 60px !important;
+            }
+            .page-header-banner h1 {
+                font-size: 2.2rem !important;
+                margin-bottom: 15px;
+                line-height: 1.3;
+            }
+            .breadcrumb {
+                padding: 8px 16px;
+                font-size: 0.85rem;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            .breadcrumb .separator {
+                margin: 0 8px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .inc-exc-container {
+                grid-template-columns: 1fr;
+            }
+            .custom-tour-banner {
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 20px;
+            }
+            .custom-tour-banner .customize-btn {
+                width: 100%;
+                text-align: center;
+            }
+        }
     </style>
 </head>
 <body>
@@ -23,7 +574,7 @@
 
     <!-- Attractive Header Banner with Breadcrumbs -->
     <section class="page-header-banner">
-        <h1>North India With Taj Mahal And Ganges</h1>
+        <h1>North India with Taj Mahal and Ganges</h1>
         <div class="breadcrumb">
             <a href="../index.html"><i class="ri-home-4-line"></i> Home</a>
             <i class="ri-arrow-right-s-line separator"></i>
@@ -53,10 +604,17 @@
                         </div>
                     </div>
                     <div class="info-item">
-                        <i class="ri-user-line"></i>
+                        <i class="ri-roadster-line"></i>
                         <div>
-                            <h5>Max Guests</h5>
-                            <p>12 Guests</p>
+                            <h5>Travel Style</h5>
+                            <p>Private Car & Guide</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="ri-settings-5-line"></i>
+                        <div>
+                            <h5>Customization</h5>
+                            <p>100% Flexible</p>
                         </div>
                     </div>
                     <div class="info-item">
@@ -68,34 +626,227 @@
                     </div>
                 </div>
 
+                <!-- Customization Alert Banner -->
+                <div class="custom-tour-banner">
+                    <div class="banner-icon">
+                        <i class="ri-equalizer-line"></i>
+                    </div>
+                    <div class="banner-content">
+                        <h4>Customize This Tour</h4>
+                        <p>This itinerary is customizable according to your need. Speak to our destination planner to tailor it.</p>
+                    </div>
+                    <a href="#quote-form" class="enquiry-btn customize-btn">Customize Now</a>
+                </div>
+
                 <div class="detail-card">
                     <h3>Tour Overview</h3>
                     <p>Immerse yourself in the cultural essence and deep spirituality of North India. This comprehensive tour connects the magnificent, romantic Taj Mahal in Agra with the historic fortresses of Rajasthan and the sacred, timeless city of Varanasi on the banks of the Ganges. Watch sunrise rituals, explore ancient alleyways, and enjoy unmatched luxury hotels.</p>
                 </div>
 
+                <!-- Highlights Section -->
                 <div class="detail-card">
-                    <h3>Itinerary Highlights</h3>
+                    <h3>Highlights</h3>
+                    <div class="highlights-grid">
+                        <div class="highlight-card">
+                            <i class="ri-building-line"></i>
+                            <p>Explore Jama Masjid, Red Fort, Chandni Chowk Bazaar - Delhi</p>
+                        </div>
+                        <div class="highlight-card">
+                            <i class="ri-home-line"></i>
+                            <p>Visit Famous Havelis In Mandawa</p>
+                        </div>
+                        <div class="highlight-card">
+                            <i class="ri-roadster-line"></i>
+                            <p>See Asia’s Largest Camel Breeding Research Farm In Bikaner</p>
+                        </div>
+                        <div class="highlight-card">
+                            <i class="ri-compass-line"></i>
+                            <p>Explore The Jaisalmer Fort, Patwon Ki Haveli</p>
+                        </div>
+                        <div class="highlight-card">
+                            <i class="ri-map-pin-line"></i>
+                            <p>A Visit The Bishnoi Village</p>
+                        </div>
+                        <div class="highlight-card">
+                            <i class="ri-user-voice-line"></i>
+                            <p>See The Dying Art Of India - Puppet Show At Udaipur</p>
+                        </div>
+                        <div class="highlight-card">
+                            <i class="ri-royal-line"></i>
+                            <p>Visit Palaces And Forts Of Jaipur</p>
+                        </div>
+                        <div class="highlight-card">
+                            <i class="ri-ancient-gate-line"></i>
+                            <p>A Visit To Fatehpur Sikri</p>
+                        </div>
+                        <div class="highlight-card">
+                            <i class="ri-heart-2-line"></i>
+                            <p>Mesmerize With The Wonderful Beauty Of Taj Mahal</p>
+                        </div>
+                        <div class="highlight-card">
+                            <i class="ri-shield-line"></i>
+                            <p>See The Famous Temples Of Khajuraho</p>
+                        </div>
+                        <div class="highlight-card">
+                            <i class="ri-water-flash-line"></i>
+                            <p>Enjoy The Boat Ride And Ganga Aarti Ceremony In Varanasi</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Itinerary Section -->
+                <div class="detail-card">
+                    <h3>Itinerary</h3>
                     <div class="itinerary-list">
                         <div class="itinerary-item">
-                            <h4>Days 1-3: Delhi - Capital Landmarks</h4>
-                            <p>Tour India's capital city, exploring Old and New Delhi's best architectural sites.</p>
+                            <div class="itinerary-header">
+                                <span class="itinerary-day-badge">Day 01</span>
+                                <h4>Arrival at Delhi</h4>
+                            </div>
+                            <p>As soon as you land at New Delhi Airport, our escort shall take you to the hotel. With a warm welcome at the hotel; we shall assist you with check – in. This Day is at leisure and you can enjoy the facilities of the hotel. Dinner and night stay shall be in the hotel itself.</p>
+                            <a href="#quote-form" class="enquiry-btn inline-enquiry-btn">Enquire Now <i class="ri-arrow-right-line"></i></a>
                         </div>
                         <div class="itinerary-item">
-                            <h4>Days 4-7: Bikaner & Jaisalmer - Desert Forts</h4>
-                            <p>Explore the stunning palaces of Mandawa, the desert citadel of Jaisalmer, and Bikaner's fort.</p>
+                            <div class="itinerary-header">
+                                <span class="itinerary-day-badge">Day 02</span>
+                                <h4>Old and New Delhi</h4>
+                            </div>
+                            <p>Next day, soon after your hefty breakfast, we will set off to see Jama Masjid which also happens to the UNESCO World Heritage Site. Build by Emperor Akbar, it’s the architecture made out of Red Stone that stands tall. Next is a peep into the old lanes of Old Delhi. And here we shall take you across Birla Temple, Crematory of Mahatma Gandhi, Parliament House and Red Fort. After lunch its Chandni Chowk and Kinari Bazar – the local cloth markets which you shall see around. Dinner and stay at the hotel.</p>
                         </div>
                         <div class="itinerary-item">
-                            <h4>Days 8-10: Jodhpur & Udaipur - Royal Lakes</h4>
-                            <p>See Jodhpur's blue city and Mehrangarh Fort, then travel to Udaipur's lake palace region.</p>
+                            <div class="itinerary-header">
+                                <span class="itinerary-day-badge">Day 03</span>
+                                <h4>New Delhi - Mandawa</h4>
+                            </div>
+                            <p>The next destination is Mandawa – by road. Mandawa which is basically is a small town in Rajasthan is famous for its Havelis, frescos on them and the fort – all of them hundreds of years old. We shall take you around the famous havelis like Hanuman Prasad Goenka, Murmuria Jhunjhunwala and Gulab Rai Ladia Haveli. Soon after lunch we will see the Mandawa Fort built in 18th century. It is loaded with Lord Krishna paintings on the walls and ceilings; antiques and mirror work. Overnight stay will be at the hotel.</p>
+                            <a href="#quote-form" class="enquiry-btn inline-enquiry-btn">Enquire Now <i class="ri-arrow-right-line"></i></a>
                         </div>
                         <div class="itinerary-item">
-                            <h4>Days 11-13: Jaipur & Agra - Golden Triangle</h4>
-                            <p>Explore the Amber Fort in Jaipur and witness the magnificent Taj Mahal in Agra.</p>
+                            <div class="itinerary-header">
+                                <span class="itinerary-day-badge">Day 04</span>
+                                <h4>Mandawa - Bikaner</h4>
+                            </div>
+                            <p>Next morning, soon after breakfast, we will set of towards Bikaner – one of most beautiful cities of Rajasthan. The tourist places we will see here include Junagarh Fort, Lalgarh Palace and Gajner Palace. After lunch here, we shall see Asia’s Largest Camel Breeding Research Farm. The evening is set for local market shopping and round about. Dinner and night stay at the hotel.</p>
                         </div>
                         <div class="itinerary-item">
-                            <h4>Days 14-16: Varanasi to Delhi - Sacred Ganges</h4>
-                            <p>Experience the divine Ganges River in Varanasi before traveling back to Delhi for departure.</p>
+                            <div class="itinerary-header">
+                                <span class="itinerary-day-badge">Day 05</span>
+                                <h4>Bikaner - Jaisalmer</h4>
+                            </div>
+                            <p>Jaisalmer is a land of Rajasthani Temples, Fort and Havelis. It’s at a distance of 330 kms one has to cover to reach here from Bikaner. In the 5 hours drive we shall see the famous 7th Century Mahavira Jain Temple and 200 years old Jija Mata Temple. Lunch as enroute and we shall Jaisalmer in the evening. Check – in the hotel as you will be served refreshments. Night stay and dinner at the pre – booked hotel only.</p>
                         </div>
+                        <div class="itinerary-item">
+                            <div class="itinerary-header">
+                                <span class="itinerary-day-badge">Day 06</span>
+                                <h4>Exploring Jaisalmer</h4>
+                            </div>
+                            <p>This land of Sun, encloses in itself some of the most beautiful places of Rajasthan. The best thing to see here is the Jaisalmer Fort. The beauty of the Fort is not only the mintautures, frescos, wall paintings and all – but also the 5000 people which it still houses! Yes, there are 5000 people still living the Fort – the blood generation of those who used to serve the generations of Maharajas of Jaisalmer! From the top of the fort you can see the entire city, painted in Golden yellow. Next things to see here are the Patwon Ki Haveli and NathMal Ji Ki Haveli – a peek into how the old age havelis used to be! Lunch is at one of the best restaurants of the city. In the evening we will drive you to Sand Dunes of Jaisalmer! Enjoy the sun setting here and move back to the hotel for dinner and night stay!</p>
+                        </div>
+                        <div class="itinerary-item">
+                            <div class="itinerary-header">
+                                <span class="itinerary-day-badge">Day 07</span>
+                                <h4>Jaisalmer - Jodhpur and Luni</h4>
+                            </div>
+                            <p>Rustic life of Rajasthan – After enjoying our breakfast, we leave to Jodhpur. As we freshen up, in the afternoon, we visit the Mehrangarh Fort, which is 125 meters above the plains and constitutes beautiful place. As we get over with our sightseeing drive to Luni, we visit the palace amidst the more rustic life of Rajasthan. As we enjoy our lunch, we take you on a safari to discover the magnificent jungle beauty. You will be visiting the Bishnoi villages. We will be spending night in the Fort Chanwa in Luni and get enjoy our trip further.</p>
+                            <a href="#quote-form" class="enquiry-btn inline-enquiry-btn">Enquire Now <i class="ri-arrow-right-line"></i></a>
+                        </div>
+                        <div class="itinerary-item">
+                            <div class="itinerary-header">
+                                <span class="itinerary-day-badge">Day 08</span>
+                                <h4>Luni - Ranakpur - Udaipur</h4>
+                            </div>
+                            <p>Next day after enjoying Jaisalmer we set off to Ranakpur via Luni. Ranakpur is famous for 15th century Jain Temples. After seeing these, we shall move on to Udaipur – the City of Lakes. Lunch is enroute and dinner and night stay at pre – booked hotel in Udaipur City.</p>
+                        </div>
+                        <div class="itinerary-item">
+                            <div class="itinerary-header">
+                                <span class="itinerary-day-badge">Day 09</span>
+                                <h4>Exploring Udaipur</h4>
+                            </div>
+                            <p>Udaipur which is at an altitude of 577ML, is surrounded by lakes. It is fun – frolick place where you can see the City Palace which encloses the Worlds’ Largest Crystal Gallery by present Maharajah Gajner Singh Ji; Fateh Sagar Lakes with hundreds of catfish in it; Jagdish Temple and Sahelion ki Barii. In the evening we shall take to you see the dying art of India – the Puppet Show at Meera Kala Mandir. Dinner and night stay at hotel itself.</p>
+                        </div>
+                        <div class="itinerary-item">
+                            <div class="itinerary-header">
+                                <span class="itinerary-day-badge">Day 10</span>
+                                <h4>Udaipur - Jaipur</h4>
+                            </div>
+                            <p>Udaipur to Jaipur is a 6 hrs drive and we shall there in the afternoon. Soon after lunch we shall take to see the Jaipur Solar Observatory – Jantar Mantar and after this Hawa Mahal. Hawa Mahal built for the Queens to see the movements of the city from “Jharokahs” or small windows – is a architectural marvel in itself! It’s a 5 storied semi – octagonal historical monument – not to be missed. Night stay and dinner at the hotel!</p>
+                        </div>
+                        <div class="itinerary-item">
+                            <div class="itinerary-header">
+                                <span class="itinerary-day-badge">Day 11</span>
+                                <h4>Exploring Jaipur</h4>
+                            </div>
+                            <p>The day we will begin with seeing the Amer Fort. You can reach up either on the back of an elephant or by foot – the choice is yours! Next is the City Palace. Inside City Palace you can see the silver miniature museum, huge silver urns which Maharajah Sawai Singhji used to carry Ganges water on a trip to London, paintings and murals on the walls of the palace and the Devi Temple. A guided tour you will enjoy. The evening is set for a trip to Babu Market – the local Indian Cultural Market – you can shop here for Indian dresses and artifacts. Dinner at Chowki Dhani and night stay at the hotel.</p>
+                        </div>
+                        <div class="itinerary-item">
+                            <div class="itinerary-header">
+                                <span class="itinerary-day-badge">Day 12</span>
+                                <h4>Jaipur - Fatehpur Sikri - Agra</h4>
+                            </div>
+                            <p>Next morning we shall set off to Fatehpur Sikiri – ages old city of Mughal Era. In the afternoon we will reach Agra. There after checking in Hotel, we shall move on to see one of the Seven Wonders of the World – the Taj Mahal. The monument which took 17 years to get completed and is epitome made of pure White Marble – is an epitome of love and a marvel to see! Night stay and dinner at hotel!</p>
+                        </div>
+                        <div class="itinerary-item">
+                            <div class="itinerary-header">
+                                <span class="itinerary-day-badge">Day 13</span>
+                                <h4>Exploring Agra</h4>
+                            </div>
+                            <p>Soon after breakfast after lunch, we shall set off to see Agra. Beginning from Agra Fort – the place from were Emperor Shah Jahan used to see the Taj Mahal. We will see other places like Tomb of Itimad-ud–Daulah, Chini Ka Rauza, Tomb of Great Akbar and Guru Ka Tal. Dinner and night stay in the hotel.</p>
+                        </div>
+                        <div class="itinerary-item">
+                            <div class="itinerary-header">
+                                <span class="itinerary-day-badge">Day 14</span>
+                                <h4>Agra - Khajuraho</h4>
+                            </div>
+                            <p>It’s a 7 hours drive from Agra to Khajuraho; so we will start early. We shall take you directly to the hotel in Khajuraho after which you can see the famous Khajuraho Temples. Located in Chatarpur District of Madhya Pradesh; it’s a UNESCO WORLD HERITAGE SITE and also considered one of the Seven Wonders of India. It’s the largest group of Medieval Hindu and Jain Temples – known for its erotic sculptures. Night stay with authentic Madhaya Pradesh cuisine dinner at the hotel only!</p>
+                        </div>
+                        <div class="itinerary-item">
+                            <div class="itinerary-header">
+                                <span class="itinerary-day-badge">Day 15</span>
+                                <h4>Khajuraho - Varanasi</h4>
+                            </div>
+                            <p>Next morning we will catch a flight to Varanasi – the land of Ganges. Reaching here by noon, we will take you to Sarnath which is just 10 kms away Sarnath is the place where Buddha preached for the first time after attaining enlightenment. After seeing this place, lunch shall be offered in the hotel. Evening you can spend taking a dip in the holy water of Ganges; seeing the world – famous Ganga Arti and taking a round of the Holy City. Night stay and dinner shall be at the hotel only.</p>
+                        </div>
+                        <div class="itinerary-item">
+                            <div class="itinerary-header">
+                                <span class="itinerary-day-badge">Day 16</span>
+                                <h4>Varanasi - Delhi (Departure)</h4>
+                            </div>
+                            <p>Next morning, we shall take you for a boat ride in the serene waters of Ganges to see the Sunrise. In the afternoon, we shall take you to Varanasi Airport from where you shall be deported to New Delhi. In Delhi we will take you around Delhi markets – if you wish so; otherwise we will escort you to the airport for your onward journey!</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Inclusions & Exclusions Section -->
+                <div class="inc-exc-container">
+                    <div class="inc-exc-card inclusions">
+                        <h3><i class="ri-checkbox-circle-line"></i> Inclusions</h3>
+                        <ul class="inc-exc-list inc-list">
+                            <li><i class="ri-check-line"></i> Accommodation in standard category of rooms at all hotels</li>
+                            <li><i class="ri-check-line"></i> Meal Plan on Bed & Breakfast at all places accordingly</li>
+                            <li><i class="ri-check-line"></i> Battery van ride in Agra</li>
+                            <li><i class="ri-check-line"></i> Elephant ride in Jaipur</li>
+                            <li><i class="ri-check-line"></i> Camel ride in Jaisalmer</li>
+                            <li><i class="ri-check-line"></i> Visit to Ranakpur Jain temples enroute from Jaipur to Udaipur</li>
+                            <li><i class="ri-check-line"></i> Boat ride along the Ganges river</li>
+                            <li><i class="ri-check-line"></i> All Transfers & Must see Sightseeing as per itinerary by A/c Etios / A/c Toyota Innova / A/c Swift D’zire for the entire tour</li>
+                            <li><i class="ri-check-line"></i> Pick up from Airport / Railway Station & drop at Airport / Railway Station</li>
+                            <li><i class="ri-check-line"></i> All applicable current taxes for hotels and transport</li>
+                        </ul>
+                    </div>
+                    <div class="inc-exc-card exclusions">
+                        <h3><i class="ri-close-circle-line"></i> Exclusions</h3>
+                        <ul class="inc-exc-list exc-list">
+                            <li><i class="ri-close-line"></i> Air Fare / Rail Fare</li>
+                            <li><i class="ri-close-line"></i> Expenses of personal nature such as laundry / tips / shopping / telephones / Medical etc.</li>
+                            <li><i class="ri-close-line"></i> Any other expenses not mentioned in the inclusions mentioned above</li>
+                            <li><i class="ri-close-line"></i> Guide to demonstrate</li>
+                            <li><i class="ri-close-line"></i> Entry fees to Monuments specifically</li>
+                            <li><i class="ri-close-line"></i> Charges in hotels for additional services</li>
+                            <li><i class="ri-close-line"></i> Photography and video making fees at the sites</li>
+                            <li><i class="ri-close-line"></i> Personal insurance</li>
+                            <li><i class="ri-close-line"></i> Tips and gratuities</li>
+                            <li><i class="ri-close-line"></i> Unforeseen Expenses because of the weather conditions</li>
+                        </ul>
                     </div>
                 </div>
             </div>
@@ -103,16 +854,285 @@
             <!-- Right Column: Sidebar -->
             <div class="details-sidebar">
                 <div class="sidebar-sticky">
-                    <div class="detail-card" style="text-align: center; background: #111e38; color: #fff;">
-                        <h3 style="color: #fff; margin-bottom: 15px;">Book This Tour</h3>
-                        <p style="color: #cbd5e1; margin-bottom: 25px;">Custom-tailored luxury experiences designed just for you.</p>
-                        <a href="#quote-form" class="action-btn enquiry-btn" style="background-color: var(--color-accent, #c89d7c); color: #111e38; padding: 15px; border-radius: 8px; text-align: center; font-weight: bold; text-decoration: none; display: block; margin-bottom: 15px; border: none; font-size: 1.1rem; cursor: pointer;">Send Enquiry</a>
-                        <a href="https://wa.me/919289990112" target="_blank" class="action-btn whatsapp-btn" style="background-color: #25D366; color: #fff; padding: 15px; border-radius: 8px; text-align: center; font-weight: bold; text-decoration: none; display: block; font-size: 1.1rem;"><i class="ri-whatsapp-line"></i> WhatsApp Chat</a>
+                    <!-- Premium Sidebar Booking Form -->
+                    <div class="sidebar-booking-card">
+                        <h3>Book This Tour</h3>
+                        <p>Fill in details to get a customized, high-end tailor-made tour plan from our experts.</p>
+                        
+                        <form onsubmit="event.preventDefault(); alert('Booking Enquiry Sent! Our travel coordinator will contact you shortly.');">
+                            <!-- Hotel Class Preference -->
+                            <div class="sidebar-form-group">
+                                <label>Hotel Class*</label>
+                                <div class="sidebar-input-wrapper">
+                                    <select class="sidebar-input" required>
+                                        <option value="" disabled selected>Select Class</option>
+                                        <option value="standard">Standard (3 Star)</option>
+                                        <option value="first-class">First Class (4 Star)</option>
+                                        <option value="deluxe">Deluxe (5 Star)</option>
+                                        <option value="luxury">Luxury Stays</option>
+                                    </select>
+                                    <i class="ri-hotel-bed-line"></i>
+                                </div>
+                            </div>
+                            
+                            <!-- Duration -->
+                            <div class="sidebar-form-group">
+                                <label>Duration*</label>
+                                <div class="sidebar-input-wrapper">
+                                    <select class="sidebar-input" required>
+                                        <option value="" disabled>No of Days</option>
+                                        <option value="1">1 Day</option>
+                                        <option value="2">2 Days</option>
+                                        <option value="3">3 Days</option>
+                                        <option value="4">4 Days</option>
+                                        <option value="5">5 Days</option>
+                                        <option value="6">6 Days</option>
+                                        <option value="7">7 Days</option>
+                                        <option value="8">8 Days</option>
+                                        <option value="9">9 Days</option>
+                                        <option value="10">10 Days</option>
+                                        <option value="11">11 Days</option>
+                                        <option value="12">12 Days</option>
+                                        <option value="13">13 Days</option>
+                                        <option value="14">14 Days</option>
+                                        <option value="15" selected>15+ Days</option>
+                                    </select>
+                                    <i class="ri-calendar-todo-line"></i>
+                                </div>
+                            </div>
+                            
+                            <!-- Date of Arrival -->
+                            <div class="sidebar-form-group">
+                                <label>Arrival Date*</label>
+                                <div class="sidebar-input-wrapper">
+                                    <input type="date" class="sidebar-input" value="2026-11-08" required>
+                                    <i class="ri-calendar-line"></i>
+                                </div>
+                            </div>
+                            
+                            <!-- Adults and Children in a row -->
+                            <div class="sidebar-form-group col-2">
+                                <div>
+                                    <label>Adults*</label>
+                                    <div class="sidebar-input-wrapper">
+                                        <select class="sidebar-input" required>
+                                            <option value="" disabled selected>Adults</option>
+                                            <option value="1">1</option>
+                                            <option value="2" selected>2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5+</option>
+                                        </select>
+                                        <i class="ri-group-line"></i>
+                                    </div>
+                                </div>
+                                <div>
+                                    <label>Children</label>
+                                    <div class="sidebar-input-wrapper">
+                                        <select class="sidebar-input">
+                                            <option value="0" selected>0</option>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3+</option>
+                                        </select>
+                                        <i class="ri-user-smile-line"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Full Name -->
+                            <div class="sidebar-form-group">
+                                <label>Full Name*</label>
+                                <div class="sidebar-input-wrapper">
+                                    <input type="text" class="sidebar-input" placeholder="Your Name" required>
+                                    <i class="ri-user-3-line"></i>
+                                </div>
+                            </div>
+                            
+                            <!-- Country -->
+                            <div class="sidebar-form-group">
+                                <label>Country*</label>
+                                <div class="sidebar-input-wrapper">
+                                    <select class="sidebar-input" required>
+                                        <option value="" disabled selected>Your Country</option>
+                                        <option value="United States">United States</option>
+                                        <option value="United Kingdom">United Kingdom</option>
+                                        <option value="India">India</option>
+                                        <option value="Canada">Canada</option>
+                                        <option value="Australia">Australia</option>
+                                        <option value="Germany">Germany</option>
+                                        <option value="France">France</option>
+                                        <option value="Others">Others</option>
+                                    </select>
+                                    <i class="ri-earth-line"></i>
+                                </div>
+                            </div>
+                            
+                            <!-- Phone Number -->
+                            <div class="sidebar-form-group">
+                                <label>Phone Number*</label>
+                                <div class="sidebar-input-wrapper">
+                                    <input type="text" class="sidebar-input" placeholder="Phone with country code" required>
+                                    <i class="ri-phone-line"></i>
+                                </div>
+                            </div>
+                            
+                            <!-- Email -->
+                            <div class="sidebar-form-group">
+                                <label>Email Address*</label>
+                                <div class="sidebar-input-wrapper">
+                                    <input type="email" class="sidebar-input" placeholder="Your email address" required>
+                                    <i class="ri-mail-line"></i>
+                                </div>
+                            </div>
+                            
+                            <!-- Plan Notes / Special Requirements -->
+                            <div class="sidebar-form-group">
+                                <label>Plan Notes & Customization</label>
+                                <div class="sidebar-input-wrapper">
+                                    <textarea class="sidebar-textarea" placeholder="Custom routes, special stays, dietary requirements, etc..."></textarea>
+                                    <i class="ri-chat-4-line" style="top: 18px;"></i>
+                                </div>
+                            </div>
+                            
+                            <!-- Submit Button -->
+                            <button type="submit" class="sidebar-submit-btn">Submit Booking Enquiry</button>
+                            
+                            <!-- Privacy Note -->
+                            <div class="sidebar-privacy-note">
+                                <i class="ri-shield-check-line"></i>
+                                <span>Absolute privacy of personal data assured.</span>
+                            </div>
+                        </form>
+                        
+                        <!-- Secondary WhatsApp Button -->
+                        <a href="https://wa.me/919289990112" target="_blank" class="sidebar-whatsapp-btn">
+                            <i class="ri-whatsapp-line"></i> WhatsApp Chat
+                        </a>
                     </div>
 
-                    <div class="detail-card">
-                        <h3>Destinations Visited</h3>
-                        <p style="color: #475569; line-height: 1.6;">Delhi - Mandawa - Bikaner - Jaisalmer - Jodhpur and Luni - Ranakpur - Udaipur - Jaipur - Fatehpur Sikri - Agra</p>
+                    <div class="detail-card sidebar-route-card">
+                        <h3>Route & Destinations</h3>
+                        <div class="destinations-route-container">
+                            <div class="route-line-track"></div>
+                            
+                            <div class="route-stop-item start-stop">
+                                <div class="route-stop-badge">01</div>
+                                <div class="route-stop-icon-box"><i class="ri-plane-landing-line"></i></div>
+                                <div class="route-stop-info">
+                                    <span class="route-stop-name">Delhi</span>
+                                    <span class="route-stop-label">Arrival Gateway</span>
+                                </div>
+                            </div>
+                            
+                            <div class="route-stop-item">
+                                <div class="route-stop-badge">02</div>
+                                <div class="route-stop-icon-box"><i class="ri-palette-line"></i></div>
+                                <div class="route-stop-info">
+                                    <span class="route-stop-name">Mandawa</span>
+                                    <span class="route-stop-label">Open Art Gallery</span>
+                                </div>
+                            </div>
+                            
+                            <div class="route-stop-item">
+                                <div class="route-stop-badge">03</div>
+                                <div class="route-stop-icon-box"><i class="ri-roadster-line"></i></div>
+                                <div class="route-stop-info">
+                                    <span class="route-stop-name">Bikaner</span>
+                                    <span class="route-stop-label">Desert Outpost</span>
+                                </div>
+                            </div>
+                            
+                            <div class="route-stop-item">
+                                <div class="route-stop-badge">04</div>
+                                <div class="route-stop-icon-box"><i class="ri-shield-flash-line"></i></div>
+                                <div class="route-stop-info">
+                                    <span class="route-stop-name">Jaisalmer</span>
+                                    <span class="route-stop-label">Golden City</span>
+                                </div>
+                            </div>
+                            
+                            <div class="route-stop-item">
+                                <div class="route-stop-badge">05</div>
+                                <div class="route-stop-icon-box"><i class="ri-building-line"></i></div>
+                                <div class="route-stop-info">
+                                    <span class="route-stop-name">Jodhpur</span>
+                                    <span class="route-stop-label">Blue City</span>
+                                </div>
+                            </div>
+                            
+                            <div class="route-stop-item">
+                                <div class="route-stop-badge">06</div>
+                                <div class="route-stop-icon-box"><i class="ri-ancient-gate-line"></i></div>
+                                <div class="route-stop-info">
+                                    <span class="route-stop-name">Ranakpur</span>
+                                    <span class="route-stop-label">Jain Temples</span>
+                                </div>
+                            </div>
+                            
+                            <div class="route-stop-item">
+                                <div class="route-stop-badge">07</div>
+                                <div class="route-stop-icon-box"><i class="ri-water-flash-line"></i></div>
+                                <div class="route-stop-info">
+                                    <span class="route-stop-name">Udaipur</span>
+                                    <span class="route-stop-label">Lake City</span>
+                                </div>
+                            </div>
+                            
+                            <div class="route-stop-item">
+                                <div class="route-stop-badge">08</div>
+                                <div class="route-stop-icon-box"><i class="ri-royal-line"></i></div>
+                                <div class="route-stop-info">
+                                    <span class="route-stop-name">Jaipur</span>
+                                    <span class="route-stop-label">Pink City</span>
+                                </div>
+                            </div>
+                            
+                            <div class="route-stop-item">
+                                <div class="route-stop-badge">09</div>
+                                <div class="route-stop-icon-box"><i class="ri-ancient-pavilion-line"></i></div>
+                                <div class="route-stop-info">
+                                    <span class="route-stop-name">Fatehpur Sikri</span>
+                                    <span class="route-stop-label">Mughal City</span>
+                                </div>
+                            </div>
+                            
+                            <div class="route-stop-item">
+                                <div class="route-stop-badge">10</div>
+                                <div class="route-stop-icon-box"><i class="ri-heart-2-line"></i></div>
+                                <div class="route-stop-info">
+                                    <span class="route-stop-name">Agra</span>
+                                    <span class="route-stop-label">Taj Mahal</span>
+                                </div>
+                            </div>
+                            
+                            <div class="route-stop-item">
+                                <div class="route-stop-badge">11</div>
+                                <div class="route-stop-icon-box"><i class="ri-shield-line"></i></div>
+                                <div class="route-stop-info">
+                                    <span class="route-stop-name">Khajuraho</span>
+                                    <span class="route-stop-label">Sculpted Temples</span>
+                                </div>
+                            </div>
+                            
+                            <div class="route-stop-item">
+                                <div class="route-stop-badge">12</div>
+                                <div class="route-stop-icon-box"><i class="ri-anchor-line"></i></div>
+                                <div class="route-stop-info">
+                                    <span class="route-stop-name">Varanasi</span>
+                                    <span class="route-stop-label">Holy Ganges</span>
+                                </div>
+                            </div>
+                            
+                            <div class="route-stop-item end-stop">
+                                <div class="route-stop-badge">13</div>
+                                <div class="route-stop-icon-box"><i class="ri-plane-takeoff-line"></i></div>
+                                <div class="route-stop-info">
+                                    <span class="route-stop-name">Delhi</span>
+                                    <span class="route-stop-label">Departure Gateway</span>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
