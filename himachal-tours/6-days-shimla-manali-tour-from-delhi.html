@@ -1,9 +1,9 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>6 Days – Shimla Manali Tour From Delhi | Discover Royal India</title>
+    <title>6 Days – Shimla Manali Tour from Delhi | Discover Royal India</title>
     <!-- Remix Icon for Premium Vector Icons -->
     <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
     <!-- Main Style Sheet -->
@@ -11,9 +11,560 @@
     <link rel="stylesheet" href="../css/india-tours.css">
     <link rel="stylesheet" href="../css/tour-details.css">
     <style>
-        .page-header-banner {{
+        .page-header-banner {
             background: url('../images/HimachalTours/shimla_manali.jpg') center/cover no-repeat !important;
-        }}
+        }
+        
+        /* Custom Premium styling for Himachal Tours */
+        .info-grid {
+            margin-bottom: 25px;
+        }
+        
+        .custom-tour-banner {
+            background: linear-gradient(135deg, #111e38 0%, #1e293b 100%);
+            color: #fff;
+            padding: 20px 25px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            border-left: 5px solid var(--color-accent, #d93f21);
+        }
+        .custom-tour-banner .banner-icon {
+            font-size: 2.2rem;
+            color: var(--color-accent, #d93f21);
+            display: flex;
+            align-items: center;
+        }
+        .custom-tour-banner .banner-content {
+            flex-grow: 1;
+        }
+        .custom-tour-banner h4 {
+            margin: 0 0 5px 0;
+            font-size: 1.25rem;
+            color: #fff;
+            font-family: var(--font-heading);
+        }
+        .custom-tour-banner p {
+            margin: 0;
+            color: #cbd5e1;
+            font-size: 0.95rem;
+            line-height: 1.4;
+        }
+        .custom-tour-banner .customize-btn {
+            background: var(--color-accent, #d93f21);
+            color: #fff;
+            padding: 12px 22px;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            white-space: nowrap;
+            transition: var(--transition-smooth);
+            box-shadow: 0 4px 10px rgba(217, 63, 33, 0.3);
+        }
+        .custom-tour-banner .customize-btn:hover {
+            background: var(--color-accent-hover, #b82e16);
+            transform: translateY(-2px);
+        }
+        
+        .highlights-container {
+            margin-bottom: 35px;
+        }
+        .highlights-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+        .highlight-card {
+            background: #fff;
+            padding: 15px 20px;
+            border-radius: 10px;
+            border: 1px solid #e2e8f0;
+            display: flex;
+            gap: 15px;
+            align-items: flex-start;
+            transition: var(--transition-smooth);
+        }
+        .highlight-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.05);
+            border-color: rgba(217, 63, 33, 0.2);
+        }
+        .highlight-card i {
+            color: var(--color-accent, #d93f21);
+            font-size: 1.3rem;
+            margin-top: 2px;
+            background: rgba(217, 63, 33, 0.08);
+            padding: 8px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 34px;
+            height: 34px;
+        }
+        .highlight-card p {
+            margin: 0;
+            color: #334155;
+            font-weight: 550;
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+
+        .itinerary-list {
+            position: relative;
+            padding-left: 35px;
+            margin-top: 20px;
+        }
+        .itinerary-list::before {
+            content: '';
+            position: absolute;
+            left: 7px;
+            top: 10px;
+            bottom: 10px;
+            width: 2px;
+            background: linear-gradient(to bottom, var(--color-accent, #d93f21) 0%, #cbd5e1 100%);
+        }
+        .itinerary-item {
+            position: relative;
+            background: #fff;
+            border: 1px solid #f1f5f9;
+            border-radius: 12px;
+            padding: 20px 25px;
+            margin-bottom: 25px;
+            transition: var(--transition-smooth);
+        }
+        .itinerary-item:hover {
+            border-color: rgba(217, 63, 33, 0.15);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+        }
+        .itinerary-item::before {
+            content: '';
+            position: absolute;
+            left: -35px;
+            top: 22px;
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+            background: #fff;
+            border: 3px solid var(--color-accent, #d93f21);
+            box-shadow: 0 0 0 6px #faf9f6;
+            transition: all 0.3s ease;
+        }
+        .itinerary-item:hover::before {
+            background: var(--color-accent, #d93f21);
+            transform: scale(1.2);
+        }
+        .itinerary-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 12px;
+            border-bottom: 1px dashed #e2e8f0;
+            padding-bottom: 10px;
+        }
+        .itinerary-day-badge {
+            background: var(--color-primary, #0f172a);
+            color: #fff;
+            font-weight: 700;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+        }
+        .itinerary-item h4 {
+            font-size: 1.2rem;
+            color: var(--color-primary, #0f172a);
+            font-family: var(--font-heading);
+            margin: 0;
+            flex-grow: 1;
+        }
+        .itinerary-item p {
+            color: #475569;
+            line-height: 1.7;
+            font-size: 0.98rem;
+            margin: 0;
+        }
+        
+        .inline-enquiry-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            margin-top: 15px;
+            padding: 8px 18px;
+            background: rgba(217, 63, 33, 0.08);
+            color: var(--color-accent, #d93f21);
+            border-radius: 6px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: var(--transition-smooth);
+            text-decoration: none;
+        }
+        .inline-enquiry-btn:hover {
+            background: var(--color-accent, #d93f21);
+            color: #fff;
+            transform: translateX(3px);
+        }
+
+        .inc-exc-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 25px;
+            margin-top: 30px;
+            margin-bottom: 30px;
+        }
+        
+        .inc-exc-card {
+            background: #fff;
+            padding: 25px;
+            border-radius: 12px;
+            border: 1px solid #f1f5f9;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.02);
+        }
+        .inc-exc-card h3 {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #f1f5f9;
+            padding-bottom: 12px;
+            margin-top: 0;
+        }
+        .inc-exc-card h3::after {
+            display: none; /* Hide default underlines */
+        }
+        .inc-exc-card.inclusions h3 {
+            color: #15803d;
+            border-bottom-color: rgba(21, 128, 61, 0.1);
+        }
+        .inc-exc-card.exclusions h3 {
+            color: #b91c1c;
+            border-bottom-color: rgba(185, 28, 28, 0.1);
+        }
+        
+        .inc-exc-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .inc-exc-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            margin-bottom: 15px;
+            line-height: 1.5;
+            font-size: 0.95rem;
+            color: #475569;
+        }
+        .inc-exc-list li i {
+            font-size: 1.2rem;
+            margin-top: 1px;
+            flex-shrink: 0;
+        }
+        .inc-exc-list.inc-list li i {
+            color: #16a34a;
+        }
+        .inc-exc-list.exc-list li i {
+            color: #dc2626;
+        }
+
+        /* Sidebar Booking Form Styling */
+        .sidebar-booking-card {
+            background: #fff;
+            border: 1px solid #e2e8f0;
+            border-radius: 12px;
+            padding: 25px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            margin-bottom: 25px;
+            border-top: 4px solid var(--color-accent, #d93f21);
+        }
+        .sidebar-booking-card h3 {
+            color: var(--color-primary, #0f172a);
+            font-size: 1.3rem;
+            margin-bottom: 5px;
+            font-family: var(--font-heading);
+            position: relative;
+            padding-bottom: 8px;
+            margin-top: 0;
+        }
+        .sidebar-booking-card h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 40px;
+            height: 3px;
+            background: var(--color-accent, #d93f21);
+            border-radius: 2px;
+        }
+        .sidebar-booking-card p {
+            color: #64748b;
+            font-size: 0.85rem;
+            margin-top: 8px;
+            margin-bottom: 20px;
+            line-height: 1.4;
+        }
+        .sidebar-form-group {
+            margin-bottom: 15px;
+            position: relative;
+        }
+        .sidebar-form-group.col-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+        }
+        .sidebar-form-group label {
+            display: block;
+            font-size: 0.78rem;
+            font-weight: 700;
+            color: #475569;
+            margin-bottom: 6px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        .sidebar-input-wrapper {
+            position: relative;
+            display: flex;
+            align-items: center;
+        }
+        .sidebar-input-wrapper i {
+            position: absolute;
+            left: 12px;
+            color: #94a3b8;
+            font-size: 1.05rem;
+            pointer-events: none;
+        }
+        .sidebar-input, .sidebar-textarea {
+            width: 100%;
+            padding: 10px 12px 10px 38px;
+            border: 1px solid #cbd5e1;
+            border-radius: 8px;
+            font-size: 0.88rem;
+            color: #334155;
+            background-color: #f8fafc;
+            transition: var(--transition-smooth);
+            font-family: var(--font-body);
+        }
+        .sidebar-input:focus, .sidebar-textarea:focus {
+            border-color: var(--color-accent, #d93f21);
+            background-color: #fff;
+            box-shadow: 0 0 0 3px rgba(217, 63, 33, 0.1);
+            outline: none;
+        }
+        .sidebar-textarea {
+            min-height: 80px;
+            resize: vertical;
+            padding-left: 38px;
+        }
+        .sidebar-submit-btn {
+            width: 100%;
+            background: var(--color-accent, #d93f21);
+            color: #fff;
+            padding: 12px;
+            border: none;
+            border-radius: 8px;
+            font-weight: 700;
+            font-size: 0.95rem;
+            cursor: pointer;
+            transition: var(--transition-smooth);
+            box-shadow: 0 4px 10px rgba(217, 63, 33, 0.2);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-top: 10px;
+        }
+        .sidebar-submit-btn:hover {
+            background: var(--color-accent-hover, #b82e16);
+            transform: translateY(-1px);
+            box-shadow: 0 6px 14px rgba(217, 63, 33, 0.3);
+        }
+        .sidebar-privacy-note {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+            font-size: 0.75rem;
+            color: #64748b;
+            margin-top: 10px;
+        }
+        .sidebar-privacy-note i {
+            color: #16a34a;
+            font-size: 0.9rem;
+        }
+        .sidebar-whatsapp-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            width: 100%;
+            background: #25D366;
+            color: #fff;
+            padding: 12px;
+            border-radius: 8px;
+            font-weight: 700;
+            font-size: 0.95rem;
+            margin-top: 12px;
+            transition: var(--transition-smooth);
+            text-decoration: none;
+        }
+        .sidebar-whatsapp-btn:hover {
+            background: #20ba5a;
+            transform: translateY(-2px);
+        }
+
+        /* High-End Destinations Route Timeline */
+        .destinations-route-container {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            position: relative;
+            padding-left: 5px;
+            margin-top: 15px;
+        }
+        .route-line-track {
+            position: absolute;
+            left: 21px;
+            top: 20px;
+            bottom: 20px;
+            width: 3px;
+            background: linear-gradient(to bottom, var(--color-accent, #d93f21) 0%, var(--color-primary, #0f172a) 50%, var(--color-accent, #d93f21) 100%);
+            border-radius: 4px;
+        }
+        .route-stop-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            position: relative;
+            z-index: 1;
+            padding: 8px 12px;
+            border-radius: 8px;
+            background: #f8fafc;
+            border: 1px solid #f1f5f9;
+            transition: var(--transition-smooth);
+        }
+        .route-stop-item:hover {
+            background: #fff;
+            border-color: rgba(21, 128, 61, 0.2);
+            transform: translateX(5px);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.04);
+        }
+        .route-stop-badge {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 26px;
+            height: 26px;
+            border-radius: 50%;
+            background: #fff;
+            border: 2px solid #cbd5e1;
+            color: #64748b;
+            font-size: 0.72rem;
+            font-weight: 750;
+            transition: var(--transition-smooth);
+            flex-shrink: 0;
+        }
+        .route-stop-icon-box {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 26px;
+            height: 26px;
+            border-radius: 50%;
+            background: rgba(15, 23, 42, 0.05);
+            color: var(--color-primary, #0f172a);
+            font-size: 1rem;
+            transition: var(--transition-smooth);
+            flex-shrink: 0;
+        }
+        .route-stop-item:hover .route-stop-badge {
+            border-color: var(--color-accent, #d93f21);
+            color: var(--color-accent, #d93f21);
+            transform: scale(1.1);
+        }
+        .route-stop-item:hover .route-stop-icon-box {
+            background: rgba(217, 63, 33, 0.1);
+            color: var(--color-accent, #d93f21);
+            transform: scale(1.1);
+        }
+        .route-stop-info {
+            display: flex;
+            flex-direction: column;
+        }
+        .route-stop-name {
+            font-size: 0.92rem;
+            font-weight: 700;
+            color: var(--color-primary, #0f172a);
+        }
+        .route-stop-label {
+            font-size: 0.7rem;
+            color: #64748b;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        /* Highlight specific stops like Start/End and key hubs */
+        .route-stop-item.start-stop {
+            background: #fff8f6;
+            border-color: rgba(217, 63, 33, 0.15);
+        }
+        .route-stop-item.start-stop .route-stop-badge {
+            background: var(--color-accent, #d93f21);
+            border-color: var(--color-accent, #d93f21);
+            color: #fff;
+        }
+        .route-stop-item.end-stop {
+            background: #f1f5f9;
+            border-color: #cbd5e1;
+        }
+        .route-stop-item.end-stop .route-stop-badge {
+            background: var(--color-primary, #0f172a);
+            border-color: var(--color-primary, #0f172a);
+            color: #fff;
+        }
+
+        @media (max-width: 991px) {
+            /* Banner header responsiveness */
+            .page-header-banner {
+                padding: 130px 20px 60px !important;
+            }
+            .page-header-banner h1 {
+                font-size: 2.2rem !important;
+                margin-bottom: 15px;
+                line-height: 1.3;
+            }
+            .breadcrumb {
+                padding: 8px 16px;
+                font-size: 0.85rem;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            .breadcrumb .separator {
+                margin: 0 8px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .inc-exc-container {
+                grid-template-columns: 1fr;
+            }
+            .custom-tour-banner {
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 20px;
+            }
+            .custom-tour-banner .customize-btn {
+                width: 100%;
+                text-align: center;
+            }
+        }
     </style>
 </head>
 <body>
@@ -23,7 +574,7 @@
 
     <!-- Attractive Header Banner with Breadcrumbs -->
     <section class="page-header-banner">
-        <h1>6 Days – Shimla Manali Tour From Delhi</h1>
+        <h1>6 Days – Shimla Manali Tour from Delhi</h1>
         <div class="breadcrumb">
             <a href="../index.html"><i class="ri-home-4-line"></i> Home</a>
             <i class="ri-arrow-right-s-line separator"></i>
@@ -31,7 +582,7 @@
             <i class="ri-arrow-right-s-line separator"></i>
             <a href="index.html">Himachal Tours</a>
             <i class="ri-arrow-right-s-line separator"></i>
-            <span class="current">Tour Package</span>
+            <span class="current">6 Days – Shimla Manali Tour from Delhi</span>
         </div>
     </section>
 
@@ -41,7 +592,7 @@
             <!-- Left Column: Details -->
             <div class="details-left">
                 <div class="tour-gallery">
-                    <img src="../images/HimachalTours/shimla_manali.jpg" alt="6 Days – Shimla Manali Tour From Delhi">
+                    <img src="../images/HimachalTours/shimla_manali.jpg" alt="6 Days – Shimla Manali Tour from Delhi">
                 </div>
 
                 <div class="info-grid">
@@ -53,39 +604,142 @@
                         </div>
                     </div>
                     <div class="info-item">
-                        <i class="ri-user-line"></i>
+                        <i class="ri-roadster-line"></i>
                         <div>
-                            <h5>Max Guests</h5>
-                            <p>Max 12 Guests</p>
+                            <h5>Travel Style</h5>
+                            <p>Private Car & Guide</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="ri-settings-5-line"></i>
+                        <div>
+                            <h5>Customization</h5>
+                            <p>100% Flexible</p>
                         </div>
                     </div>
                     <div class="info-item">
                         <i class="ri-star-line"></i>
                         <div>
                             <h5>Rating</h5>
-                            <p>4.8 (32 Reviews)</p>
+                            <p>4.8 (47 Reviews)</p>
                         </div>
                     </div>
                 </div>
 
-                <div class="detail-card">
-                    <h3>Tour Overview</h3>
-                    <p>The classic twin-station Himalayan itinerary. Experience the best viewpoints, shopping streets, and high mountain passes.</p>
+                <!-- Customization Alert Banner -->
+                <div class="custom-tour-banner">
+                    <div class="banner-icon">
+                        <i class="ri-equalizer-line"></i>
+                    </div>
+                    <div class="banner-content">
+                        <h4>Customize This Tour</h4>
+                        <p>This itinerary is customizable according to your need. Speak to our destination planner to tailor it.</p>
+                    </div>
+                    <a href="#quote-form" class="enquiry-btn customize-btn">Customize Now</a>
                 </div>
 
                 <div class="detail-card">
-                    <h3>Itinerary Highlights</h3>
-                    <div class="itinerary-list">
-                                                <div class="itinerary-item">
-                            <h4>Days 1-2</h4>
-                            <p>Delhi to Shimla (Explore colonial heritage, Viceroy Lodge, and walk the ridge)</p>
-                        </div>                        <div class="itinerary-item">
-                            <h4>Days 3-5</h4>
-                            <p>Shimla to Manali (Scenic drive along Beas River, tour Solang valley and local temples)</p>
-                        </div>                        <div class="itinerary-item">
-                            <h4>Day 6</h4>
-                            <p>Manali to Delhi (Return drive to Delhi)</p>
+                    <h3>Tour Overview</h3>
+                    <p>Wander through the two most popular hill stations of North India on this private 6-day tour from Delhi. Enjoy the cool mountain breeze and beautiful vistas of Shimla, visit the summer home of British Viceroys, take a day excursion to Kufri, drive through Kullu Valley to Manali, explore the wood-carved Hadimba Temple, and see spectacular snow slopes at Solang Valley and Rohtang Pass.</p>
+                </div>
+
+                <!-- Highlights Section -->
+                <div class="detail-card">
+                    <h3>Highlights</h3>
+                    <div class="highlights-grid">
+                        <div class="highlight-card">
+                            <i class="ri-roadster-line"></i>
+                            <p>Day trip to Kufri peaks (Indira Tourist Park, Mahasu Peak).</p>
                         </div>
+                        <div class="highlight-card">
+                            <i class="ri-ancient-gate-line"></i>
+                            <p>Visit historic Vice-Regal Lodge, Mall Road, and Christ Church in Shimla.</p>
+                        </div>
+                        <div class="highlight-card">
+                            <i class="ri-snowflake-line"></i>
+                            <p>Explore Hadimba Devi Temple, Vashisht Kund springs, & Tibetan Monasteries.</p>
+                        </div>
+                        <div class="highlight-card">
+                            <i class="ri-compass-line"></i>
+                            <p>Excursion to snow glaciers of Rohtang Pass & Solang Valley adventure sports.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Itinerary Section -->
+                <div class="detail-card">
+                    <h3>Itinerary</h3>
+                    <div class="itinerary-list">
+                        <div class="itinerary-item">
+                            <div class="itinerary-header">
+                                <span class="itinerary-day-badge">Day 01</span>
+                                <h4>Delhi – Shimla</h4>
+                            </div>
+                            <p>Upon your arrival at the Delhi airport or railway station, you will be met by our representative and driven to Shimla (the 'Queen of Hills'). On reaching Shimla, check in to your hotel. After relaxing in your room, spend the evening at leisure exploring the surrounding scenic streets. Dinner and overnight stay at the hotel.</p>
+                            <a href="#quote-form" class="enquiry-btn inline-enquiry-btn">Enquire Now <i class="ri-arrow-right-line"></i></a>
+                        </div>
+                        <div class="itinerary-item">
+                            <div class="itinerary-header">
+                                <span class="itinerary-day-badge">Day 02</span>
+                                <h4>Shimla – Kufri – Shimla</h4>
+                            </div>
+                            <p>After breakfast, take a day trip to Kufri (2,290m altitude) to see Mahasu Peak, Indira Tourist Park, and Chini Bungalow. Return to Shimla to explore the Vice-Regal Lodge, a grand English Renaissance heritage building that served as the summer residence of British Viceroys. In the evening, enjoy a relaxing walk on the Mall Road and the Ridge. Dinner and overnight stay at the hotel.</p>
+                        </div>
+                        <div class="itinerary-item">
+                            <div class="itinerary-header">
+                                <span class="itinerary-day-badge">Day 03</span>
+                                <h4>Shimla – Manali</h4>
+                            </div>
+                            <p>After breakfast, check out and drive to Manali (2,050m altitude). Settle into your hotel upon arrival. In the evening, explore Manali's lively main Mall Road market to enjoy local street food and shopping. Dinner and overnight stay at the hotel.</p>
+                            <a href="#quote-form" class="enquiry-btn inline-enquiry-btn">Enquire Now <i class="ri-arrow-right-line"></i></a>
+                        </div>
+                        <div class="itinerary-item">
+                            <div class="itinerary-header">
+                                <span class="itinerary-day-badge">Day 04</span>
+                                <h4>Manali Sightseeing</h4>
+                            </div>
+                            <p>Explore the famous attractions of Manali. Visit the 450-year-old wooden Hadimba Devi Temple, the tiny scenic village of Jagatsukh, and the Vashisht Kund hot sulfur springs. Later, visit the Tibetan Monastery, local handicraft centers, and the ancient Vashisht village. Return to your hotel for dinner. Overnight stay in Manali.</p>
+                        </div>
+                        <div class="itinerary-item">
+                            <div class="itinerary-header">
+                                <span class="itinerary-day-badge">Day 05</span>
+                                <h4>Manali – Rohtang Pass – Manali</h4>
+                            </div>
+                            <p>Set off on an excursion to Solang Valley (14 km from Manali) for adventure sports like paragliding and zorbing. Then, drive up to Rohtang Pass (3,978m altitude), open from June to October, to witness spectacular glaciers and snow-capped peaks. Return to your hotel in Manali for dinner. Overnight stay in Manali.</p>
+                        </div>
+                        <div class="itinerary-item">
+                            <div class="itinerary-header">
+                                <span class="itinerary-day-badge">Day 06</span>
+                                <h4>Manali – Delhi</h4>
+                            </div>
+                            <p>After breakfast, check out of the hotel and begin your return journey to Delhi. Upon arrival, you will be transferred to the Delhi railway station or airport for your departure back home. ***Tour Ends***</p>
+                            <a href="#quote-form" class="enquiry-btn inline-enquiry-btn">Enquire Now <i class="ri-arrow-right-line"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Inclusions & Exclusions Section -->
+                <div class="inc-exc-container">
+                    <div class="inc-exc-card inclusions">
+                        <h3><i class="ri-checkbox-circle-line"></i> Inclusions</h3>
+                        <ul class="inc-exc-list inc-list">
+                            <li><i class="ri-check-line"></i> Accommodation in hotels of your chosen category (Single/Double/Triple occupancy)</li>
+                            <li><i class="ri-check-line"></i> Daily breakfast and dinners at the hotels</li>
+                            <li><i class="ri-check-line"></i> Entrance fees for monuments and monasteries</li>
+                            <li><i class="ri-check-line"></i> Excursions to Kufri, Solang Valley, and Rohtang Pass</li>
+                            <li><i class="ri-check-line"></i> Private transportation throughout the trip in dedicated vehicle</li>
+                            <li><i class="ri-check-line"></i> Local English-speaking guides for sightseeing</li>
+                            <li><i class="ri-check-line"></i> Assistance upon arrival and departure</li>
+                            <li><i class="ri-check-line"></i> Current Government Taxes</li>
+                        </ul>
+                    </div>
+                    <div class="inc-exc-card exclusions">
+                        <h3><i class="ri-close-circle-line"></i> Exclusions</h3>
+                        <ul class="inc-exc-list exc-list">
+                            <li><i class="ri-close-line"></i> International/Domestic flight airfares</li>
+                            <li><i class="ri-close-line"></i> Personal expenses such as drinks, tips, travel insurance, laundry, and phone calls</li>
+                            <li><i class="ri-close-line"></i> Any services which are not mentioned in package inclusions</li>
+                        </ul>
                     </div>
                 </div>
             </div>
@@ -93,16 +747,208 @@
             <!-- Right Column: Sidebar -->
             <div class="details-sidebar">
                 <div class="sidebar-sticky">
-                    <div class="detail-card" style="text-align: center; background: #111e38; color: #fff;">
-                        <h3 style="color: #fff; margin-bottom: 15px;">Book This Tour</h3>
-                        <p style="color: #cbd5e1; margin-bottom: 25px;">Custom-tailored luxury experiences designed just for you.</p>
-                        <a href="#quote-form" class="action-btn enquiry-btn" style="background-color: var(--color-accent, #c89d7c); color: #111e38; padding: 15px; border-radius: 8px; text-align: center; font-weight: bold; text-decoration: none; display: block; margin-bottom: 15px; border: none; font-size: 1.1rem; cursor: pointer;">Send Enquiry</a>
-                        <a href="https://wa.me/919289990112" target="_blank" class="action-btn whatsapp-btn" style="background-color: #25D366; color: #fff; padding: 15px; border-radius: 8px; text-align: center; font-weight: bold; text-decoration: none; display: block; font-size: 1.1rem;"><i class="ri-whatsapp-line"></i> WhatsApp Chat</a>
+                    <!-- Premium Sidebar Booking Form -->
+                    <div class="sidebar-booking-card">
+                        <h3>Book This Tour</h3>
+                        <p>Fill in details to get a customized, high-end tailor-made tour plan from our experts.</p>
+                        
+                        <form onsubmit="event.preventDefault(); alert('Booking Enquiry Sent! Our travel coordinator will contact you shortly.');">
+                            <!-- Hotel Class Preference -->
+                            <div class="sidebar-form-group">
+                                <label>Hotel Class*</label>
+                                <div class="sidebar-input-wrapper">
+                                    <select class="sidebar-input" required>
+                                        <option value="" disabled selected>Select Class</option>
+                                        <option value="standard">Standard (3 Star)</option>
+                                        <option value="first-class">First Class (4 Star)</option>
+                                        <option value="deluxe">Deluxe (5 Star)</option>
+                                        <option value="luxury">Luxury Stays</option>
+                                    </select>
+                                    <i class="ri-hotel-bed-line"></i>
+                                </div>
+                            </div>
+                            
+                            <!-- Duration -->
+                            <div class="sidebar-form-group">
+                                <label>Duration*</label>
+                                <div class="sidebar-input-wrapper">
+                                    <select class="sidebar-input" required>
+                                        <option value="" disabled>No of Days</option>
+                                        <option value="6" selected>6 Days</option>
+                                    </select>
+                                    <i class="ri-calendar-todo-line"></i>
+                                </div>
+                            </div>
+                            
+                            <!-- Date of Arrival -->
+                            <div class="sidebar-form-group">
+                                <label>Arrival Date*</label>
+                                <div class="sidebar-input-wrapper">
+                                    <input type="date" class="sidebar-input" value="2026-11-08" required>
+                                    <i class="ri-calendar-line"></i>
+                                </div>
+                            </div>
+                            
+                            <!-- Adults and Children in a row -->
+                            <div class="sidebar-form-group col-2">
+                                <div>
+                                    <label>Adults*</label>
+                                    <div class="sidebar-input-wrapper">
+                                        <select class="sidebar-input" required>
+                                            <option value="" disabled selected>Adults</option>
+                                            <option value="1">1</option>
+                                            <option value="2" selected>2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5+</option>
+                                        </select>
+                                        <i class="ri-group-line"></i>
+                                    </div>
+                                </div>
+                                <div>
+                                    <label>Children</label>
+                                    <div class="sidebar-input-wrapper">
+                                        <select class="sidebar-input">
+                                            <option value="0" selected>0</option>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3+</option>
+                                        </select>
+                                        <i class="ri-user-smile-line"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Full Name -->
+                            <div class="sidebar-form-group">
+                                <label>Full Name*</label>
+                                <div class="sidebar-input-wrapper">
+                                    <input type="text" class="sidebar-input" placeholder="Your Name" required>
+                                    <i class="ri-user-3-line"></i>
+                                </div>
+                            </div>
+                            
+                            <!-- Country -->
+                            <div class="sidebar-form-group">
+                                <label>Country*</label>
+                                <div class="sidebar-input-wrapper">
+                                    <select class="sidebar-input" required>
+                                        <option value="" disabled selected>Your Country</option>
+                                        <option value="United States">United States</option>
+                                        <option value="United Kingdom">United Kingdom</option>
+                                        <option value="India">India</option>
+                                        <option value="Canada">Canada</option>
+                                        <option value="Australia">Australia</option>
+                                        <option value="Germany">Germany</option>
+                                        <option value="France">France</option>
+                                        <option value="Others">Others</option>
+                                    </select>
+                                    <i class="ri-earth-line"></i>
+                                </div>
+                            </div>
+                            
+                            <!-- Phone Number -->
+                            <div class="sidebar-form-group">
+                                <label>Phone Number*</label>
+                                <div class="sidebar-input-wrapper">
+                                    <input type="text" class="sidebar-input" placeholder="Phone with country code" required>
+                                    <i class="ri-phone-line"></i>
+                                </div>
+                            </div>
+                            
+                            <!-- Email -->
+                            <div class="sidebar-form-group">
+                                <label>Email Address*</label>
+                                <div class="sidebar-input-wrapper">
+                                    <input type="email" class="sidebar-input" placeholder="Your email address" required>
+                                    <i class="ri-mail-line"></i>
+                                </div>
+                            </div>
+                            
+                            <!-- Plan Notes / Special Requirements -->
+                            <div class="sidebar-form-group">
+                                <label>Plan Notes & Customization</label>
+                                <div class="sidebar-input-wrapper">
+                                    <textarea class="sidebar-textarea" placeholder="Rohtang Pass permits, paragliding bookings, Vice-Regal entry requests, Delhi NCR pickup details..."></textarea>
+                                    <i class="ri-chat-4-line" style="top: 18px;"></i>
+                                </div>
+                            </div>
+                            
+                            <!-- Submit Button -->
+                            <button type="submit" class="sidebar-submit-btn">Submit Booking Enquiry</button>
+                            
+                            <!-- Privacy Note -->
+                            <div class="sidebar-privacy-note">
+                                <i class="ri-shield-check-line"></i>
+                                <span>Absolute privacy of personal data assured.</span>
+                            </div>
+                        </form>
+                        
+                        <!-- Secondary WhatsApp Button -->
+                        <a href="https://wa.me/919289990112" target="_blank" class="sidebar-whatsapp-btn">
+                            <i class="ri-whatsapp-line"></i> WhatsApp Chat
+                        </a>
                     </div>
 
-                    <div class="detail-card">
-                        <h3>Destinations Visited</h3>
-                        <p style="color: #475569; line-height: 1.6;">Delhi - Shimla - Kufri - Manali - Rohtang Pass - Delhi</p>
+                    <div class="detail-card sidebar-route-card">
+                        <h3>Route & Destinations</h3>
+                        <div class="destinations-route-container">
+                            <div class="route-line-track"></div>
+                            
+                            <div class="route-stop-item start-stop">
+                                <div class="route-stop-badge">01</div>
+                                <div class="route-stop-icon-box"><i class="ri-plane-landing-line"></i></div>
+                                <div class="route-stop-info">
+                                    <span class="route-stop-name">Delhi</span>
+                                    <span class="route-stop-label">Pick up & drive</span>
+                                </div>
+                            </div>
+                            
+                            <div class="route-stop-item">
+                                <div class="route-stop-badge">02</div>
+                                <div class="route-stop-icon-box"><i class="ri-roadster-line"></i></div>
+                                <div class="route-stop-info">
+                                    <span class="route-stop-name">Shimla & Kufri</span>
+                                    <span class="route-stop-label">Vice Regal Lodge</span>
+                                </div>
+                            </div>
+                            
+                            <div class="route-stop-item">
+                                <div class="route-stop-badge">03</div>
+                                <div class="route-stop-icon-box"><i class="ri-footprint-line"></i></div>
+                                <div class="route-stop-info">
+                                    <span class="route-stop-name">Mall Road</span>
+                                    <span class="route-stop-label">Leisure walks</span>
+                                </div>
+                            </div>
+                            
+                            <div class="route-stop-item">
+                                <div class="route-stop-badge">04</div>
+                                <div class="route-stop-icon-box"><i class="ri-hotel-line"></i></div>
+                                <div class="route-stop-info">
+                                    <span class="route-stop-name">Manali</span>
+                                    <span class="route-stop-label">Hadimba Temple & springs</span>
+                                </div>
+                            </div>
+                            
+                            <div class="route-stop-item">
+                                <div class="route-stop-badge">05</div>
+                                <div class="route-stop-icon-box"><i class="ri-snowflake-line"></i></div>
+                                <div class="route-stop-info">
+                                    <span class="route-stop-name">Rohtang Pass</span>
+                                    <span class="route-stop-label">Glaciers & Solang adventure</span>
+                                </div>
+                            </div>
+                            
+                            <div class="route-stop-item end-stop">
+                                <div class="route-stop-badge">06</div>
+                                <div class="route-stop-icon-box"><i class="ri-plane-takeoff-line"></i></div>
+                                <div class="route-stop-info">
+                                    <span class="route-stop-name">Delhi</span>
+                                    <span class="route-stop-label">Return drop-off</span>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
