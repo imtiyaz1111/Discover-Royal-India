@@ -171,32 +171,60 @@ document.addEventListener('DOMContentLoaded', () => {
     const slides = document.querySelectorAll('.hero-slider .slide');
     const dots = document.querySelectorAll('.slider-dots .dot');
     
-    // Slide content data matching Agra/Taj Mahal, Rajasthan, and Kerala
+    // Slide content data matching banner1 (Taj/Agra), banner2 (Rajasthan), banner3 (Kerala)
     const heroContentData = [
         {
+            badge: "India's #1 Luxury Tour Operator",
             subtitle: "Experience Heritage & Splendor",
             title: "Discover <span>Royal India</span>",
-            description: "Embark on an unforgettable bespoke journey through majestic palaces, sacred temples, and vibrant landscapes custom-tailored for international explorers."
+            description: "Embark on an unforgettable bespoke journey through majestic palaces, sacred temples, and vibrant landscapes custom-tailored for international explorers.",
+            ctaLabel: "Explore Tours",
+            ctaHref: "#quote-form",
+            ctaSecondaryLabel: "View Packages",
+            ctaSecondaryHref: "india-tours.html"
         },
         {
+            badge: "Royal Rajasthan Awaits You",
             subtitle: "Royal Forts & Golden Deserts",
             title: "Majestic <span>Rajasthan</span>",
-            description: "Explore legendary fortresses, luxurious heritage palaces, and the rich cultural tapestry of the land of Kings."
+            description: "Explore legendary fortresses, luxurious heritage palaces, and the rich cultural tapestry of the land of Kings.",
+            ctaLabel: "Rajasthan Tours",
+            ctaHref: "rajasthan-tours/",
+            ctaSecondaryLabel: "View Packages",
+            ctaSecondaryHref: "india-tours.html"
         },
         {
+            badge: "God's Own Country Beckons",
             subtitle: "Serene Backwaters & Lush Hills",
             title: "Tranquil <span>Kerala Paradise</span>",
-            description: "Relax in luxury houseboats, rejuvenate with authentic Ayurveda, and discover beautiful tropical coastlines."
+            description: "Relax in luxury houseboats, rejuvenate with authentic Ayurveda, and discover beautiful tropical coastlines.",
+            ctaLabel: "Kerala Tours",
+            ctaHref: "kerala-tours/",
+            ctaSecondaryLabel: "View Packages",
+            ctaSecondaryHref: "india-tours.html"
         }
     ];
 
+    const badgeTextEl = document.querySelector('.hero-badge .hero-badge-text');
     const subtitleEl = document.querySelector('.hero-content .hero-subtitle');
     const titleEl = document.querySelector('.hero-content .hero-title');
     const descriptionEl = document.querySelector('.hero-content .hero-description');
+    const ctaPrimaryEl = document.getElementById('hero-cta-primary');
+    const ctaSecondaryEl = document.getElementById('hero-cta-secondary');
+    const heroBadgeEl = document.querySelector('.hero-badge');
+    const heroCtaGroup = document.querySelector('.hero-cta-group');
+    const heroStats = document.querySelector('.hero-stats');
     
     if (slides.length > 0) {
         let currentSlide = 0;
         const slideInterval = 6000; // 6 seconds
+
+        function animateElement(el, delay) {
+            if (!el) return;
+            el.style.animation = 'none';
+            void el.offsetWidth;
+            el.style.animation = `slideInLeft 0.9s ease ${delay}s both`;
+        }
 
         function showSlide(index) {
             slides.forEach(slide => slide.classList.remove('active'));
@@ -211,25 +239,27 @@ document.addEventListener('DOMContentLoaded', () => {
             if (subtitleEl && titleEl && descriptionEl && heroContentData[index]) {
                 const data = heroContentData[index];
                 
-                // Temporarily remove animation
-                subtitleEl.style.animation = 'none';
-                titleEl.style.animation = 'none';
-                descriptionEl.style.animation = 'none';
-                
-                // Trigger reflow to restart animation
-                void subtitleEl.offsetWidth;
-                void titleEl.offsetWidth;
-                void descriptionEl.offsetWidth;
-                
-                // Set text/html
+                // Update text/html
+                if (badgeTextEl) badgeTextEl.textContent = data.badge;
                 subtitleEl.textContent = data.subtitle;
                 titleEl.innerHTML = data.title;
                 descriptionEl.textContent = data.description;
-                
-                // Re-apply animations
-                subtitleEl.style.animation = 'fadeInDown 1s ease forwards';
-                titleEl.style.animation = 'fadeInUp 1s ease 0.2s both';
-                descriptionEl.style.animation = 'fadeInUp 1s ease 0.4s both';
+                if (ctaPrimaryEl) {
+                    ctaPrimaryEl.querySelector('span').textContent = data.ctaLabel;
+                    ctaPrimaryEl.href = data.ctaHref;
+                }
+                if (ctaSecondaryEl) {
+                    ctaSecondaryEl.querySelector('span').textContent = data.ctaSecondaryLabel;
+                    ctaSecondaryEl.href = data.ctaSecondaryHref;
+                }
+
+                // Re-animate all hero elements with staggered delays
+                animateElement(heroBadgeEl, 0);
+                animateElement(subtitleEl, 0.1);
+                animateElement(titleEl, 0.2);
+                animateElement(descriptionEl, 0.35);
+                animateElement(heroCtaGroup, 0.5);
+                animateElement(heroStats, 0.65);
             }
 
             currentSlide = index;
