@@ -777,17 +777,19 @@
                         <h3>Book This Tour</h3>
                         <p>Fill in details to get a customized, high-end tailor-made tour plan from our experts.</p>
                         
-                        <form onsubmit="event.preventDefault(); alert('Booking Enquiry Sent! Our travel coordinator will contact you shortly.');">
+                      <form action="../send-inquiry.php" method="POST">
+                            <input type="hidden" name="source_page" value="Tour: 4 Days Haridwar Rishikesh Tour">
+                            
                             <!-- Hotel Class Preference -->
                             <div class="sidebar-form-group">
                                 <label>Hotel Class*</label>
                                 <div class="sidebar-input-wrapper">
-                                    <select class="sidebar-input" required>
-                                        <option value="" disabled selected>Select Class</option>
-                                        <option value="standard">Standard (3 Star)</option>
-                                        <option value="first-class">First Class (4 Star)</option>
-                                        <option value="deluxe">Deluxe (5 Star)</option>
-                                        <option value="luxury">Luxury Stays</option>
+                                    <select class="sidebar-input" name="hotel" required>
+                                        <option value="" disabled selected>Select Hotel*</option>
+                                        <option value="Standard (3 Star)">Standard (3 Star)</option>
+                                        <option value="First Class (4 Star)">First Class (4 Star)</option>
+                                        <option value="Deluxe (5 Star)">Deluxe (5 Star)</option>
+                                        <option value="Luxury">Luxury</option>
                                     </select>
                                     <i class="ri-hotel-bed-line"></i>
                                 </div>
@@ -797,9 +799,28 @@
                             <div class="sidebar-form-group">
                                 <label>Duration*</label>
                                 <div class="sidebar-input-wrapper">
-                                    <select class="sidebar-input" required>
-                                        <option value="" disabled>No of Days</option>
-                                        <option value="4" selected>4 Days</option>
+                                    <select class="sidebar-input" name="days" required>
+                                        <option value="" disabled>No of Days*</option>
+                                        <option>1</option>
+                                        <option>2</option>
+                                        <option>3</option>
+                                        <option selected>4</option>
+                                        <option>5</option>
+                                        <option>6</option>
+                                        <option>7</option>
+                                        <option>8</option>
+                                        <option>9</option>
+                                        <option>10</option>
+                                        <option>11</option>
+                                        <option>12</option>
+                                        <option>13</option>
+                                        <option>14</option>
+                                        <option>15</option>
+                                        <option>16</option>
+                                        <option>17</option>
+                                        <option>18</option>
+                                        <option>19</option>
+                                        <option>20+</option>
                                     </select>
                                     <i class="ri-calendar-todo-line"></i>
                                 </div>
@@ -809,7 +830,7 @@
                             <div class="sidebar-form-group">
                                 <label>Arrival Date*</label>
                                 <div class="sidebar-input-wrapper">
-                                    <input type="date" class="sidebar-input" value="2026-11-08" required>
+                                    <input type="date" class="sidebar-input" name="travel_date" required>
                                     <i class="ri-calendar-line"></i>
                                 </div>
                             </div>
@@ -819,19 +840,19 @@
                                 <div>
                                     <label>Adults*</label>
                                     <div class="sidebar-input-wrapper">
-                                        <select class="sidebar-input" name="Adults" required>
+                                        <select class="sidebar-input" name="adults" required>
                                             <option value="">Adults*</option>
-                                            <option value="1">1</option>
-                                            <option value="2">2</option>
-                                            <option value="3">3</option>
-                                            <option value="4">4</option>
-                                            <option value="5">5</option>
-                                            <option value="6">6</option>
-                                            <option value="7">7</option>
-                                            <option value="8">8</option>
-                                            <option value="9">9</option>
-                                            <option value="10">10</option>
-                                            <option value="Group">Group</option>
+                                            <option>1</option>
+                                            <option>2</option>
+                                            <option>3</option>
+                                            <option>4</option>
+                                            <option>5</option>
+                                            <option>6</option>
+                                            <option>7</option>
+                                            <option>8</option>
+                                            <option>9</option>
+                                            <option>10</option>
+                                            <option>Group</option>
                                         </select>
                                         <i class="ri-group-line"></i>
                                     </div>
@@ -839,14 +860,14 @@
                                 <div>
                                     <label>Children</label>
                                     <div class="sidebar-input-wrapper">
-                                        <select class="sidebar-input" name="Kids">
+                                        <select class="sidebar-input" name="children">
                                             <option value="">Child</option>
-                                            <option value="0">0</option>
-                                            <option value="1">1</option>
-                                            <option value="2">2</option>
-                                            <option value="3">3</option>
-                                            <option value="4">4</option>
-                                            <option value="5">5</option>
+                                            <option>0</option>
+                                            <option>1</option>
+                                            <option>2</option>
+                                            <option>3</option>
+                                            <option>4</option>
+                                            <option>5</option>
                                         </select>
                                         <i class="ri-user-smile-line"></i>
                                     </div>
@@ -857,7 +878,7 @@
                             <div class="sidebar-form-group">
                                 <label>Full Name*</label>
                                 <div class="sidebar-input-wrapper">
-                                    <input type="text" class="sidebar-input" placeholder="Your Name" required>
+                                    <input type="text" class="sidebar-input" name="name" placeholder="Your Name*" required>
                                     <i class="ri-user-3-line"></i>
                                 </div>
                             </div>
@@ -866,8 +887,8 @@
                             <div class="sidebar-form-group">
                                 <label>Country*</label>
                                 <div class="sidebar-input-wrapper">
-                                    <select class="sidebar-input" name="YourCountry" required>
-<option value="">Your Country*</option>
+                                    <select class="sidebar-input" name="country" required>
+                                        <option value="">Your Country*</option>
                                         <option value="Afghanistan">Afghanistan</option>
                                         <option value="Albania">Albania</option>
                                         <option value="Algeria">Algeria</option>
@@ -1073,7 +1094,7 @@
                             <div class="sidebar-form-group">
                                 <label>Phone Number*</label>
                                 <div class="sidebar-input-wrapper">
-                                    <input type="text" class="sidebar-input" placeholder="Phone with country code" required>
+                                    <input type="tel" class="sidebar-input" name="phone" placeholder="Phone Number*" required>
                                     <i class="ri-phone-line"></i>
                                 </div>
                             </div>
@@ -1082,7 +1103,7 @@
                             <div class="sidebar-form-group">
                                 <label>Email Address*</label>
                                 <div class="sidebar-input-wrapper">
-                                    <input type="email" class="sidebar-input" placeholder="Your email address" required>
+                                    <input type="email" class="sidebar-input" name="email" placeholder="Email Address*" required>
                                     <i class="ri-mail-line"></i>
                                 </div>
                             </div>
@@ -1091,13 +1112,13 @@
                             <div class="sidebar-form-group">
                                 <label>Plan Notes & Customization</label>
                                 <div class="sidebar-input-wrapper">
-                                    <textarea class="sidebar-textarea" placeholder="Rafting stretch preferences, Mansa Devi ropeway tickets request, hotel customizations, dietary requirements..."></textarea>
+                                    <textarea class="sidebar-textarea" name="requirements" placeholder="Other Tour Requirements"></textarea>
                                     <i class="ri-chat-4-line" style="top: 18px;"></i>
                                 </div>
                             </div>
                             
                             <!-- Submit Button -->
-                            <button type="submit" class="sidebar-submit-btn">Submit Booking Enquiry</button>
+                            <button type="submit" class="sidebar-submit-btn">SEND ENQUIRY</button>
                             
                             <!-- Privacy Note -->
                             <div class="sidebar-privacy-note">
