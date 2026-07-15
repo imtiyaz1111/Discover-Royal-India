@@ -1,96 +1,155 @@
-# ----------------------------------------------------------------------
-# 1. SERVER CONFIGURATION & DIRECTORY INDEX
-# ----------------------------------------------------------------------
+# =====================================================
+# Discover Royal India
+# Production .htaccess
+# =====================================================
+
+Options -Indexes
+
 DirectoryIndex index.html
 
-# ----------------------------------------------------------------------
-# 2. REWRITE ENGINE RULES (HTTPS, NON-WWW, HTML STRIPPING & REWRITING)
-# ----------------------------------------------------------------------
+# =====================================================
+# Custom Error Pages
+# =====================================================
+
+ErrorDocument 404 /404.html
+
+# =====================================================
+# Rewrite Rules
+# =====================================================
+
 <IfModule mod_rewrite.c>
-    RewriteEngine On
-    RewriteBase /
 
-    # Rule 2a: Force HTTPS & Redirect WWW to non-WWW (Preserves Query Strings)
-    RewriteCond %{HTTPS} off [OR]
-    RewriteCond %{HTTP_HOST} ^www\.(.+) [NC]
-    RewriteRule ^(.*)$ https://discoverroyalindia.com/$1 [R=301,L,NE]
+RewriteEngine On
+RewriteBase /
 
-    # Rule 2b: Redirect index.html requests to the root directory
-    RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /index\.html\ HTTP/ [NC]
-    RewriteRule ^index\.html$ https://discoverroyalindia.com/ [R=301,L]
+# ------------------------------------
+# Force HTTPS
+# ------------------------------------
 
-    # Rule 2c: Redirect direct requests for *.html to extensionless URLs
-    RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /([^\ ]+)\.html\ HTTP/ [NC]
-    RewriteRule ^(.*)\.html$ https://discoverroyalindia.com/$1 [R=301,L]
+RewriteCond %{HTTPS} !=on
+RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
-    # Rule 2d: Internally map extensionless URLs to their .html equivalent
-    RewriteCond %{REQUEST_FILENAME} !-d
-    RewriteCond %{REQUEST_FILENAME}\.html -f
-    RewriteRule ^(.*?)/?$ $1.html [L]
+# ------------------------------------
+# Redirect WWW to Non-WWW
+# ------------------------------------
+
+RewriteCond %{HTTP_HOST} ^www\.discoverroyalindia\.com$ [NC]
+RewriteRule ^(.*)$ https://discoverroyalindia.com/$1 [L,R=301]
+
+# ------------------------------------
+# Redirect index.html
+# ------------------------------------
+
+RewriteRule ^index\.html$ / [R=301,L]
+
+# ------------------------------------
+# Remove .html Extension
+# ------------------------------------
+
+RewriteCond %{THE_REQUEST} \s/+(.+?)\.html[\s?] [NC]
+RewriteRule ^(.+)\.html$ /$1 [R=301,L]
+
+# ------------------------------------
+# Internal Rewrite
+# ------------------------------------
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}.html -f
+RewriteRule ^([^/.]+)/?$ $1.html [L]
+
 </IfModule>
 
-# ----------------------------------------------------------------------
-# 3. SECURITY HEADERS (Apache 2.4+)
-# ----------------------------------------------------------------------
-<IfModule mod_headers.c>
-    Header set X-Content-Type-Options "nosniff"
-    Header set X-Frame-Options "SAMEORIGIN"
-    Header set Referrer-Policy "no-referrer-when-downgrade"
-    Header set X-XSS-Protection "1; mode=block"
-    Header set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
-</IfModule>
+# =====================================================
+# GZIP Compression
+# =====================================================
 
-# ----------------------------------------------------------------------
-# 4. GZIP / DEFLATE COMPRESSION (Core Web Vitals - LCP/Page Speed)
-# ----------------------------------------------------------------------
 <IfModule mod_deflate.c>
-    # Compress HTML, CSS, JavaScript, Text, XML and fonts
-    AddOutputFilterByType DEFLATE application/javascript
-    AddOutputFilterByType DEFLATE application/rss+xml
-    AddOutputFilterByType DEFLATE application/vnd.ms-fontobject
-    AddOutputFilterByType DEFLATE application/x-font
-    AddOutputFilterByType DEFLATE application/x-font-opentype
-    AddOutputFilterByType DEFLATE application/x-font-otf
-    AddOutputFilterByType DEFLATE application/x-font-truetype
-    AddOutputFilterByType DEFLATE application/x-font-ttf
-    AddOutputFilterByType DEFLATE application/x-javascript
-    AddOutputFilterByType DEFLATE application/xhtml+xml
-    AddOutputFilterByType DEFLATE application/xml
-    AddOutputFilterByType DEFLATE font/opentype
-    AddOutputFilterByType DEFLATE font/otf
-    AddOutputFilterByType DEFLATE font/ttf
-    AddOutputFilterByType DEFLATE image/svg+xml
-    AddOutputFilterByType DEFLATE image/x-icon
-    AddOutputFilterByType DEFLATE text/css
-    AddOutputFilterByType DEFLATE text/html
-    AddOutputFilterByType DEFLATE text/javascript
-    AddOutputFilterByType DEFLATE text/plain
-    AddOutputFilterByType DEFLATE text/xml
+
+AddOutputFilterByType DEFLATE text/html
+AddOutputFilterByType DEFLATE text/plain
+AddOutputFilterByType DEFLATE text/css
+AddOutputFilterByType DEFLATE text/javascript
+AddOutputFilterByType DEFLATE application/javascript
+AddOutputFilterByType DEFLATE application/json
+AddOutputFilterByType DEFLATE application/xml
+AddOutputFilterByType DEFLATE image/svg+xml
+AddOutputFilterByType DEFLATE font/woff
+AddOutputFilterByType DEFLATE font/woff2
+
 </IfModule>
 
-# ----------------------------------------------------------------------
-# 5. BROWSER EXPIRES / CACHING (Core Web Vitals - Page Speed)
-# ----------------------------------------------------------------------
+# =====================================================
+# Browser Cache
+# =====================================================
+
 <IfModule mod_expires.c>
-    ExpiresActive On
-    ExpiresDefault "access plus 1 month"
 
-    # CSS / JS
-    ExpiresByType text/css "access plus 1 year"
-    ExpiresByType application/javascript "access plus 1 year"
-    ExpiresByType text/javascript "access plus 1 year"
+ExpiresActive On
 
-    # Images
-    ExpiresByType image/jpeg "access plus 1 year"
-    ExpiresByType image/png "access plus 1 year"
-    ExpiresByType image/gif "access plus 1 year"
-    ExpiresByType image/webp "access plus 1 year"
-    ExpiresByType image/svg+xml "access plus 1 year"
-    ExpiresByType image/x-icon "access plus 1 year"
+ExpiresByType text/css "access plus 1 year"
+ExpiresByType application/javascript "access plus 1 year"
 
-    # Web Fonts
-    ExpiresByType font/ttf "access plus 1 year"
-    ExpiresByType font/woff "access plus 1 year"
-    ExpiresByType font/woff2 "access plus 1 year"
-    ExpiresByType application/x-font-woff "access plus 1 year"
+ExpiresByType image/jpeg "access plus 1 year"
+ExpiresByType image/png "access plus 1 year"
+ExpiresByType image/gif "access plus 1 year"
+ExpiresByType image/webp "access plus 1 year"
+ExpiresByType image/svg+xml "access plus 1 year"
+
+ExpiresByType font/woff "access plus 1 year"
+ExpiresByType font/woff2 "access plus 1 year"
+
+ExpiresDefault "access plus 30 days"
+
 </IfModule>
+
+# =====================================================
+# Security Headers
+# =====================================================
+
+<IfModule mod_headers.c>
+
+Header always set X-Frame-Options "SAMEORIGIN"
+
+Header always set X-Content-Type-Options "nosniff"
+
+Header always set Referrer-Policy "strict-origin-when-cross-origin"
+
+Header always set Permissions-Policy "geolocation=(), microphone=(), camera=()"
+
+Header always set X-XSS-Protection "1; mode=block"
+
+Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
+
+</IfModule>
+
+# =====================================================
+# Protect Sensitive Files
+# =====================================================
+
+<Files ".htaccess">
+Require all denied
+</Files>
+
+<FilesMatch "^(\.env|composer\.(json|lock)|package(-lock)?\.json|README|LICENSE)">
+Require all denied
+</FilesMatch>
+
+# =====================================================
+# Disable Server Signature
+# =====================================================
+
+ServerSignature Off
+
+# =====================================================
+# MIME Types
+# =====================================================
+
+AddType image/webp .webp
+
+AddType font/woff2 .woff2
+
+# =====================================================
+# Default Charset
+# =====================================================
+
+AddDefaultCharset UTF-8
