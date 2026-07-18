@@ -195,7 +195,8 @@ button, input, select {
     width: 100%;
 }
 
-.nav-link:hover {
+.nav-link:hover,
+.nav-link.active {
     color: var(--color-accent);
 }
 
@@ -231,7 +232,8 @@ button, input, select {
     transition: var(--transition-smooth);
 }
 
-.dropdown-menu li a:hover {
+.dropdown-menu li a:hover,
+.dropdown-menu li a.active {
     background-color: rgba(20, 184, 166, 0.05);
     color: var(--color-accent);
     padding-left: 25px;
@@ -1178,7 +1180,8 @@ select.quote-input {
     display: block;
 }
 
-.mobile-dropdown-menu li a:hover {
+.mobile-dropdown-menu li a:hover,
+.mobile-dropdown-menu li a.active {
     color: var(--color-accent);
 }
 
@@ -1948,10 +1951,11 @@ select.quote-input {
 
 /* Slider Drag & Auto-scroll Area */
 .categories-slider-wrapper {
-    width: 100%;
+    width: auto;
+    margin: 0 -5%;
+    padding: 15px 5%;
     overflow-x: auto;
     cursor: grab;
-    padding-bottom: 15px;
     scrollbar-width: none; /* Hide scrollbar for Firefox */
 }
 

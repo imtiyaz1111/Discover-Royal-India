@@ -41,6 +41,14 @@ document.addEventListener('DOMContentLoaded', () => {
                 a.setAttribute('href', pathPrefix + href);
             }
         });
+
+        // Fix form actions
+        document.querySelectorAll('form').forEach(form => {
+            const action = form.getAttribute('action');
+            if (action && !action.startsWith('http') && !action.startsWith('/') && !action.startsWith('../') && !action.startsWith('./')) {
+                form.setAttribute('action', pathPrefix + action);
+            }
+        });
     }
 
     // 1. Dynamic Component Loader
@@ -153,17 +161,50 @@ document.addEventListener('DOMContentLoaded', () => {
                 parent.classList.toggle('open');
             });
         });
-        
-        // Highlight active page link in menu based on current path
-        const currentPath = window.location.pathname.split("/").pop();
-        const allLinks = document.querySelectorAll('.nav-link, .mobile-link');
-        
-        allLinks.forEach(link => {
-            const href = link.getAttribute('href');
-            if (href === currentPath || (currentPath === '' && href === 'index.html')) {
-                allLinks.forEach(l => l.classList.remove('active'));
-                link.classList.add('active');
-            }
+
+        // Intercept hash scroll clicks on the same page
+        document.querySelectorAll('a[href*="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                const href = this.getAttribute('href');
+                if (!href) return;
+                
+                const cleanHref = href.split('?')[0];
+                const hash = href.includes('#') ? href.substring(href.indexOf('#')) : '';
+                const pathBeforeHash = cleanHref.split('#')[0];
+                
+                const cleanLocationPath = window.location.pathname.replace(/^\/+|\/+$/g, '').replace(/\.html$/, '');
+                const cleanLinkPath = pathBeforeHash.replace(/^\/+|\/+$/g, '').replace(/\.html$/, '').replace(/^(\.\.\/|\.\/)+/g, '');
+                
+                const isSamePage = cleanLinkPath === '' || 
+                                   cleanLinkPath === 'index' || 
+                                   cleanLocationPath === cleanLinkPath ||
+                                   (cleanLinkPath === 'index' && cleanLocationPath === '');
+                
+                if (isSamePage && hash && hash !== '#') {
+                    const targetEl = document.querySelector(hash);
+                    if (targetEl) {
+                        e.preventDefault();
+                        
+                        // Calculate header height to offset scroll
+                        const header = document.querySelector('.header-wrapper');
+                        const headerOffset = header ? header.offsetHeight : 80;
+                        const elementPosition = targetEl.getBoundingClientRect().top;
+                        const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+                        
+                        window.scrollTo({
+                            top: offsetPosition,
+                            behavior: 'smooth'
+                        });
+                        
+                        // Update active state in menu
+                        document.querySelectorAll('.nav-link, .mobile-link').forEach(link => link.classList.remove('active'));
+                        this.classList.add('active');
+                        
+                        // If it's a mobile link, close the drawer
+                        closeDrawer();
+                    }
+                }
+            });
         });
     }
 
@@ -620,43 +661,168 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Dynamic Active Navbar Link Handler
     function setActiveMenuItem() {
-        const currentPath = window.location.pathname;
+        const currentPath = window.location.pathname.toLowerCase();
+        const currentHash = window.location.hash.toLowerCase();
         const navLinks = document.querySelectorAll('.nav-link, .mobile-link');
+        const dropdownLinks = document.querySelectorAll('.dropdown-menu a, .mobile-dropdown-menu a, .mega-menu a');
         
         // Remove active class from all links first
         navLinks.forEach(link => link.classList.remove('active'));
+        dropdownLinks.forEach(link => link.classList.remove('active'));
         
         let matched = false;
         
-        if (currentPath.includes('about-us.html')) {
+        // Helper to normalize paths for comparison
+        function getCleanPath(p) {
+            if (!p) return '';
+            let clean = p.split('?')[0].split('#')[0];
+            clean = clean.replace(/^(https?:\/\/[^\/]+)/, '');
+            clean = clean.replace(/^\/+|\/+$/g, ''); // Remove leading/trailing slashes
+            clean = clean.replace(/\.html$/, '');   // Remove .html extension
+            clean = clean.replace(/^(\.\.\/|\.\/)+/g, ''); // Remove ../ and ./
+            return clean;
+        }
+        
+        const cleanCurrentPath = getCleanPath(currentPath);
+        
+        // Helper to check if a link is an anchor link on the current page
+        function isCurrentPageAnchor(link) {
+            const href = link.getAttribute('href');
+            if (!href) return false;
+            return href.includes('#');
+        }
+        
+        // Helper to check if the link's anchor matches current location's hash
+        function anchorMatchesHash(link) {
+            const href = link.getAttribute('href');
+            if (!href || !href.includes('#')) return false;
+            const linkHash = href.substring(href.indexOf('#')).toLowerCase();
+            return currentHash === linkHash;
+        }
+        
+        // If cleanCurrentPath is empty or index, it's the Home page
+        const isHome = cleanCurrentPath === '' || cleanCurrentPath === 'index';
+        
+        if (isHome) {
+            // On home page, check if we have a hash that matches an anchor link
+            let hashMatched = false;
+            if (currentHash) {
+                navLinks.forEach(link => {
+                    if (isCurrentPageAnchor(link) && anchorMatchesHash(link)) {
+                        link.classList.add('active');
+                        hashMatched = true;
+                    }
+                });
+            }
+            
+            // If hash matched, we don't activate "Home"
+            if (hashMatched) return;
+            
+            // Otherwise, activate Home
             navLinks.forEach(link => {
-                if (link.getAttribute('href') && link.getAttribute('href').includes('about-us.html')) {
-                    link.classList.add('active');
-                    matched = true;
+                const href = link.getAttribute('href');
+                if (href) {
+                    const cleanHref = getCleanPath(href);
+                    // Home links (like '/' or 'index.html') without anchors
+                    if (!isCurrentPageAnchor(link) && (cleanHref === '' || cleanHref === 'index')) {
+                        link.classList.add('active');
+                    }
                 }
             });
-        } else if (currentPath.includes('contact-us.html')) {
+            return;
+        }
+        
+        // 1. Try to find a direct match in dropdown/submenu links first
+        let activeDropdownLink = null;
+        dropdownLinks.forEach(link => {
+            if (isCurrentPageAnchor(link)) return; // Skip anchor links
+            const href = getCleanPath(link.getAttribute('href'));
+            if (href && href !== '' && (cleanCurrentPath === href || cleanCurrentPath.startsWith(href + '/'))) {
+                link.classList.add('active');
+                activeDropdownLink = link;
+            }
+        });
+        
+        // If a dropdown link is active, activate its parent dropdown trigger
+        if (activeDropdownLink) {
+            // Desktop: Find parent dropdown element (e.g. .dropdown or .mega-dropdown-trigger)
+            const parentDropdown = activeDropdownLink.closest('.dropdown, .mega-dropdown-trigger');
+            if (parentDropdown) {
+                const trigger = parentDropdown.querySelector('.nav-link');
+                if (trigger) trigger.classList.add('active');
+            }
+            // Mobile: Find parent mobile-dropdown
+            const parentMobileDropdown = activeDropdownLink.closest('.mobile-dropdown');
+            if (parentMobileDropdown) {
+                const trigger = parentMobileDropdown.querySelector('.mobile-link');
+                if (trigger) trigger.classList.add('active');
+            }
+            matched = true;
+        }
+        
+        // 2. If not matched in dropdowns, search in top-level links
+        if (!matched) {
             navLinks.forEach(link => {
-                if (link.getAttribute('href') && link.getAttribute('href').includes('contact-us.html')) {
-                    link.classList.add('active');
-                    matched = true;
+                if (isCurrentPageAnchor(link)) return; // Skip anchor links
+                // Skip dropdown triggers since we want specific matches first
+                if (link.parentElement.classList.contains('dropdown') || link.closest('.mobile-dropdown-header')) {
+                    return;
                 }
-            });
-        } else if (currentPath.includes('-tours/')) {
-            // Highlight "India Tour" dropdown parent link
-            navLinks.forEach(link => {
-                if (link.textContent.includes('India Tour')) {
+                const href = getCleanPath(link.getAttribute('href'));
+                if (href && href !== '' && (cleanCurrentPath === href || cleanCurrentPath.startsWith(href + '/'))) {
                     link.classList.add('active');
                     matched = true;
                 }
             });
         }
         
-        // If not matched, default to Home
+        // 3. Fallback check for tour-detail pages or other subpages inside tour folders
+        if (!matched) {
+            const pathParts = cleanCurrentPath.split('/');
+            if (pathParts.length > 0) {
+                const folderName = pathParts[0];
+                if (folderName.endsWith('-tours')) {
+                    // Try to find a dropdown link matching this folder name
+                    let parentTrigger = null;
+                    dropdownLinks.forEach(link => {
+                        if (isCurrentPageAnchor(link)) return;
+                        const href = getCleanPath(link.getAttribute('href'));
+                        if (href && href.includes(folderName)) {
+                            link.classList.add('active');
+                            const parentDropdown = link.closest('.dropdown, .mega-dropdown-trigger');
+                            if (parentDropdown) {
+                                parentTrigger = parentDropdown.querySelector('.nav-link');
+                            }
+                            const parentMobileDropdown = link.closest('.mobile-dropdown');
+                            if (parentMobileDropdown) {
+                                const mobileTrigger = parentMobileDropdown.querySelector('.mobile-link');
+                                if (mobileTrigger) mobileTrigger.classList.add('active');
+                            }
+                        }
+                    });
+                    
+                    if (parentTrigger) {
+                        parentTrigger.classList.add('active');
+                        matched = true;
+                    } else {
+                        // Default fallback to "India Tour" trigger if directory looks like a tour
+                        navLinks.forEach(link => {
+                            if (link.textContent.toLowerCase().includes('india tour')) {
+                                link.classList.add('active');
+                                matched = true;
+                            }
+                        });
+                    }
+                }
+            }
+        }
+        
+        // 4. Ultimate Fallback: Default to Home if still unmatched
         if (!matched) {
             navLinks.forEach(link => {
-                const href = link.getAttribute('href');
-                if (href && (href.includes('index.html') || href === '/')) {
+                if (isCurrentPageAnchor(link)) return;
+                const href = getCleanPath(link.getAttribute('href'));
+                if (href === '' || href === 'index') {
                     link.classList.add('active');
                 }
             });

@@ -24,7 +24,7 @@ if(!$name || !$email || !$phone || !$country || !$hotel || !$days || !$travel_da
     exit("Required fields are missing.");
 }
 
-$to = "mdimtiyazalam630@gmail.com";
+$to = "discoverroyalindia@gmail.com";
 $subject = "New Luxury Tour Enquiry | Discover Royal India";
 
 $fromEmail = "no-reply@discoverroyalindia.com";
